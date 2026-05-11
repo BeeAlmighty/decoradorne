@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-cream: #FAF7F4;
+  --color-parchment: #F2EDE8;
+  --color-espresso: #1A1410;
+  --color-gold: #C9A96E;
+  --color-gold-light: #DEC48E;
+  --color-gold-dark: #A8834A;
+  --color-rose-muted: #D4878A;
+  --color-sage: #8BA888;
+  --color-warm-border: #E8E0D8;
+
+  /* Font Families — CSS variables injected by next/font */
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-dm-sans), 'DM Sans', system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'Geist Mono', ui-monospace, monospace;
+
+  /* Shadows */
+  --shadow-card: 0 2px 20px 0 rgba(26, 20, 16, 0.06);
+  --shadow-card-hover: 0 8px 40px 0 rgba(26, 20, 16, 0.12);
+  --shadow-gold: 0 4px 24px 0 rgba(201, 169, 110, 0.25);
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #FAF7F4;
+  color: #1A1410;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display font for headings */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+/* Brand selection */
+::selection {
+  background-color: #C9A96E;
+  color: #FAF7F4;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F2EDE8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 10px;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #C9A96E;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Hero keyframes — da- prefix avoids colliding with Tailwind animate-* */
+@keyframes daFadeSlideIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes daMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.da-fade    { animation: daFadeSlideIn 0.8s ease-out forwards; opacity: 0; }
+.da-marquee { animation: daMarquee 42s linear infinite; }
+.da-d1      { animation-delay: 0.10s; }
+.da-d2      { animation-delay: 0.20s; }
+.da-d3      { animation-delay: 0.32s; }
+.da-d4      { animation-delay: 0.44s; }
+.da-d5      { animation-delay: 0.56s; }
+
+/* Helper classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C9A96E 0%, #DEC48E 50%, #A8834A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
