@@ -1,11 +1,12 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { buildDefaultWhatsAppUrl } from '@/lib/whatsapp';
 
 export function WhatsAppFAB() {
   const url = buildDefaultWhatsAppUrl();
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <a
@@ -17,19 +18,23 @@ export function WhatsAppFAB() {
     >
       <div className="relative">
         {/* Outer pulse ring */}
-        <motion.span
-          className="absolute inset-0 rounded-full bg-[#25D366]"
-          animate={{ scale: [1, 1.6], opacity: [0.35, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
-          aria-hidden="true"
-        />
+        {!prefersReducedMotion && (
+          <motion.span
+            className="absolute inset-0 rounded-full bg-[#25D366]"
+            animate={{ scale: [1, 1.6], opacity: [0.35, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
+            aria-hidden="true"
+          />
+        )}
         {/* Inner pulse ring */}
-        <motion.span
-          className="absolute inset-0 rounded-full bg-[#25D366]"
-          animate={{ scale: [1, 1.3], opacity: [0.25, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', delay: 0.4 }}
-          aria-hidden="true"
-        />
+        {!prefersReducedMotion && (
+          <motion.span
+            className="absolute inset-0 rounded-full bg-[#25D366]"
+            animate={{ scale: [1, 1.3], opacity: [0.25, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeOut', delay: 0.4 }}
+            aria-hidden="true"
+          />
+        )}
         {/* Button */}
         <motion.div
           whileHover={{ scale: 1.08 }}

@@ -85,7 +85,7 @@ export function Hero() {
               href="#lead-form"
               className="inline-flex items-center justify-center gap-2 bg-[#C9A96E] text-[#FAF7F4] font-medium px-8 py-4 rounded-full hover:bg-[#A8834A] transition-colors text-sm sm:text-base"
             >
-              Plan my event
+              Style my event
               <ArrowRight size={16} />
             </a>
             <a

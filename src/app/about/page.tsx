@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
-import { generatePageMetadata, buildLocalBusinessJsonLd } from '@/lib/seo';
+import { generatePageMetadata, buildBreadcrumbJsonLd } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { LeadSection } from '@/components/sections/LeadSection';
-import { STATS, BUSINESS_PHONE, BUSINESS_IG } from '@/lib/constants';
+import { STATS, BUSINESS_IG, SITE_URL } from '@/lib/constants';
 import { ArrowRight, Award, Heart, MapPin, Users } from 'lucide-react';
 import { buildDefaultWhatsAppUrl } from '@/lib/whatsapp';
+import { PageHero } from '@/components/ui/page-hero';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'About Decor Adorne — Lagos Luxury Event Decoration Studio',
   description:
-    "Meet the team behind Lagos's most trusted event decoration studio. Decor Adorne has styled 500+ events across Lagos since 2016, blending cultural authenticity with editorial luxury.",
+    "Lagos's most trusted event decoration studio since 2016. Decor Adorne has styled 500+ celebrations with cultural authenticity and editorial luxury.",
   path: '/about',
 });
 
@@ -41,29 +42,22 @@ export default function AboutPage() {
 
   return (
     <>
-      <JsonLd data={buildLocalBusinessJsonLd()} />
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: 'Home', item: SITE_URL },
+          { name: 'About', item: `${SITE_URL}/about` },
+        ])}
+      />
 
-      {/* Hero */}
-      <section className="pt-36 sm:pt-48 pb-20 bg-[#FAF7F4] relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_50%_at_30%_40%,rgba(201,169,110,0.09),transparent)]" />
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
-          <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#C9A96E] mb-4">
-            Our story
-          </p>
-          <h1
-            className="font-display font-light text-[#1A1410] max-w-2xl mb-6"
-            style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', lineHeight: 1.05 }}
-          >
-            Transforming spaces into{' '}
-            <em className="italic text-[#C9A96E]">memories.</em>
-          </h1>
-          <p className="text-[#1A1410]/60 max-w-xl leading-relaxed">
-            Since 2016, Decor Adorne has been Lagos&rsquo;s trusted name for luxury event
-            decoration — bringing beauty, culture, and intentional detail to every celebration
-            we are honoured to be part of.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our story"
+        headlineBefore="Transforming spaces into"
+        headlineItalic="memories."
+        description="Since 2016, Decor Adorne has been Lagos's trusted name for luxury event decoration — bringing beauty, culture, and intentional detail to every celebration we are honoured to be part of."
+        cta={{ label: 'Plan my event', href: '/#lead-form' }}
+        ctaSecondary={{ label: 'See our work', href: BUSINESS_IG, external: true }}
+        photoUrl="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80"
+      />
 
       {/* Founder story */}
       <section className="py-20 sm:py-28 bg-[#F2EDE8]">
@@ -118,7 +112,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#C9A96E] text-[#FAF7F4] font-medium px-7 py-3.5 rounded-full hover:bg-[#A8834A] transition-colors text-sm"
                 >
-                  Plan my event
+                  Style my event
                   <ArrowRight size={14} />
                 </a>
                 <a

@@ -18,23 +18,24 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { name, phone, eventType, date, vision } = result.data;
+  const data = result.data;
 
-  // Forward to n8n webhook if configured
   const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
   if (webhookUrl && webhookUrl.startsWith('https://')) {
     try {
       await fetch(webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, eventType, date, vision, source: 'website' }),
+        body: JSON.stringify({
+          ...data,
+          source:      'website',
+          submittedAt: new Date().toISOString(),
+        }),
       });
     } catch {
       // fail silently — WhatsApp redirect still works
     }
   }
 
-  const waUrl = buildLeadWhatsAppUrl({ name, eventType, date, vision });
-
-  return NextResponse.json({ waUrl }, { status: 200 });
+  return NextResponse.json({ waUrl: buildLeadWhatsAppUrl(data) }, { status: 200 });
 }

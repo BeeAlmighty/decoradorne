@@ -36,15 +36,37 @@ export const metadata: Metadata = {
     template: `%s | ${BUSINESS_NAME}`,
   },
   description:
-    'Lagos luxury event decoration and rentals. Specialists in Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and premium Rentals.',
+    'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
   metadataBase: new URL(SITE_URL),
   openGraph: {
+    title: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+    description:
+      'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
     siteName: BUSINESS_NAME,
     locale: 'en_NG',
     type: 'website',
+    url: SITE_URL,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+    description:
+      'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
+    images: ['/opengraph-image'],
+    site: '@decor_adorne',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/icon.jpg',
+    apple: [{ url: '/apple-icon', type: 'image/png', sizes: '180x180' }],
+    shortcut: '/icon.jpg',
   },
 };
 
@@ -60,8 +82,9 @@ export default function RootLayout({
     >
       <head>
         <JsonLd data={buildLocalBusinessJsonLd()} />
+        <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
-      <body className="flex min-h-screen flex-col antialiased">
+      <body className="flex min-h-screen flex-col antialiased" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

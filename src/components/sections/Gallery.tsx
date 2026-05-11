@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -7,90 +8,84 @@ import { ArrowRight } from 'lucide-react';
 interface GalleryTile {
   id: string;
   label: string;
-  gradient: string;
-  accent: string;
   alt: string;
+  src: string;
+  accent: string;
+  tall?: boolean;
 }
 
 const GALLERY_ITEMS: GalleryTile[] = [
   {
     id: 'engagement-1',
     label: 'Engagement Decor',
-    gradient: 'from-[#C9A96E]/30 to-[#F2EDE8]',
+    src: '/images/gallery/engagement-1.JPG',
     accent: '#C9A96E',
-    alt: 'Luxury engagement decoration Lagos — floral arch with gold candle arrangement',
+    alt: 'Luxury engagement decoration Lagos — floral arch and candlelit table setup',
+    tall: true,
   },
   {
-    id: 'kamu-1',
-    label: 'Kamu Setup',
-    gradient: 'from-[#D4878A]/25 to-[#FAF7F4]',
-    accent: '#D4878A',
-    alt: 'Kamu ceremony decoration Lagos — colourful throne and traditional fabric draping',
-  },
-  {
-    id: 'nikkah-1',
-    label: 'Nikkah Ceremony',
-    gradient: 'from-[#8BA888]/25 to-[#F2EDE8]',
-    accent: '#8BA888',
-    alt: 'Nikkah decoration Lagos — elegant floral arch and soft ambient lighting',
-  },
-  {
-    id: 'arabian-1',
-    label: 'Arabian Night',
-    gradient: 'from-[#C9A96E]/20 to-[#1A1410]/5',
-    accent: '#C9A96E',
-    alt: 'Arabian Night decoration Lagos — Moroccan lanterns and ceiling draping',
-  },
-  {
-    id: 'picnic-1',
-    label: 'Luxury Picnic',
-    gradient: 'from-[#8BA888]/30 to-[#FAF7F4]',
-    accent: '#8BA888',
-    alt: 'Luxury picnic setup Lagos — styled low table with fresh florals and cushions',
-  },
-  {
-    id: 'henna-1',
+    id: 'henna-2',
     label: 'Henna Party',
-    gradient: 'from-[#D4878A]/20 to-[#F2EDE8]',
+    src: '/images/gallery/henna-2.JPG',
+    accent: '#8BA888',
+    alt: 'Henna party decoration Lagos — jewel-toned styling and floral details',
+  },
+  {
+    id: 'naming-1',
+    label: 'Naming Ceremony',
+    src: '/images/gallery/naming-1.JPG',
+    accent: '#8BA888',
+    alt: 'Naming ceremony decoration Lagos — warm celebratory setup',
+  },
+  {
+    id: 'wedding-1',
+    label: 'Kamu Setup',
+    src: '/images/gallery/wedding-1.JPG',
     accent: '#D4878A',
-    alt: 'Henna party decoration Lagos — jewel-toned cushions and floral backdrop',
+    alt: 'Kamu ceremony decoration Lagos — vibrant traditional styling',
+  },
+  {
+    id: 'wedding-2',
+    label: 'Nikkah Ceremony',
+    src: '/images/gallery/wedding-2.JPG',
+    accent: '#D4878A',
+    alt: 'Nikkah decoration Lagos — elegant floral arch and ambient lighting',
+  },
+  {
+    id: 'durbar-1',
+    label: 'Durbar Decor',
+    src: '/images/gallery/durbar-decor-1.JPG',
+    accent: '#C9A96E',
+    alt: 'Durbar decoration Lagos — royal grand venue styling with ornate draping and gold accents',
   },
 ];
 
-function PlaceholderTile({
-  tile,
-  delay,
-  tall,
-}: {
-  tile: GalleryTile;
-  delay: number;
-  tall?: boolean;
-}) {
+function Tile({ tile, delay }: { tile: GalleryTile; delay: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.97 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.55, delay }}
-      className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${tile.gradient} ${tall ? 'row-span-2' : ''}`}
-      style={{ minHeight: tall ? '440px' : '210px' }}
-      role="img"
-      aria-label={tile.alt}
+      className={`relative rounded-2xl overflow-hidden bg-[#1A1410] group ${tile.tall ? 'row-span-2' : ''}`}
+      style={{ minHeight: tile.tall ? '440px' : '210px' }}
     >
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, ${tile.accent} 1px, transparent 1px)`,
-          backgroundSize: '24px 24px',
-        }}
+      <Image
+        src={tile.src}
+        alt={tile.alt}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+        sizes="(max-width: 768px) 50vw, 33vw"
       />
-      <div className="absolute inset-0 flex flex-col justify-end p-5">
-        <div
-          className="inline-flex self-start text-xs font-medium px-3 py-1.5 rounded-full mb-1"
-          style={{ backgroundColor: `${tile.accent}22`, color: tile.accent }}
+      {/* Scrim */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1A1410]/70 via-transparent to-transparent" />
+      {/* Label */}
+      <div className="absolute bottom-0 left-0 right-0 p-4">
+        <span
+          className="inline-flex text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm bg-[#FAF7F4]/12 text-[#FAF7F4]"
         >
           {tile.label}
-        </div>
+        </span>
       </div>
     </motion.div>
   );
@@ -132,15 +127,10 @@ export function Gallery() {
           </Link>
         </div>
 
-        {/* Asymmetric grid */}
+        {/* Asymmetric 2-col / 3-col grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 auto-rows-[210px] gap-4">
           {GALLERY_ITEMS.map((item, i) => (
-            <PlaceholderTile
-              key={item.id}
-              tile={item}
-              delay={i * 0.08}
-              tall={i === 0}
-            />
+            <Tile key={item.id} tile={item} delay={i * 0.08} />
           ))}
         </div>
       </div>

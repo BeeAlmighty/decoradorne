@@ -32,6 +32,10 @@ export interface Service {
   included: string[];
   faqs: ServiceFaq[];
   colorAccent: string;
+  /** Path in /public — when present the service page renders a dark photo hero */
+  heroImage?: string;
+  /** SEO meta description — keyword-tuned, under 160 chars. Falls back to description if absent. */
+  metaDescription?: string;
 }
 
 export const SERVICES: Service[] = [
@@ -71,6 +75,9 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#C9A96E',
+    heroImage: '/images/gallery/engagement-1.JPG',
+    metaDescription:
+      'Expert engagement decoration in Lagos — floral arches, candlelit table styling, and personalised setups across Victoria Island, Lekki, and Ikoyi. Free quote.',
   },
   {
     slug: 'kamu-decoration-lagos',
@@ -108,6 +115,9 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#D4878A',
+    heroImage: '/images/gallery/wedding-1.JPG',
+    metaDescription:
+      'Kamu ceremony decoration in Lagos — throne styling, cultural fabric draping, and authentic Hausa-inspired décor. Serving all Lagos areas. Free consultation.',
   },
   {
     slug: 'henna-party-decor-lagos',
@@ -145,6 +155,9 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#8BA888',
+    heroImage: '/images/gallery/henna-1.JPG',
+    metaDescription:
+      'Henna party decoration in Lagos — floor cushions, Moroccan lanterns, flower walls, and intimate settings from ₦150,000. Lekki, VI, Ikoyi, and Mainland.',
   },
   {
     slug: 'arabian-night-decoration-lagos',
@@ -183,6 +196,8 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#C9A96E',
+    metaDescription:
+      'Arabian Night decoration in Lagos — full venue transformations with jewel-tone ceiling draping, ornate lanterns, and low cushion seating. Book now.',
   },
   {
     slug: 'nikkah-decoration-lagos',
@@ -220,6 +235,9 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#D4878A',
+    heroImage: '/images/gallery/wedding-2.JPG',
+    metaDescription:
+      'Nikkah decoration in Lagos — elegant, respectful ceremony styling with floral arches, segregated seating arrangements, and Nikkah + Walima packages.',
   },
   {
     slug: 'naming-ceremony-decor-lagos',
@@ -257,6 +275,9 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#8BA888',
+    heroImage: '/images/gallery/naming-1.JPG',
+    metaDescription:
+      'Naming ceremony decoration in Lagos — joyful setups for Yoruba, Hausa, and Igbo traditions. Home setups welcome. Balloon columns, backdrops, florals.',
   },
   {
     slug: 'picnic-setup-lagos',
@@ -295,6 +316,8 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#C9A96E',
+    metaDescription:
+      'Luxury picnic setups in Lagos — styled low tables, fresh florals, and fairy lights at Lekki, Tarkwa Bay, Ikoyi, and your own garden. From ₦150,000.',
   },
   {
     slug: 'event-rentals-lagos',
@@ -332,6 +355,89 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#D4878A',
+    metaDescription:
+      'Premium event rental items in Lagos — Chiavari chairs, charger plates, linens, candelabras, and glassware. Delivery and collection included. From ₦50,000.',
+  },
+  {
+    slug: 'durbar-decoration-lagos',
+    name: 'Durbar Decoration',
+    shortName: 'Durbar',
+    tagline: 'Royal grandeur, magnificently adorned.',
+    icon: 'Gem',
+    description:
+      'Rooted in Northern Nigerian royal tradition, Durbar celebrations demand décor that commands the room — richly draped, ornately styled, and breathtakingly grand.',
+    longDescription:
+      "The Durbar is one of Nigeria's most magnificent cultural celebrations — a display of royal pageantry, elaborate robes, and centuries of Hausa tradition. We create décor that rises to meet this grandeur: sweeping fabric installations, opulent gold and jewel-tone styling, ceremonial stage arrangements, and regal details that honour the occasion and leave every guest in Lagos in awe.",
+    included: [
+      'Grand entrance arch with cultural fabric and floral styling',
+      'Stage or royal dais arrangement for the honorees',
+      'Rich ceiling and wall draping in gold and jewel tones',
+      'Ornate lantern and candelabra cluster installations',
+      'Ceremonial table settings with traditional textile accents',
+      'Cultural tapestry and decorative prop arrangements',
+      'Full setup and breakdown service',
+    ],
+    faqs: [
+      {
+        question: 'What makes Durbar decoration unique compared to other events?',
+        answer:
+          "Durbar décor draws on Northern Nigerian royal tradition — richer fabrics, deeper jewel tones, ornate lantern clusters, and ceremonial staging. We blend authentic cultural elements with our editorial eye to create a setting that feels genuinely grand rather than generic.",
+      },
+      {
+        question: 'Can you source authentic Durbar-themed fabrics and props in Lagos?',
+        answer:
+          "Yes. We work with trusted suppliers of premium Nigerian textiles — including aso-oke, brocade, and traditional embroidered fabrics — to ensure every element of the décor feels culturally grounded and visually striking.",
+      },
+      {
+        question: 'Do you style Durbar celebrations at hotel ballrooms in Lagos?',
+        answer:
+          "Absolutely. We transform hotel ballrooms, event halls, and private compound spaces into Durbar-worthy settings. Our team conducts a venue walk-through to plan the layout and ensure every element is executed to the highest standard.",
+      },
+    ],
+    colorAccent: '#C9A96E',
+    heroImage: '/images/gallery/durbar-decor-1.JPG',
+    metaDescription:
+      'Durbar decoration in Lagos — royal-grand venue styling with jewel-tone draping, ornate lanterns, and ceremonial stage arrangements. Authentic Hausa décor.',
+  },
+  {
+    slug: 'birthday-decoration-lagos',
+    name: 'Birthday Decoration',
+    shortName: 'Birthday',
+    tagline: 'Make every year count.',
+    icon: 'Cake',
+    description:
+      'From milestone birthdays to intimate surprises, we create luxury birthday setups in Lagos that are personal, stunning, and unforgettable.',
+    longDescription:
+      "A birthday is a milestone worth celebrating beautifully. Whether you're planning a surprise garden party in Lekki, a luxury rooftop celebration in Victoria Island, or an intimate dinner in Ikoyi, Decor Adorne creates birthday setups that feel personal and extraordinary. Balloon installations, statement backdrops, florals, and curated styling — all tailored to the celebrant's personality.",
+    included: [
+      'Statement balloon arch or ceiling installation',
+      'Personalised birthday backdrop or neon sign',
+      'Table styling with florals, candles, and charger plates',
+      'Themed centrepieces and dessert table styling',
+      'Birthday throne or feature chair arrangement',
+      'Day-of setup and full breakdown service',
+    ],
+    faqs: [
+      {
+        question: 'Do you style birthday decorations at home venues in Lagos?',
+        answer:
+          'Yes — home setups are one of our most popular requests. We assess your available space and design a setup that transforms it without damage to the property.',
+      },
+      {
+        question: 'Can you style a surprise birthday party setup in Lagos?',
+        answer:
+          'Absolutely. We coordinate directly with the organiser, arrive ahead of schedule, and have the venue fully styled and ready before the celebrant arrives.',
+      },
+      {
+        question: 'What age milestone birthdays do you specialise in?',
+        answer:
+          'We style everything from 1st birthdays to 50th and beyond. Each package is tailored to the celebrant — the aesthetic, colour palette, and details all reflect who they are.',
+      },
+    ],
+    colorAccent: '#C9A96E',
+    heroImage: '/images/gallery/birthday-1.JPG',
+    metaDescription:
+      'Birthday decoration in Lagos — balloon arches, statement backdrops, throne styling, and florals for milestone celebrations in Victoria Island, Lekki, Ikeja.',
   },
 ];
 

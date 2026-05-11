@@ -30,6 +30,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -88,20 +93,66 @@ h6 {
 
 /* Hero keyframes — da- prefix avoids colliding with Tailwind animate-* */
 @keyframes daFadeSlideIn {
-  from { opacity: 0; transform: translateY(22px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
 }
+
+/* Marquee: 3 copies are rendered, so shifting -33.333% = exactly 1 copy width → seamless loop */
 @keyframes daMarquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-33.333%); }
 }
-.da-fade    { animation: daFadeSlideIn 0.8s ease-out forwards; opacity: 0; }
-.da-marquee { animation: daMarquee 42s linear infinite; }
+
+/* Slow ambient pulse on the gold glow ring */
+@keyframes daGlowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
+}
+
+.da-fade    { animation: daFadeSlideIn 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; opacity: 0; }
+.da-marquee { animation: daMarquee 36s linear infinite; }
 .da-d1      { animation-delay: 0.10s; }
-.da-d2      { animation-delay: 0.20s; }
-.da-d3      { animation-delay: 0.32s; }
-.da-d4      { animation-delay: 0.44s; }
-.da-d5      { animation-delay: 0.56s; }
+.da-d2      { animation-delay: 0.22s; }
+.da-d3      { animation-delay: 0.36s; }
+.da-d4      { animation-delay: 0.50s; }
+.da-d5      { animation-delay: 0.62s; }
+.da-d6      { animation-delay: 0.74s; }
+
+/* ── BackgroundGradientAnimation keyframes ── */
+@keyframes da-first {
+  0%   { transform: rotate(0deg)    translate(-5%, -10%)  rotate(0deg); }
+  100% { transform: rotate(360deg)  translate(-5%, -10%)  rotate(-360deg); }
+}
+@keyframes da-second {
+  0%   { transform: rotate(0deg)    translate(-50%, 25%)  rotate(0deg); }
+  100% { transform: rotate(-360deg) translate(-50%, 25%)  rotate(360deg); }
+}
+@keyframes da-third {
+  0%   { transform: rotate(0deg)    translate(50%, -25%)  rotate(0deg); }
+  100% { transform: rotate(-360deg) translate(50%, -25%)  rotate(360deg); }
+}
+@keyframes da-fourth {
+  0%   { transform: rotate(0deg)    translate(-25%, -50%) rotate(0deg); }
+  100% { transform: rotate(360deg)  translate(-25%, -50%) rotate(-360deg); }
+}
+@keyframes da-fifth {
+  0%   { transform: rotate(0deg)    translate(-50%, 50%)  rotate(0deg); }
+  100% { transform: rotate(360deg)  translate(-50%, 50%)  rotate(-360deg); }
+}
+
+@utility animate-da-first  { animation: da-first  9s  linear infinite; }
+@utility animate-da-second { animation: da-second 11s linear infinite; }
+@utility animate-da-third  { animation: da-third  13s linear infinite; }
+@utility animate-da-fourth { animation: da-fourth 10s linear infinite; }
+@utility animate-da-fifth  { animation: da-fifth  15s linear infinite; }
 
 /* Helper classes */
 .font-display {

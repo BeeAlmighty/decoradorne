@@ -1,21 +1,16 @@
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
-  ArrowRight,
-  MessageCircle,
-  Heart,
-  Star,
-  Sparkles,
-  Moon,
-  Crown,
-  Gift,
-  Sun,
-  Package,
+  ArrowRight, MessageCircle, Heart, Star, Sparkles, Moon, Crown, Gift, Sun, Package, Gem,
 } from 'lucide-react';
 import { buildDefaultWhatsAppUrl } from '@/lib/whatsapp';
 
-// Decor Adorne services replace the generic "tech brand" marquee
+const WA_URL = buildDefaultWhatsAppUrl();
+
+const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+
 const MARQUEE_ITEMS = [
   { name: 'Engagement Decor', icon: Heart },
   { name: 'Kamu Ceremony', icon: Star },
@@ -25,15 +20,21 @@ const MARQUEE_ITEMS = [
   { name: 'Naming Ceremony', icon: Gift },
   { name: 'Luxury Picnic', icon: Sun },
   { name: 'Event Rentals', icon: Package },
+  { name: 'Durbar Decor',  icon: Gem },
+] as const;
+
+/** Soft gold dust — barely perceptible, adds editorial depth */
+const PARTICLES = [
+  { id: 1, left: '14%',  top: '20%', size: 2.5, dur: 22, delay: 0   },
+  { id: 2, left: '80%',  top: '36%', size: 1.5, dur: 28, delay: 4   },
+  { id: 3, left: '55%',  top: '75%', size: 2,   dur: 19, delay: 9   },
+  { id: 4, left: '30%',  top: '58%', size: 1.5, dur: 26, delay: 14  },
 ] as const;
 
 function StatItem({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex flex-col items-center justify-center transition-transform hover:-translate-y-1 cursor-default">
-      <span
-        className="text-xl font-normal text-[#FAF7F4] sm:text-2xl"
-        style={{ fontFamily: 'var(--font-mono)' }}
-      >
+      <span className="text-xl font-normal text-[#FAF7F4] sm:text-2xl" style={{ fontFamily: 'var(--font-mono)' }}>
         {value}
       </span>
       <span className="text-[10px] uppercase tracking-wider text-[#FAF7F4]/40 font-medium sm:text-xs">
@@ -44,36 +45,64 @@ function StatItem({ value, label }: { value: string; label: string }) {
 }
 
 export function GlassmorphismTrustHero() {
-  const waUrl = buildDefaultWhatsAppUrl();
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <div className="relative w-full min-h-screen bg-[#1A1410] text-[#FAF7F4] overflow-hidden flex flex-col">
-      {/* ── Decorative background photo ── */}
-      <div
+
+      {/* ── Background photo — Ken Burns slow zoom-out on mount ── */}
+      <motion.div
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        initial={{ scale: prefersReducedMotion ? 1 : 1.06 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 5, ease: EASE }}
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80')",
           opacity: 0.18,
           maskImage:
             'linear-gradient(180deg, transparent 0%, black 18%, black 72%, transparent 100%)',
           WebkitMaskImage:
             'linear-gradient(180deg, transparent 0%, black 18%, black 72%, transparent 100%)',
         }}
-      />
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </motion.div>
 
-      {/* ── Ambient gold glow ── */}
-      <div
+      {/* ── Ambient gold glow — slow breathing drift (y + scale only, no x to avoid mobile overflow) ── */}
+      <motion.div
         aria-hidden="true"
+        animate={prefersReducedMotion ? undefined : {
+          y: [0, -18, 6, -10, 0],
+          scale: [1, 1.06, 0.97, 1.03, 1],
+        }}
+        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', repeatType: 'mirror' }}
         className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[640px] h-[380px] rounded-full bg-[#C9A96E]/8 blur-[130px] pointer-events-none"
       />
+
+      {/* ── Floating gold dust particles ── */}
+      {!prefersReducedMotion && PARTICLES.map((p) => (
+        <motion.div
+          key={p.id}
+          aria-hidden="true"
+          className="absolute rounded-full bg-[#C9A96E] pointer-events-none"
+          style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: 0 }}
+          animate={{ y: [0, -22, 8, -14, 0], opacity: [0, 0.18, 0.08, 0.15, 0] }}
+          transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      ))}
 
       {/* ── Main content ── */}
       <div className="relative z-10 flex-1 flex flex-col mx-auto w-full max-w-7xl px-5 sm:px-8 pt-32 sm:pt-44 pb-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-start">
 
-          {/* ── Left column ── */}
+          {/* ── Left column — staggered CSS fade-up ── */}
           <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
 
             {/* Eyebrow badge */}
@@ -94,18 +123,15 @@ export function GlassmorphismTrustHero() {
                 fontSize: 'clamp(3.5rem, 7vw, 6.5rem)',
                 lineHeight: 1.0,
                 letterSpacing: '-0.02em',
-                maskImage:
-                  'linear-gradient(180deg, black 0%, black 82%, transparent 100%)',
-                WebkitMaskImage:
-                  'linear-gradient(180deg, black 0%, black 82%, transparent 100%)',
+                maskImage: 'linear-gradient(180deg, black 0%, black 82%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(180deg, black 0%, black 82%, transparent 100%)',
               }}
             >
-              Moments,
+              <span className="sr-only">Lagos luxury event decoration — </span>Moments,
               <br />
               <span
                 style={{
-                  background:
-                    'linear-gradient(135deg, #FAF7F4 0%, #FAF7F4 52%, #C9A96E 100%)',
+                  background: 'linear-gradient(135deg, #FAF7F4 0%, #FAF7F4 52%, #C9A96E 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -130,12 +156,11 @@ export function GlassmorphismTrustHero() {
                 href="#lead-form"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A96E] px-8 py-4 text-sm font-semibold text-[#1A1410] transition-all hover:scale-[1.02] hover:bg-[#DEC48E] active:scale-[0.98]"
               >
-                Plan my event
+                Style my event
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
-
               <a
-                href={waUrl}
+                href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#FAF7F4]/15 bg-[#FAF7F4]/5 px-8 py-4 text-sm font-semibold text-[#FAF7F4] backdrop-blur-sm transition-all hover:bg-[#FAF7F4]/10 hover:border-[#C9A96E]/30"
@@ -146,16 +171,13 @@ export function GlassmorphismTrustHero() {
             </div>
           </div>
 
-          {/* ── Right column ── */}
+          {/* ── Right column — entry with slight slide from right ── */}
           <div className="lg:col-span-5 space-y-5 lg:mt-8">
 
             {/* Stats glass card */}
             <div className="da-fade da-d5 relative overflow-hidden rounded-3xl border border-[#FAF7F4]/10 bg-[#FAF7F4]/5 p-8 backdrop-blur-xl shadow-2xl">
-              {/* Card glow */}
-              <div
-                aria-hidden="true"
-                className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#C9A96E]/6 blur-3xl pointer-events-none"
-              />
+              {/* Card ambient glow */}
+              <div aria-hidden="true" className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#C9A96E]/6 blur-3xl pointer-events-none" />
 
               <div className="relative z-10">
                 {/* Primary stat */}
@@ -164,30 +186,32 @@ export function GlassmorphismTrustHero() {
                     <Heart className="h-6 w-6 text-[#C9A96E]" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <div
-                      className="text-3xl font-normal tracking-tight text-[#FAF7F4]"
-                      style={{ fontFamily: 'var(--font-mono)' }}
-                    >
+                    <div className="text-3xl font-normal tracking-tight text-[#FAF7F4]" style={{ fontFamily: 'var(--font-mono)' }}>
                       500+
                     </div>
                     <div className="text-sm text-[#FAF7F4]/45">Events styled in Lagos</div>
                   </div>
                 </div>
 
-                {/* Happiness bar */}
+                {/* Animated happiness bar */}
                 <div className="space-y-3 mb-8">
                   <div className="flex justify-between text-sm">
                     <span className="text-[#FAF7F4]/45">Client happiness</span>
                     <span className="text-[#C9A96E] font-medium">4.9 / 5.0</span>
                   </div>
                   <div className="h-2 w-full overflow-hidden rounded-full bg-[#FAF7F4]/10">
-                    <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-[#C9A96E] to-[#DEC48E]" />
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: '98%' }}
+                      transition={{ duration: 1.6, delay: prefersReducedMotion ? 0 : 1.0, ease: EASE }}
+                      className="h-full rounded-full bg-gradient-to-r from-[#C9A96E] to-[#DEC48E]"
+                    />
                   </div>
                 </div>
 
                 <div className="h-px w-full bg-[#FAF7F4]/10 mb-6" />
 
-                {/* Mini stat grid — same structure as original */}
+                {/* Mini stat grid */}
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <StatItem value="8+" label="Years" />
                   <div className="w-px bg-[#FAF7F4]/10 mx-auto" />
@@ -214,44 +238,32 @@ export function GlassmorphismTrustHero() {
             </div>
 
             {/* Services marquee card */}
-            <div className="da-fade da-d5 relative overflow-hidden rounded-3xl border border-[#FAF7F4]/10 bg-[#FAF7F4]/5 py-8 backdrop-blur-xl">
+            <div className="da-fade da-d6 relative overflow-hidden rounded-3xl border border-[#FAF7F4]/10 bg-[#FAF7F4]/5 py-8 backdrop-blur-xl">
               <p className="mb-6 px-8 text-[10px] font-medium text-[#FAF7F4]/35 uppercase tracking-[0.2em]">
                 Our specialties
               </p>
-
               <div
                 className="relative flex overflow-hidden"
                 style={{
-                  maskImage:
-                    'linear-gradient(to right, transparent, black 18%, black 82%, transparent)',
-                  WebkitMaskImage:
-                    'linear-gradient(to right, transparent, black 18%, black 82%, transparent)',
+                  maskImage: 'linear-gradient(to right, transparent, black 18%, black 82%, transparent)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent, black 18%, black 82%, transparent)',
                 }}
               >
-                {/* Triple the list so the loop is seamless */}
+                {/* 3 copies → daMarquee shifts by -33.333% = exactly 1 copy → seamless */}
                 <div className="da-marquee flex gap-10 whitespace-nowrap px-4">
-                  {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map(
-                    (item, i) => {
-                      const Icon = item.icon;
-                      return (
-                        <div
-                          key={i}
-                          className="flex items-center gap-2 opacity-40 transition-all hover:opacity-95 hover:scale-105 cursor-default"
-                        >
-                          <Icon
-                            className="h-4 w-4 text-[#C9A96E]"
-                            strokeWidth={1.5}
-                          />
-                          <span className="text-sm font-medium text-[#FAF7F4] tracking-tight">
-                            {item.name}
-                          </span>
-                        </div>
-                      );
-                    },
-                  )}
+                  {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={i} className="flex items-center gap-2 opacity-40 transition-all hover:opacity-95 hover:scale-105 cursor-default">
+                        <Icon className="h-4 w-4 text-[#C9A96E]" strokeWidth={1.5} />
+                        <span className="text-sm font-medium text-[#FAF7F4] tracking-tight">{item.name}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

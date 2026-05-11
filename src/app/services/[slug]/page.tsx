@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { SERVICES } from '@/lib/constants';
+import { SERVICES, SITE_URL } from '@/lib/constants';
 import { ServicePage } from '@/components/services/ServicePage';
-import { generatePageMetadata } from '@/lib/seo';
+import { generatePageMetadata, buildBreadcrumbJsonLd } from '@/lib/seo';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return generatePageMetadata({
     title: `${service.name} in Lagos | Decor Adorne`,
-    description: `${service.description} Serving Lagos with ${service.name.toLowerCase()} packages tailored to your vision. Get a free quote today.`,
+    description: service.metaDescription ?? `${service.description} Based in Lagos. Free quote.`,
     path: `/services/${service.slug}`,
+    image: service.heroImage,
   });
 }
 
@@ -30,5 +32,16 @@ export default async function ServiceSlugPage({ params }: PageProps) {
 
   if (!service) notFound();
 
-  return <ServicePage service={service} />;
+  return (
+    <>
+      <JsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: 'Home', item: SITE_URL },
+          { name: 'Services', item: `${SITE_URL}/services` },
+          { name: `${service.name} in Lagos`, item: `${SITE_URL}/services/${service.slug}` },
+        ])}
+      />
+      <ServicePage service={service} />
+    </>
+  );
 }
