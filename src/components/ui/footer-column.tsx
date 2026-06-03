@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ReactNode } from 'react';
@@ -11,38 +13,43 @@ interface FooterLink {
 interface FooterColumnProps {
   heading: string;
   links: FooterLink[];
+  /** Accent color used for the heading dot, hover state, and underline. */
+  accent?: string;
 }
 
-export function FooterColumn({ heading, links }: FooterColumnProps) {
+export function FooterColumn({ heading, links, accent = '#C9A96E' }: FooterColumnProps) {
   return (
     <div>
-      <p className="text-xs font-medium tracking-[0.18em] uppercase text-[#FAF7F4]/30 mb-5">
+      <p className="flex items-center gap-2 text-xs font-medium tracking-[0.18em] uppercase mb-5" style={{ color: accent }}>
+        <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: accent }} aria-hidden="true" />
         {heading}
       </p>
       <ul className="flex flex-col gap-2.5">
-        {links.map((link) =>
-          link.external ? (
+        {links.map((link) => {
+          const linkClass = 'group inline-flex items-center text-sm text-[#FAF7F4]/55 transition-colors';
+          const onEnter = (e: React.MouseEvent<HTMLElement>) => { e.currentTarget.style.color = accent; };
+          const onLeave = (e: React.MouseEvent<HTMLElement>) => { e.currentTarget.style.color = ''; };
+          return link.external ? (
             <li key={link.href}>
               <a
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#FAF7F4]/55 hover:text-[#C9A96E] transition-colors"
+                className={linkClass}
+                onMouseEnter={onEnter}
+                onMouseLeave={onLeave}
               >
                 {link.label}
               </a>
             </li>
           ) : (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-sm text-[#FAF7F4]/55 hover:text-[#C9A96E] transition-colors"
-              >
+              <Link href={link.href} className={linkClass} onMouseEnter={onEnter} onMouseLeave={onLeave}>
                 {link.label}
               </Link>
             </li>
-          )
-        )}
+          );
+        })}
       </ul>
     </div>
   );
@@ -62,6 +69,13 @@ interface FooterBrandColumnProps {
   socialLinks: SocialLink[];
 }
 
+/** Map social platform → on-brand hover color */
+const SOCIAL_ACCENT: Record<string, string> = {
+  Instagram: '#E2567A',
+  WhatsApp: '#25D366',
+  Facebook: '#4267B2',
+};
+
 export function FooterBrandColumn({
   name,
   description,
@@ -70,10 +84,9 @@ export function FooterBrandColumn({
   socialLinks,
 }: FooterBrandColumnProps) {
   return (
-    <div className="lg:col-span-1">
+    <div className="relative lg:col-span-1">
       <Link href="/" className="group inline-flex items-center gap-3 mb-5" aria-label={name}>
-        {/* Logo — mix-blend-mode:screen dissolves the black JPEG bg into the dark footer */}
-        <div className="relative h-10 w-10 rounded-[10px] overflow-hidden shrink-0 ring-1 ring-[#FAF7F4]/8 group-hover:ring-[#C9A96E]/30 transition-all duration-300">
+        <div className="relative h-10 w-10 rounded-[10px] overflow-hidden shrink-0 ring-1 ring-[#FAF7F4]/8 group-hover:ring-[#A878CD]/40 transition-all duration-300">
           <Image
             src="/images/logo/logo.jpeg"
             alt=""
@@ -82,9 +95,17 @@ export function FooterBrandColumn({
             sizes="40px"
           />
         </div>
-        <span className="font-display text-2xl font-light text-[#FAF7F4] group-hover:text-[#C9A96E] transition-colors leading-none">
+        <span className="font-display text-2xl font-light text-[#FAF7F4] leading-none">
           {name.split(' ')[0]}{' '}
-          <span className="italic text-[#C9A96E] font-medium">
+          <span
+            className="italic font-medium"
+            style={{
+              background: 'linear-gradient(135deg, #DEC48E 0%, #C49EE0 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             {name.split(' ').slice(1).join(' ')}
           </span>
         </span>
@@ -97,30 +118,49 @@ export function FooterBrandColumn({
       <div className="flex flex-col gap-2.5 text-sm text-[#FAF7F4]/55 mb-7">
         <a
           href={`tel:${phone.replace(/\s/g, '')}`}
-          className="flex items-center gap-2.5 hover:text-[#C9A96E] transition-colors"
+          className="flex items-center gap-2.5 transition-colors"
+          onMouseEnter={(e) => { e.currentTarget.style.color = '#D4AF37'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = ''; }}
         >
-          <PhoneIcon />
+          <span style={{ color: '#D4AF37' }}><PhoneIcon /></span>
           {phone}
         </a>
         <span className="flex items-center gap-2.5">
-          <MapPinIcon />
+          <span style={{ color: '#A878CD' }}><MapPinIcon /></span>
           {address}
         </span>
       </div>
 
       <div className="flex items-center gap-3">
-        {socialLinks.map((social) => (
-          <a
-            key={social.href}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.label}
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-[#FAF7F4]/12 bg-[#FAF7F4]/5 text-[#FAF7F4]/50 hover:border-[#C9A96E]/40 hover:text-[#C9A96E] hover:bg-[#C9A96E]/8 transition-all duration-200"
-          >
-            {social.icon}
-          </a>
-        ))}
+        {socialLinks.map((social) => {
+          const hoverColor = SOCIAL_ACCENT[social.label] ?? '#C9A96E';
+          return (
+            <a
+              key={social.href}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-9 h-9 flex items-center justify-center rounded-full border border-[#FAF7F4]/12 bg-[#FAF7F4]/5 text-[#FAF7F4]/55 transition-all duration-200"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#FAF7F4';
+                e.currentTarget.style.backgroundColor = hoverColor;
+                e.currentTarget.style.borderColor = hoverColor;
+                e.currentTarget.style.boxShadow = `0 6px 20px ${hoverColor}55`;
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '';
+                e.currentTarget.style.backgroundColor = '';
+                e.currentTarget.style.borderColor = '';
+                e.currentTarget.style.boxShadow = '';
+                e.currentTarget.style.transform = '';
+              }}
+            >
+              {social.icon}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

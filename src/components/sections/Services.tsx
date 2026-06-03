@@ -1,184 +1,363 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Heart, Star, Sparkles, Moon, Crown,
-  Gift, Sun, Package, Cake, Gem, ArrowRight,
-} from 'lucide-react';
-import { SERVICES } from '@/lib/constants';
-import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
-import type { ReactNode } from 'react';
-
-const ICON_MAP: Record<string, ReactNode> = {
-  Heart:    <Heart    size={20} strokeWidth={1.5} />,
-  Star:     <Star     size={20} strokeWidth={1.5} />,
-  Sparkles: <Sparkles size={20} strokeWidth={1.5} />,
-  Moon:     <Moon     size={20} strokeWidth={1.5} />,
-  Crown:    <Crown    size={20} strokeWidth={1.5} />,
-  Gift:     <Gift     size={20} strokeWidth={1.5} />,
-  Sun:      <Sun      size={20} strokeWidth={1.5} />,
-  Package:  <Package  size={20} strokeWidth={1.5} />,
-  Cake:     <Cake     size={20} strokeWidth={1.5} />,
-  Gem:      <Gem      size={20} strokeWidth={1.5} />,
-};
+import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
+import { SERVICES, type Service } from '@/lib/constants';
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 
+const pad = (n: number) => String(n + 1).padStart(2, '0');
+
+/** First two services that have imagery anchor the editorial spread. */
+const FEATURED = SERVICES.filter((s) => s.heroImage).slice(0, 2);
+
 export function Services() {
   return (
-    <BackgroundGradientAnimation
-      bgStart="#FAF7F4"
-      bgEnd="#F2EDE8"
-      blendingValue="soft-light"
-      size="65%"
-      interactive={false}
-      containerClassName="py-24 sm:py-32"
-    >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+    <section className="relative bg-[#F2EDE8] py-24 sm:py-36 overflow-hidden">
 
-        {/* ── Section header ── */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
-          <div>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-xs font-medium tracking-[0.22em] uppercase text-[#C9A96E] mb-3"
-            >
-              What we do
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
-              className="font-display font-light text-[#1A1410]"
-              style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 1.1 }}
-            >
-              Every celebration,{' '}
-              <em className="italic text-[#C9A96E]">beautifully dressed.</em>
-            </motion.h2>
+      {/* ── Oversized italic watermark — paper-stamp decoration ── */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute select-none font-display italic text-[#C9A96E]/[0.08]"
+        style={{
+          right: '-4rem',
+          bottom: '-3rem',
+          fontSize: 'clamp(14rem, 26vw, 26rem)',
+          lineHeight: 0.85,
+          fontWeight: 300,
+          transform: 'rotate(-6deg)',
+          letterSpacing: '-0.04em',
+        }}
+      >
+        Services
+      </span>
+
+      {/* Top-left soft gold wash */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 600px 400px at 8% 0%, rgba(201,169,110,0.10), transparent 70%)',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8">
+
+        {/* ── HEADER — asymmetric: small mono left, big serif right ── */}
+        <header className="grid grid-cols-12 gap-y-8 gap-x-6 items-end mb-16 sm:mb-24">
+          <div className="col-span-12 lg:col-span-4 order-2 lg:order-1">
+            <p className="font-mono text-[10px] tracking-[0.32em] uppercase text-[#1A1410]/45 mb-4 flex items-center">
+              <span className="inline-block w-6 h-px bg-[#C9A96E] mr-3" aria-hidden="true" />
+              Vol. 01, The Services Index
+            </p>
+            <p className="text-sm text-[#1A1410]/55 leading-relaxed max-w-xs font-display italic">
+              Ten ways we transform a venue, anywhere in Nigeria, into a lantern-lit setting your guests will not stop talking about.
+            </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <h2
+            className="col-span-12 lg:col-span-8 order-1 lg:order-2 font-display font-light text-[#1A1410]"
+            style={{
+              fontSize: 'clamp(2.6rem, 6.4vw, 5.5rem)',
+              lineHeight: 0.94,
+              letterSpacing: '-0.025em',
+            }}
           >
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[#1A1410]/50 hover:text-[#C9A96E] transition-colors"
+            Every celebration,
+            <br />
+            <em
+              className="italic"
+              style={{
+                background:
+                  'linear-gradient(135deg, #C9A96E 0%, #DEC48E 45%, #A8834A 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
             >
-              View all services
-              <ArrowRight size={14} />
-            </Link>
-          </motion.div>
-        </div>
+              lantern-lit by hand.
+            </em>
+          </h2>
+        </header>
 
-        {/* ── Card grid — dark espresso cards on light animated background ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {SERVICES.map((service, i) => (
-            <motion.div
-              key={service.slug}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: i * 0.06, ease: EASE }}
-            >
-              <Link href={`/services/${service.slug}`} className="group block h-full">
-                <motion.article
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.26, ease: EASE }}
-                  className="relative h-full bg-[#1A1410] rounded-2xl p-6 flex flex-col gap-5 overflow-hidden border border-[#C9A96E]/15 hover:border-[#C9A96E]/40 transition-colors duration-300"
-                >
-                  {/* Subtle top-edge shimmer on hover */}
-                  <div
-                    className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C9A96E]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    aria-hidden="true"
-                  />
+        {/* ── FEATURED PAIR — magazine-spread overlap on desktop ── */}
+        {FEATURED.length === 2 && (
+          <div className="grid grid-cols-12 gap-6 lg:gap-0 mb-20 sm:mb-28 relative">
+            {FEATURED.map((service, i) => {
+              const originalIndex = SERVICES.indexOf(service);
+              const layout =
+                i === 0
+                  ? { className: 'col-span-12 lg:col-span-7 z-10', tilt: -1.2, delay: 0 }
+                  : { className: 'col-span-12 lg:col-span-6 lg:col-start-7 lg:-mt-16', tilt: 1.6, delay: 0.18 };
+              return (
+                <FeatureCard
+                  key={service.slug}
+                  service={service}
+                  indexLabel={pad(originalIndex)}
+                  {...layout}
+                />
+              );
+            })}
+          </div>
+        )}
 
-                  {/* Ambient inner glow — bottom right */}
-                  <div
-                    className="absolute bottom-0 right-0 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{
-                      background: `radial-gradient(circle, ${service.colorAccent}18 0%, transparent 70%)`,
-                    }}
-                    aria-hidden="true"
-                  />
+        {/* ── INDEX LIST — typographic table-of-contents spread ── */}
+        <div className="relative">
+          <div className="flex items-end justify-between border-b border-[#1A1410]/15 pb-3">
+            <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#1A1410]/45">
+              The Full Index
+            </span>
+            <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#1A1410]/45">
+              {String(SERVICES.length).padStart(2, '0')} entries
+            </span>
+          </div>
 
-                  {/* Icon badge */}
-                  <div
-                    className="relative w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                    style={{
-                      backgroundColor: `${service.colorAccent}20`,
-                      color: service.colorAccent,
-                    }}
-                  >
-                    {ICON_MAP[service.icon]}
-                  </div>
-
-                  {/* Text */}
-                  <div className="flex-1">
-                    <h3 className="font-sans font-semibold text-[#FAF7F4] text-sm mb-2 group-hover:text-[#C9A96E] transition-colors duration-200 leading-snug">
-                      {service.name}
-                    </h3>
-                    <p className="text-xs text-[#FAF7F4]/45 leading-relaxed line-clamp-3">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* CTA link */}
-                  <span className="relative inline-flex items-center gap-1.5 text-[11px] font-medium text-[#C9A96E]/60 group-hover:text-[#C9A96E] group-hover:gap-2.5 transition-all duration-200">
-                    Learn more
-                    <ArrowRight size={11} />
-                  </span>
-                </motion.article>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* ── Bottom stat strip ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5, ease: EASE }}
-          className="mt-14 pt-10 border-t border-[#1A1410]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
-        >
-          <div className="flex items-center gap-8 sm:gap-10">
-            {[
-              { value: '8+',   label: 'Years in Lagos' },
-              { value: '500+', label: 'Events styled'  },
-              { value: '4.9',  label: 'Client rating'  },
-            ].map((stat, i) => (
-              <div key={stat.label} className="flex flex-col gap-0.5">
-                <span
-                  className="text-2xl font-normal text-[#C9A96E]"
-                  style={{ fontFamily: 'var(--font-mono)' }}
-                >
-                  {stat.value}
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.16em] uppercase text-[#1A1410]/40">
-                  {stat.label}
-                </span>
-              </div>
+          <ol>
+            {SERVICES.map((service, i) => (
+              <IndexRow key={service.slug} service={service} number={pad(i)} />
             ))}
+          </ol>
+        </div>
+
+        {/* ── EDITORIAL SIGN-OFF ── */}
+        <div className="mt-16 sm:mt-24 grid grid-cols-12 gap-6 items-end">
+          <p
+            className="col-span-12 sm:col-span-7 font-display italic font-light text-[#1A1410]/85 leading-tight"
+            style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)' }}
+          >
+            Don&rsquo;t see your celebration?
+            <br />
+            <span
+              style={{
+                background: 'linear-gradient(135deg, #C9A96E 0%, #A8834A 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              We style it anyway.
+            </span>
+          </p>
+          <div className="col-span-12 sm:col-span-5 flex sm:justify-end">
+            <Link
+              href="/#lead-form"
+              className="group inline-flex items-center gap-3 text-sm font-medium tracking-wide text-[#1A1410] border-b border-[#1A1410]/30 hover:border-[#C9A96E] pb-1.5 transition-colors"
+            >
+              Begin a conversation
+              <ArrowUpRight
+                size={16}
+                strokeWidth={1.6}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#C9A96E]"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* Featured Card — large photo panel with tilt and editorial overlay        */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+function FeatureCard({
+  service,
+  indexLabel,
+  className,
+  tilt,
+  delay = 0,
+}: {
+  service: Service;
+  indexLabel: string;
+  className: string;
+  tilt: number;
+  delay?: number;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const lockedTilt = prefersReducedMotion ? 0 : tilt;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 36, rotate: lockedTilt }}
+      whileInView={{ opacity: 1, y: 0, rotate: lockedTilt }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.85, delay, ease: EASE }}
+      className={`relative ${className}`}
+    >
+      <Link href={`/services/${service.slug}`} className="group block">
+        <article className="relative aspect-[4/5] sm:aspect-[5/6] overflow-hidden bg-[#1A1410] rounded-[2px] shadow-[0_30px_80px_-20px_rgba(26,20,16,0.35)]">
+          {service.heroImage && (
+            <Image
+              src={service.heroImage}
+              alt={`${service.name} by Decor Adorne, Arabian-inspired styling in Lagos & across Nigeria`}
+              fill
+              className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          )}
+
+          {/* Editorial dark scrim — heaviest at bottom for legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(180deg, rgba(26,20,16,0.18) 0%, rgba(26,20,16,0) 35%, rgba(26,20,16,0.55) 75%, rgba(26,20,16,0.92) 100%)',
+            }}
+          />
+
+          {/* "FEATURED" pill */}
+          <div className="absolute top-5 left-5 flex items-center gap-2 backdrop-blur-md bg-[#FAF7F4]/12 border border-[#FAF7F4]/22 rounded-full px-3 py-1.5">
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{ background: service.colorAccent }}
+              aria-hidden="true"
+            />
+            <span className="font-mono text-[9px] tracking-[0.25em] uppercase text-[#FAF7F4]/95">
+              Featured · No. {indexLabel}
+            </span>
           </div>
 
-          <Link
-            href="/#lead-form"
-            className="shrink-0 inline-flex items-center gap-2 bg-[#1A1410] text-[#FAF7F4] font-semibold text-sm px-6 py-3 rounded-full hover:bg-[#C9A96E] hover:text-[#1A1410] transition-all duration-300"
-          >
-            Plan my event
-            <ArrowRight size={14} />
-          </Link>
-        </motion.div>
+          {/* Hairline corner brackets — editorial photography mark */}
+          <Bracket position="tl" />
+          <Bracket position="tr" />
+          <Bracket position="br" />
 
-      </div>
-    </BackgroundGradientAnimation>
+          {/* Bottom title block */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+            <p
+              className="font-mono text-[10px] tracking-[0.3em] uppercase mb-3"
+              style={{ color: service.colorAccent }}
+            >
+              {service.shortName}
+            </p>
+            <h3
+              className="font-display font-light text-[#FAF7F4] leading-[0.96] mb-3"
+              style={{
+                fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              <em className="italic font-light">{service.tagline.replace(/\.$/, '')}</em>
+            </h3>
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-xs sm:text-sm text-[#FAF7F4]/60 leading-relaxed line-clamp-2 max-w-sm">
+                {service.description}
+              </p>
+              <span className="shrink-0 w-9 h-9 rounded-full border border-[#FAF7F4]/25 flex items-center justify-center text-[#FAF7F4]/85 group-hover:bg-[#FAF7F4] group-hover:text-[#1A1410] group-hover:border-[#FAF7F4] transition-all duration-300">
+                <ArrowUpRight size={15} strokeWidth={1.6} />
+              </span>
+            </div>
+          </div>
+        </article>
+      </Link>
+    </motion.div>
+  );
+}
+
+function Bracket({ position }: { position: 'tl' | 'tr' | 'bl' | 'br' }) {
+  const positions = {
+    tl: 'top-3 left-3 border-t border-l',
+    tr: 'top-3 right-3 border-t border-r',
+    bl: 'bottom-3 left-3 border-b border-l',
+    br: 'bottom-3 right-3 border-b border-r',
+  } as const;
+  return (
+    <span
+      aria-hidden="true"
+      className={`absolute w-5 h-5 border-[#FAF7F4]/40 pointer-events-none ${positions[position]}`}
+    />
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* Index Row — a single typographic line in the magazine TOC                 */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+function IndexRow({ service, number }: { service: Service; number: string }) {
+  const [hovered, setHovered] = useState(false);
+
+  // Italicize the trailing word for editorial flair (e.g. "Henna *Party*").
+  const parts = service.shortName.split(' ');
+  const head = parts.slice(0, -1).join(' ');
+  const tail = parts.slice(-1)[0];
+
+  return (
+    <li className="relative border-b border-[#1A1410]/12 last:border-b-0">
+      <Link
+        href={`/services/${service.slug}`}
+        className="group relative grid grid-cols-12 items-center gap-3 sm:gap-6 py-5 sm:py-7"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {/* Hover sweep — soft accent tint from the left */}
+        <motion.span
+          aria-hidden="true"
+          initial={false}
+          animate={{ scaleX: hovered ? 1 : 0, opacity: hovered ? 1 : 0 }}
+          transition={{ duration: 0.5, ease: EASE }}
+          className="absolute inset-y-0 left-0 right-0 origin-left pointer-events-none"
+          style={{
+            background: `linear-gradient(90deg, ${service.colorAccent}14 0%, transparent 70%)`,
+          }}
+        />
+
+        {/* Number */}
+        <span className="col-span-2 sm:col-span-1 font-mono text-xs sm:text-sm text-[#1A1410]/40 tabular-nums tracking-wider relative">
+          {number}
+        </span>
+
+        {/* Swatch + name */}
+        <div className="col-span-7 sm:col-span-7 lg:col-span-5 flex items-center gap-3 sm:gap-5 relative">
+          <span
+            className="relative shrink-0 transition-transform duration-300"
+            style={{ transform: hovered ? 'scale(1.4)' : 'scale(1)' }}
+          >
+            <span
+              className="block w-2.5 h-2.5 rounded-full transition-shadow duration-300"
+              style={{
+                background: service.colorAccent,
+                boxShadow: hovered ? `0 0 0 5px ${service.colorAccent}25` : 'none',
+              }}
+            />
+          </span>
+          <h3
+            className="font-display font-light text-[#1A1410] leading-none transition-transform duration-500 ease-out group-hover:translate-x-2"
+            style={{
+              fontSize: 'clamp(1.6rem, 3.2vw, 2.6rem)',
+              letterSpacing: '-0.018em',
+            }}
+          >
+            {head ? (
+              <>
+                {head}{' '}
+                <em className="italic font-normal" style={{ color: service.colorAccent }}>
+                  {tail}
+                </em>
+              </>
+            ) : (
+              <em className="italic font-normal" style={{ color: service.colorAccent }}>
+                {tail}
+              </em>
+            )}
+          </h3>
+        </div>
+
+        {/* Tagline — desktop only */}
+        <p className="hidden lg:block lg:col-span-5 text-sm font-display italic text-[#1A1410]/55 leading-snug relative">
+          {service.tagline}
+        </p>
+
+        {/* Arrow */}
+        <span className="col-span-3 sm:col-span-4 lg:col-span-1 flex justify-end text-[#1A1410]/30 transition-all duration-300 group-hover:text-[#1A1410] group-hover:translate-x-1 relative">
+          <ArrowUpRight size={20} strokeWidth={1.5} />
+        </span>
+      </Link>
+    </li>
   );
 }

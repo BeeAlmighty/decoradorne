@@ -8,9 +8,9 @@ import Link from 'next/link';
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 
 const PARTICLES = [
-  { id: 1, left: '8%',  top: '28%', size: 2,   dur: 24, delay: 0  },
-  { id: 2, left: '82%', top: '22%', size: 1.5, dur: 32, delay: 6  },
-  { id: 3, left: '58%', top: '68%', size: 2,   dur: 21, delay: 11 },
+  { id: 1, left: '8%',  top: '28%', size: 2,   dur: 24, delay: 0,  color: '#C9A96E' },
+  { id: 2, left: '82%', top: '22%', size: 1.5, dur: 32, delay: 6,  color: '#A878CD' },
+  { id: 3, left: '58%', top: '68%', size: 2,   dur: 21, delay: 11, color: '#E2567A' },
 ] as const;
 
 interface CtaLink {
@@ -88,17 +88,29 @@ export function PageHero({
             : { y: [0, -14, 5, -8, 0], scale: [1, 1.04, 0.97, 1.02, 1] }
         }
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', repeatType: 'mirror' }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[560px] h-[300px] rounded-full bg-[#C9A96E]/6 blur-[120px] pointer-events-none"
+        className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[280px] rounded-full bg-[#C9A96E]/8 blur-[110px] pointer-events-none"
       />
 
-      {/* ── Gold dust particles ── */}
+      {/* ── Ambient mauve glow ── */}
+      <motion.div
+        aria-hidden="true"
+        animate={
+          prefersReducedMotion
+            ? undefined
+            : { y: [0, 12, -6, 9, 0], scale: [1, 0.96, 1.04, 0.98, 1] }
+        }
+        transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut', repeatType: 'mirror' }}
+        className="absolute top-1/3 right-[15%] w-[380px] h-[220px] rounded-full bg-[#A878CD]/7 blur-[100px] pointer-events-none"
+      />
+
+      {/* ── Dust particles ── */}
       {!prefersReducedMotion &&
         PARTICLES.map((p) => (
           <motion.div
             key={p.id}
             aria-hidden="true"
-            className="absolute rounded-full bg-[#C9A96E] pointer-events-none"
-            style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: 0 }}
+            className="absolute rounded-full pointer-events-none"
+            style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: 0, backgroundColor: p.color }}
             animate={{ y: [0, -18, 6, -12, 0], opacity: [0, 0.15, 0.06, 0.12, 0] }}
             transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -131,7 +143,7 @@ export function PageHero({
             className="italic"
             style={{
               background:
-                'linear-gradient(135deg, #FAF7F4 0%, #FAF7F4 50%, #C9A96E 100%)',
+                'linear-gradient(135deg, #FAF7F4 0%, #DEC48E 45%, #A878CD 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -165,21 +177,32 @@ export function PageHero({
         )}
 
         {/* Decorative rule — editorial spacer */}
-        <div className="da-fade da-d5 mt-12 sm:mt-16 h-px w-full max-w-2xl bg-gradient-to-r from-[#C9A96E]/35 via-[#C9A96E]/10 to-transparent" />
+        <div className="da-fade da-d5 mt-12 sm:mt-16 h-px w-full max-w-2xl bg-gradient-to-r from-[#C9A96E]/40 via-[#A878CD]/20 to-transparent" />
       </div>
     </div>
   );
 }
 
 function CtaButton({ link, variant }: { link: CtaLink; variant: 'primary' | 'ghost' }) {
-  const baseClass =
-    variant === 'primary'
-      ? 'inline-flex items-center gap-2 bg-[#C9A96E] text-[#1A1410] text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-[#DEC48E] transition-colors'
-      : 'inline-flex items-center gap-2 border border-[#FAF7F4]/15 bg-[#FAF7F4]/5 text-[#FAF7F4] text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-[#FAF7F4]/10 hover:border-[#C9A96E]/30 transition-all backdrop-blur-sm';
+  const ghostClass =
+    'inline-flex items-center gap-2 border border-[#FAF7F4]/15 bg-[#FAF7F4]/5 text-[#FAF7F4] text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-[#FAF7F4]/10 hover:border-[#A878CD]/30 transition-all backdrop-blur-sm';
+  const primaryStyle = {
+    background: 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)',
+    boxShadow: '0 4px 20px rgba(168,120,205,0.30)',
+  };
+  const baseClass = variant === 'primary'
+    ? 'inline-flex items-center gap-2 text-[#FAF7F4] text-sm font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-[1.02]'
+    : ghostClass;
 
   if (link.external) {
     return (
-      <a href={link.href} target="_blank" rel="noopener noreferrer" className={baseClass}>
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={baseClass}
+        style={variant === 'primary' ? primaryStyle : undefined}
+      >
         {link.label}
         <ArrowRight className="w-4 h-4" />
       </a>
@@ -187,7 +210,7 @@ function CtaButton({ link, variant }: { link: CtaLink; variant: 'primary' | 'gho
   }
 
   return (
-    <Link href={link.href} className={baseClass}>
+    <Link href={link.href} className={baseClass} style={variant === 'primary' ? primaryStyle : undefined}>
       {link.label}
       <ArrowRight className="w-4 h-4" />
     </Link>

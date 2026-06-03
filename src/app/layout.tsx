@@ -4,6 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppFAB } from '@/components/layout/WhatsAppFAB';
+import { NavigationProgress } from '@/components/layout/NavigationProgress';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { buildLocalBusinessJsonLd } from '@/lib/seo';
 import { BUSINESS_NAME, SITE_URL } from '@/lib/constants';
@@ -32,16 +33,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+    default: `${BUSINESS_NAME}: Arabian-Inspired Luxury Event Decor`,
     template: `%s | ${BUSINESS_NAME}`,
   },
   description:
-    'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
+    'Arabian-inspired luxury event decor: Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Picnic, Birthday & Rentals. Lagos studio. Across Nigeria.',
   metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+    title: `${BUSINESS_NAME}: Arabian-Inspired Luxury Event Decor`,
     description:
-      'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
+      'Arabian-inspired luxury event decor: Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Picnic, Birthday & Rentals. Lagos studio. Across Nigeria.',
     siteName: BUSINESS_NAME,
     locale: 'en_NG',
     type: 'website',
@@ -51,23 +52,20 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+        alt: `${BUSINESS_NAME}: Arabian-Inspired Luxury Event Decor`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${BUSINESS_NAME} — Lagos Luxury Event Decoration`,
+    title: `${BUSINESS_NAME}: Arabian-Inspired Luxury Event Decor`,
     description:
-      'Lagos luxury event decoration and rentals — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic setups, and Rentals.',
+      'Arabian-inspired luxury event decor: Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Picnic, Birthday & Rentals. Lagos studio. Across Nigeria.',
     images: ['/opengraph-image'],
     site: '@decor_adorne',
   },
-  icons: {
-    icon: '/icon.jpg',
-    apple: [{ url: '/apple-icon', type: 'image/png', sizes: '180x180' }],
-    shortcut: '/icon.jpg',
-  },
+  // Icons are provided by the file-based metadata conventions in this folder:
+  // favicon.ico, icon.png, and apple-icon.tsx. Next.js injects the <link> tags.
 };
 
 export default function RootLayout({
@@ -85,6 +83,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body className="flex min-h-screen flex-col antialiased" suppressHydrationWarning>
+        <NavigationProgress />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -115,7 +115,7 @@ export function Navbar() {
             <Link
               href="/"
               className="flex items-center gap-2.5 shrink-0 group"
-              aria-label={`${BUSINESS_NAME} — home`}
+              aria-label={`${BUSINESS_NAME} home`}
             >
               <div className={`relative h-9 w-9 rounded-[10px] overflow-hidden bg-[#1A1410] shrink-0 ring-1 ${t.logoRing} group-hover:ring-[#C9A96E]/50 transition-all duration-300 shadow-[0_2px_10px_rgba(26,20,16,0.40)]`}>
                 <Image
@@ -133,7 +133,7 @@ export function Navbar() {
                   <span className="font-medium italic text-[#C9A96E]">Adorne</span>
                 </span>
                 <span className={`hidden sm:block text-[8px] font-medium tracking-[0.24em] uppercase leading-none mt-[5px] transition-colors duration-300 ${t.wordmarkSub}`}>
-                  Lagos · Since {FOUNDED_YEAR}
+                  Since {FOUNDED_YEAR} · Nationwide
                 </span>
               </div>
             </Link>
@@ -174,7 +174,7 @@ export function Navbar() {
                         <div className="flex-1 bg-[#FAF7F4]">
                           <div className="px-5 py-3.5 border-b border-[#E8E0D8]">
                             <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-[#C9A96E]">Our Services</p>
-                            <p className="text-[#1A1410]/45 text-[11px] mt-0.5">Lagos event decoration & styling</p>
+                            <p className="text-[#1A1410]/45 text-[11px] mt-0.5">Arabian-inspired event styling</p>
                           </div>
                           <div className="grid grid-cols-2 gap-0 p-2 pt-2.5">
                             {SERVICES.map((service) => (
@@ -209,7 +209,7 @@ export function Navbar() {
                               &ldquo;{BUSINESS_TAGLINE}&rdquo;
                             </p>
                             <p className="text-[#C9A96E]/60 text-[10px] tracking-[0.18em] uppercase mt-3">
-                              Lagos · Since {FOUNDED_YEAR}
+                              Since {FOUNDED_YEAR} · Nationwide
                             </p>
                           </div>
                           <a
@@ -252,7 +252,8 @@ export function Navbar() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 bg-[#C9A96E] text-[#FAF7F4] text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#A8834A] hover:shadow-[0_4px_20px_rgba(201,169,110,0.40)] transition-all duration-300 shrink-0"
+              className="hidden md:inline-flex items-center gap-2 text-[#FAF7F4] text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 shrink-0 hover:scale-[1.03]"
+              style={{ background: 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)', boxShadow: '0 4px 16px rgba(168,120,205,0.30)' }}
             >
               Style my event <ArrowRight size={14} />
             </a>
@@ -395,7 +396,8 @@ export function Navbar() {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#C9A96E] text-[#1A1410] font-semibold px-6 py-3.5 rounded-full text-sm hover:bg-[#DEC48E] transition-colors w-full"
+                  className="flex items-center justify-center gap-2 text-[#FAF7F4] font-semibold px-6 py-3.5 rounded-full text-sm w-full"
+                  style={{ background: 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)' }}
                 >
                   Style my event <ArrowRight size={15} />
                 </motion.a>
@@ -405,7 +407,7 @@ export function Navbar() {
                   transition={{ delay: 0.32 }}
                   className="text-center text-[9px] font-medium tracking-[0.25em] uppercase text-[#FAF7F4]/25 mt-4"
                 >
-                  Lagos · Nigeria · Since {FOUNDED_YEAR}
+                  Since {FOUNDED_YEAR} · Lagos · Nationwide
                 </motion.p>
               </div>
             </motion.aside>

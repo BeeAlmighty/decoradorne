@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og';
+import { LOGO_LOCKUP_CREAM, LOGO_LOCKUP_RATIO } from '@/lib/logo-data';
 
-export const alt = 'Decor Adorne — Lagos Luxury Event Decoration';
+export const alt = 'Decor Adorne: Arabian-Inspired Luxury Event Decor';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -9,6 +10,9 @@ const STATS = [
   { v: '8+',   l: 'Years'  },
   { v: '4.9/5', l: 'Rating' },
 ];
+
+const LOCKUP_W = 500;
+const LOCKUP_H = Math.round(LOCKUP_W / LOGO_LOCKUP_RATIO);
 
 export default function Image() {
   return new ImageResponse(
@@ -75,30 +79,17 @@ export default function Image() {
       >
         {/* Eyebrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          {/* D monogram badge */}
+          {/* Gold diamond marker */}
           <div
             style={{
-              width: 44,
-              height: 44,
-              borderRadius: 10,
-              border: '1.5px solid rgba(201,169,110,0.45)',
-              background: 'rgba(201,169,110,0.07)',
+              width: 14,
+              height: 14,
+              transform: 'rotate(45deg)',
+              border: '1.5px solid rgba(201,169,110,0.55)',
+              background: 'rgba(201,169,110,0.10)',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
             }}
-          >
-            <span
-              style={{
-                color: '#C9A96E',
-                fontSize: 24,
-                fontFamily: 'Georgia, serif',
-                fontStyle: 'italic',
-              }}
-            >
-              D
-            </span>
-          </div>
+          />
           <div
             style={{
               width: 1,
@@ -117,54 +108,14 @@ export default function Image() {
               fontWeight: 500,
             }}
           >
-            Lagos · Luxury Event Decoration
+            Arabian-Inspired · Across Nigeria
           </span>
         </div>
 
-        {/* Wordmark + tagline */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 0,
-              lineHeight: 0.92,
-              letterSpacing: '-0.025em',
-            }}
-          >
-            <span
-              style={{
-                fontSize: 100,
-                fontFamily: 'Georgia, "Times New Roman", serif',
-                fontWeight: 300,
-                color: '#FAF7F4',
-              }}
-            >
-              Decor
-            </span>
-            <span
-              style={{
-                fontSize: 100,
-                fontFamily: 'Georgia, "Times New Roman", serif',
-                fontWeight: 400,
-                fontStyle: 'italic',
-                color: '#C9A96E',
-              }}
-            >
-              Adorne.
-            </span>
-          </div>
-          <span
-            style={{
-              fontSize: 24,
-              fontFamily: 'Georgia, serif',
-              fontStyle: 'italic',
-              color: 'rgba(250,247,244,0.42)',
-              letterSpacing: '0.01em',
-            }}
-          >
-            Moments, beautifully adorned.
-          </span>
+        {/* Real Decor Adorné logo lockup */}
+        <div style={{ display: 'flex' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={LOGO_LOCKUP_CREAM} width={LOCKUP_W} height={LOCKUP_H} alt="Decor Adorne logo" />
         </div>
 
         {/* Stats row + URL */}

@@ -32,7 +32,7 @@ export function generatePageMetadata({
       url: image,
       width: 1200,
       height: 630,
-      alt: `${BUSINESS_NAME} — Lagos luxury event decoration`,
+      alt: `${BUSINESS_NAME}: Arabian-inspired luxury event decor`,
     },
   ];
 
@@ -78,17 +78,21 @@ export function generatePageMetadata({
   };
 }
 
-// Shared area served — used in both LocalBusiness and Service schemas
+// Shared area served — used in both LocalBusiness and Service schemas.
+// Lagos is the studio's home; nationwide coverage reflects actual service area.
 const AREA_SERVED = [
+  { '@type': 'Country', name: 'Nigeria' },
   { '@type': 'City', name: 'Lagos' },
+  { '@type': 'City', name: 'Abuja' },
+  { '@type': 'City', name: 'Kano' },
+  { '@type': 'City', name: 'Kaduna' },
+  { '@type': 'City', name: 'Sokoto' },
+  { '@type': 'City', name: 'Ibadan' },
+  { '@type': 'City', name: 'Port Harcourt' },
   { '@type': 'AdministrativeArea', name: 'Victoria Island' },
   { '@type': 'AdministrativeArea', name: 'Lekki' },
   { '@type': 'AdministrativeArea', name: 'Ikoyi' },
   { '@type': 'AdministrativeArea', name: 'Ikeja' },
-  { '@type': 'AdministrativeArea', name: 'Ajah' },
-  { '@type': 'AdministrativeArea', name: 'Surulere' },
-  { '@type': 'AdministrativeArea', name: 'Lagos Island' },
-  { '@type': 'AdministrativeArea', name: 'Mainland Lagos' },
 ];
 
 export function buildLocalBusinessJsonLd() {
@@ -98,7 +102,7 @@ export function buildLocalBusinessJsonLd() {
     '@id': `${SITE_URL}/#business`,
     name: BUSINESS_NAME,
     description:
-      'Lagos luxury event decoration and rentals. Specialists in Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Picnic, and Rental decor.',
+      'Arabian-inspired luxury event decor and rentals. Specialists in Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Picnic, and Birthday styling. Lagos studio, serving Nigeria nationwide.',
     url: SITE_URL,
     telephone: '+2348103349288',
     email: 'hello@decoradorne.com',
@@ -135,7 +139,7 @@ export function buildLocalBusinessJsonLd() {
     priceRange: '₦₦₦',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Event Decoration Services Lagos',
+      name: 'Arabian-Inspired Luxury Event Decoration Services',
       itemListElement: [
         { '@type': 'Offer', url: `${SITE_URL}/services/engagement-decor-lagos`, itemOffered: { '@type': 'Service', name: 'Engagement Decoration Lagos' } },
         { '@type': 'Offer', url: `${SITE_URL}/services/kamu-decoration-lagos`, itemOffered: { '@type': 'Service', name: 'Kamu Ceremony Decoration Lagos' } },

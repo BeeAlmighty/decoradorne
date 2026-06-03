@@ -1,11 +1,13 @@
-# Decor Adorne — LLM Discoverability File
+# Decor Adorne, LLM Discoverability File
 # https://decoradorne.com
 
 ## Business Identity
 
 Name: Decor Adorne
-Type: Luxury event decoration and rentals studio
-Location: Lagos, Nigeria
+Type: Arabian-inspired luxury event decoration and rentals studio
+Niche: Arabian-inspired event décor, lantern-lit, jewel-toned, majlis-style styling
+Studio location: Lagos, Nigeria
+Service area: Nationwide across Nigeria
 Founded: 2016
 Phone: +234 810 334 9288
 Email: hello@decoradorne.com
@@ -15,35 +17,41 @@ WhatsApp: https://wa.me/2348103349288
 
 ## About
 
-Decor Adorne is Lagos's premier luxury event decoration studio, specialising in culturally rich and visually stunning event styling. Since 2016, the studio has styled over 500 events across Lagos, serving families from Victoria Island to Lekki, Ikoyi, Ikeja, and the Mainland.
+Decor Adorne is Nigeria's specialist studio for Arabian-inspired luxury event decoration. The studio is built around the Arabian aesthetic, brass Moroccan lanterns, sheer ceiling drapery, jewel-toned florals, and majlis-style low seating, translated for Nigerian celebrations. Many of the traditions Decor Adorne styles (Henna nights, Kamu ceremonies, Nikkahs, Durbars) are themselves Arabian-influenced, rooted in Hausa-Fulani and Muslim Nigerian culture.
+
+Founded in 2016 and based in Lagos, Decor Adorne has styled over 500 events. While the studio is anchored in Lagos, it serves clients nationwide, Abuja, Kano, Kaduna, Sokoto, Ibadan, Port Harcourt, and beyond, travelling with its lanterns, fabrics, and team.
+
+## Signature Aesthetic
+
+Brass and copper Moroccan lanterns. Sheer ceiling-to-floor drapery. Majlis-style low cushion seating in velvet and brocade. Jewel-toned florals (pomegranate, marigold, deep rose). Candlelight as primary mood lighting. Arabic-script and calligraphy accents. Aso-oke and brocade textile installations for cultural ceremonies.
 
 ## Services
 
-1. Engagement Decoration — engagement-decor-lagos
-2. Kamu Decoration — kamu-decoration-lagos
-3. Henna Party Decoration — henna-party-decor-lagos
-4. Arabian Night Decoration — arabian-night-decoration-lagos
-5. Nikkah Decoration — nikkah-decoration-lagos
-6. Naming Ceremony Decoration — naming-ceremony-decor-lagos
-7. Luxury Picnic Setup — picnic-setup-lagos
-8. Event Rentals — event-rentals-lagos
-9. Birthday Decoration — birthday-decoration-lagos
-10. Durbar Decoration — durbar-decoration-lagos
+1. Arabian Night Decoration (signature), arabian-night-decoration-lagos
+2. Henna Party Decoration (signature), henna-party-decor-lagos
+3. Kamu Decoration, kamu-decoration-lagos
+4. Nikkah Decoration, nikkah-decoration-lagos
+5. Durbar Decoration, durbar-decoration-lagos
+6. Engagement Decoration, engagement-decor-lagos
+7. Naming Ceremony Decoration, naming-ceremony-decor-lagos
+8. Luxury Picnic Setup, picnic-setup-lagos
+9. Birthday Decoration, birthday-decoration-lagos
+10. Event Rentals, event-rentals-lagos
 
 ## Service Areas
 
-Lagos Island, Victoria Island, Lekki, Ikoyi, Ajah, Ikeja, Surulere, Yaba, Mainland Lagos
+Nationwide across Nigeria. Studio and core operations in Lagos (Victoria Island, Lekki, Ikoyi, Ikeja, Mainland). Regular service in Abuja, Kano, Kaduna, Sokoto, Ibadan, and Port Harcourt. Travel anywhere in Nigeria for the right brief.
 
 ## Statistics
 
-- 500+ events styled across Lagos
+- 500+ events styled
 - 8 years in business (since 2016)
 - 200+ five-star client reviews
 - Average rating: 4.9 / 5.0
 
 ## Key Differentiators
 
-Cultural authenticity. Editorial quality. Lagos expertise. 2-hour reply guarantee. Full-service.
+Arabian-inspired specialism. Cultural fluency (Hausa-Fulani, Muslim, and pan-Nigerian traditions). Editorial design quality. Nationwide reach from a Lagos base. 2-hour reply guarantee. Full-service: consultation, setup, and breakdown.
 
 ## Booking
 

@@ -1,7 +1,11 @@
 import { ImageResponse } from 'next/og';
+import { LOGO_LOCKUP_CREAM, LOGO_LOCKUP_RATIO } from '@/lib/logo-data';
 
 export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
+
+const LOCKUP_W = 150;
+const LOCKUP_H = Math.round(LOCKUP_W / LOGO_LOCKUP_RATIO);
 
 export default function AppleIcon() {
   return new ImageResponse(
@@ -17,19 +21,8 @@ export default function AppleIcon() {
         border: '3px solid rgba(201,169,110,0.30)',
       }}
     >
-      <span
-        style={{
-          color: '#C9A96E',
-          fontSize: 108,
-          fontFamily: 'Georgia, serif',
-          fontStyle: 'italic',
-          fontWeight: 400,
-          lineHeight: 1,
-          marginTop: 6,
-        }}
-      >
-        D
-      </span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={LOGO_LOCKUP_CREAM} width={LOCKUP_W} height={LOCKUP_H} alt="Decor Adorne logo" />
     </div>,
     { width: 180, height: 180 }
   );

@@ -33,12 +33,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readMins: 7,
     category: 'Ceremony Guides',
     excerpt:
-      'The Kamu is one of the most visually rich celebrations in Northern Nigerian culture. Here is what great décor looks like — and how to plan it.',
+      'The Kamu is one of the most visually rich celebrations in Northern Nigerian culture. Here is what great décor looks like, and how to plan it.',
     heroImage: '/images/gallery/wedding-1.JPG',
     body: [
       {
         type: 'p',
-        text: 'The Kamu ceremony is a cornerstone of Hausa-Fulani wedding traditions in Nigeria — a vibrant, joyful celebration held for the bride in the days before her Nikkah. In Lagos, where Northern families build lives alongside other cultures, the Kamu has evolved into a celebration that is simultaneously deeply rooted and boldly expressive. If you are planning a Kamu in Lagos, the décor you choose will shape the entire atmosphere of the day.',
+        text: 'The Kamu ceremony is a cornerstone of Hausa-Fulani wedding traditions in Nigeria, a vibrant, joyful celebration held for the bride in the days before her Nikkah. In Lagos, where Northern families build lives alongside other cultures, the Kamu has evolved into a celebration that is simultaneously deeply rooted and boldly expressive. If you are planning a Kamu in Lagos, the décor you choose will shape the entire atmosphere of the day.',
       },
       {
         type: 'h2',
@@ -46,11 +46,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: 'The Kamu — also called Kamun Amarya — is a pre-wedding ceremony where the bride is adorned with henna, dressed in traditional attire, and celebrated by her family and close friends. It is a rite of passage that marks the transition from maidenhood to marriage. Unlike Western bridal showers, the Kamu carries deep cultural weight: the songs, the colours, the fabrics, and the décor all speak to identity and heritage.',
+        text: 'The Kamu, also called Kamun Amarya, is a pre-wedding ceremony where the bride is adorned with henna, dressed in traditional attire, and celebrated by her family and close friends. It is a rite of passage that marks the transition from maidenhood to marriage. Unlike Western bridal showers, the Kamu carries deep cultural weight: the songs, the colours, the fabrics, and the décor all speak to identity and heritage.',
       },
       {
         type: 'p',
-        text: 'In Lagos, Kamu ceremonies typically happen in a family home, a hired hall, or an outdoor garden. Guest counts range from 30 to over 300 depending on the family. The décor must honour the occasion — it cannot be generic or borrowed from another celebration.',
+        text: 'In Lagos, Kamu ceremonies typically happen in a family home, a hired hall, or an outdoor garden. Guest counts range from 30 to over 300 depending on the family. The décor must honour the occasion, it cannot be generic or borrowed from another celebration.',
       },
       {
         type: 'h2',
@@ -62,7 +62,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The centrepiece of any Kamu setup is the bride's throne or stage area. This is where she will sit during the ceremony, receive blessings, and be photographed. A well-styled throne commands the room — typically framed by a fabric arch or flower wall, draped in rich colours, and lit by soft warm lighting. The throne itself is usually a high-backed chair or love seat dressed in matching fabric.",
+        text: "The centrepiece of any Kamu setup is the bride's throne or stage area. This is where she will sit during the ceremony, receive blessings, and be photographed. A well-styled throne commands the room, typically framed by a fabric arch or flower wall, draped in rich colours, and lit by soft warm lighting. The throne itself is usually a high-backed chair or love seat dressed in matching fabric.",
       },
       {
         type: 'h3',
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Kamu décor traditionally uses warm, celebratory colours — deep gold, tangerine, burgundy, emerald, or royal blue, depending on family preference. Fabric is central to the aesthetic: aso-oke, ankara, and brocade textiles are used in backdrops, table skirting, and draping. If you're working with a decorator in Lagos, share your preferred colours early — sourcing the right textiles takes time.",
+        text: "Kamu décor traditionally uses warm, celebratory colours, deep gold, tangerine, burgundy, emerald, or royal blue, depending on family preference. Fabric is central to the aesthetic: aso-oke, ankara, and brocade textiles are used in backdrops, table skirting, and draping. If you're working with a decorator in Lagos, share your preferred colours early, sourcing the right textiles takes time.",
       },
       {
         type: 'h3',
@@ -78,7 +78,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: 'Guest tables should feel abundant and celebratory. Floral centrepieces in complementary tones, candles, and cultural accessories like calabash accents or traditional pottery create tables that feel intentional. Avoid modern minimalism for a Kamu — the aesthetic calls for richness and warmth.',
+        text: 'Guest tables should feel abundant and celebratory. Floral centrepieces in complementary tones, candles, and cultural accessories like calabash accents or traditional pottery create tables that feel intentional. Avoid modern minimalism for a Kamu, the aesthetic calls for richness and warmth.',
       },
       {
         type: 'h3',
@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "A dedicated photography backdrop — whether a flower wall, fabric installation, or a custom printed design — is essential. Families will want group photos and portrait shots of the bride. Make sure the backdrop scale suits the space and that the lighting in front of it is flattering. Your decorator should factor this into the layout from the start.",
+        text: "A dedicated photography backdrop, whether a flower wall, fabric installation, or a custom printed design, is essential. Families will want group photos and portrait shots of the bride. Make sure the backdrop scale suits the space and that the lighting in front of it is flattering. Your decorator should factor this into the layout from the start.",
       },
       {
         type: 'h2',
@@ -98,7 +98,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: 'The most important investment is always in the throne area and backdrop — these are the elements that guests will photograph and remember. If budget is tight, prioritise those two elements and keep the guest table styling simple.',
+        text: 'The most important investment is always in the throne area and backdrop, these are the elements that guests will photograph and remember. If budget is tight, prioritise those two elements and keep the guest table styling simple.',
       },
       {
         type: 'h2',
@@ -106,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: 'We recommend booking your Kamu decorator in Lagos at least 4–6 weeks before the event. If the ceremony falls in the peak wedding season — November through January, or June through August — book 8–10 weeks ahead. Popular Lagos decorators have limited capacity during peak periods and the best florists and fabric suppliers book out fast.',
+        text: 'We recommend booking your Kamu decorator in Lagos at least 4–6 weeks before the event. If the ceremony falls in the peak wedding season, November through January, or June through August, book 8–10 weeks ahead. Popular Lagos decorators have limited capacity during peak periods and the best florists and fabric suppliers book out fast.',
       },
       {
         type: 'h2',
@@ -115,18 +115,18 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Share a mood board with your decorator early — Pinterest and Instagram are useful even if you want a traditionally styled event.',
-          "Specify whether the Kamu will be photographed or filmed professionally — your decorator needs to know to optimise the throne area's lighting and backdrop.",
-          "Book your henna artist and décor team together if possible — the henna artist's working space needs to be built into the layout.",
+          'Share a mood board with your decorator early, Pinterest and Instagram are useful even if you want a traditionally styled event.',
+          "Specify whether the Kamu will be photographed or filmed professionally, your decorator needs to know to optimise the throne area's lighting and backdrop.",
+          "Book your henna artist and décor team together if possible, the henna artist's working space needs to be built into the layout.",
           'If the event is outdoors, discuss a contingency plan for rain. Lagos weather can change quickly.',
-          'Choose a decorator who has styled Kamu ceremonies specifically — the cultural details matter and should not be left to guesswork.',
+          'Choose a decorator who has styled Kamu ceremonies specifically, the cultural details matter and should not be left to guesswork.',
         ],
       },
       {
         type: 'cta',
         label: 'View our Kamu decoration package',
         href: '/services/kamu-decoration-lagos',
-        sub: 'Full venue styling from throne to table — Lagos-wide.',
+        sub: 'Full venue styling from throne to table, Lagos-wide.',
       },
     ],
   },
@@ -139,12 +139,12 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Engagement Decoration Ideas in Lagos: Trends Our Clients Love',
     metaTitle: 'Engagement Decor Ideas Lagos',
     metaDescription:
-      'The best engagement decoration ideas for Lagos celebrations in 2025 — from floral arches to candlelit table settings. Inspiration and advice from Decor Adorne.',
+      'The best engagement decoration ideas for Lagos celebrations in 2025, from floral arches to candlelit table settings. Inspiration and advice from Decor Adorne.',
     publishedAt: '2025-03-24',
     readMins: 6,
     category: 'Event Inspiration',
     excerpt:
-      'Whether you are planning a surprise proposal or a grand engagement party in Lagos, these are the décor ideas our clients keep requesting — and why they work.',
+      'Whether you are planning a surprise proposal or a grand engagement party in Lagos, these are the décor ideas our clients keep requesting, and why they work.',
     heroImage: '/images/gallery/engagement-1.JPG',
     body: [
       {
@@ -157,11 +157,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Nothing anchors an engagement celebration like a well-designed floral arch. Whether it's a full doorway arch framing the couple's entrance, a circular moon gate, or a floor-to-ceiling flower wall, the floral backdrop creates the focal point that every other element organises around. In Lagos, white and blush roses with eucalyptus greenery remain the most requested palette — timeless, universally flattering, and beautiful in photographs.",
+        text: "Nothing anchors an engagement celebration like a well-designed floral arch. Whether it's a full doorway arch framing the couple's entrance, a circular moon gate, or a floor-to-ceiling flower wall, the floral backdrop creates the focal point that every other element organises around. In Lagos, white and blush roses with eucalyptus greenery remain the most requested palette, timeless, universally flattering, and beautiful in photographs.",
       },
       {
         type: 'p',
-        text: "For outdoor venues in Ikoyi or Lekki, we often lean into tropical foliage — birds of paradise, anthuriums, and oversized tropical leaves give the installation a distinctly Lagos quality while remaining deeply elegant. For ballroom venues on Victoria Island, a more structured, sculptural arch makes a bolder statement.",
+        text: "For outdoor venues in Ikoyi or Lekki, we often lean into tropical foliage, birds of paradise, anthuriums, and oversized tropical leaves give the installation a distinctly Lagos quality while remaining deeply elegant. For ballroom venues on Victoria Island, a more structured, sculptural arch makes a bolder statement.",
       },
       {
         type: 'h2',
@@ -169,11 +169,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The table is where guests spend most of the evening, so it deserves serious attention. For engagement parties in Lagos, we consistently return to warm candlelight as the foundation — hurricane vases, taper candles in brass candlesticks, and floating candles in low vessels all create the intimate, romantic atmosphere that makes an engagement celebration feel different from a regular dinner event.",
+        text: "The table is where guests spend most of the evening, so it deserves serious attention. For engagement parties in Lagos, we consistently return to warm candlelight as the foundation, hurricane vases, taper candles in brass candlesticks, and floating candles in low vessels all create the intimate, romantic atmosphere that makes an engagement celebration feel different from a regular dinner event.",
       },
       {
         type: 'p',
-        text: "Layered table styling — a charger plate, linen napkin, personalised place card, and a low floral centrepiece — creates visual depth without overwhelming the table. Avoid the common mistake of centrepieces so tall that guests cannot see each other across the table.",
+        text: "Layered table styling, a charger plate, linen napkin, personalised place card, and a low floral centrepiece, creates visual depth without overwhelming the table. Avoid the common mistake of centrepieces so tall that guests cannot see each other across the table.",
       },
       {
         type: 'h2',
@@ -201,11 +201,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Well-executed balloon installations have made a strong comeback in Lagos — not the classic balloon arch of the 1990s, but sculpted organic arrangements in muted, sophisticated tones: warm champagne, terracotta, sage, or deep burgundy. A balloon column flanking the entrance, or a ceiling installation above the couple's seating area, adds drama and visual height without competing with the floral work.",
+        text: "Well-executed balloon installations have made a strong comeback in Lagos, not the classic balloon arch of the 1990s, but sculpted organic arrangements in muted, sophisticated tones: warm champagne, terracotta, sage, or deep burgundy. A balloon column flanking the entrance, or a ceiling installation above the couple's seating area, adds drama and visual height without competing with the floral work.",
       },
       {
         type: 'p',
-        text: "A petal pathway — roses or bougainvillea petals strewn along the route the couple walks — is a simple, affordable addition that photographs magnificently and adds a fairy-tale quality to the moment of proposal or arrival.",
+        text: "A petal pathway, roses or bougainvillea petals strewn along the route the couple walks, is a simple, affordable addition that photographs magnificently and adds a fairy-tale quality to the moment of proposal or arrival.",
       },
       {
         type: 'h2',
@@ -218,10 +218,10 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Book your decorator 4–6 weeks before the event — or 8–10 weeks for peak season dates.',
-          'Visit the venue with your decorator before the event day — seeing the space changes everything.',
-          'Share examples of what you love (and what you hate) — mood boards prevent misunderstandings.',
-          'Ask to see past engagement work specifically — not just general event photos.',
+          'Book your decorator 4–6 weeks before the event, or 8–10 weeks for peak season dates.',
+          'Visit the venue with your decorator before the event day, seeing the space changes everything.',
+          'Share examples of what you love (and what you hate), mood boards prevent misunderstandings.',
+          'Ask to see past engagement work specifically, not just general event photos.',
           'Confirm setup and breakdown times with the venue before signing the decoration contract.',
         ],
       },
@@ -252,7 +252,7 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       {
         type: 'p',
-        text: "The henna party — or henna night — is one of the most intimate pre-wedding celebrations in the Lagos wedding calendar. Unlike the grand scale of the Kamu or the ceremony formality of the Nikkah, the henna gathering is smaller, warmer, and built for close family and friends. The décor reflects this: instead of commanding a ballroom, a great henna party setup creates a cosy, jewel-toned world that makes every guest feel like they have stepped into something special.",
+        text: "The henna party, or henna night, is one of the most intimate pre-wedding celebrations in the Lagos wedding calendar. Unlike the grand scale of the Kamu or the ceremony formality of the Nikkah, the henna gathering is smaller, warmer, and built for close family and friends. The décor reflects this: instead of commanding a ballroom, a great henna party setup creates a cosy, jewel-toned world that makes every guest feel like they have stepped into something special.",
       },
       {
         type: 'h2',
@@ -260,11 +260,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Henna party décor in Lagos draws from Moroccan and Middle Eastern styling traditions — rich jewel tones, Moroccan lanterns, low floor cushion seating, and an abundance of warm candlelight. The palette is typically deeper and more saturated than an engagement party: think emerald, sapphire, deep plum, burnt orange, and gold. The resulting atmosphere is intimate, sensory, and warm.",
+        text: "Henna party décor in Lagos draws from Moroccan and Middle Eastern styling traditions, rich jewel tones, Moroccan lanterns, low floor cushion seating, and an abundance of warm candlelight. The palette is typically deeper and more saturated than an engagement party: think emerald, sapphire, deep plum, burnt orange, and gold. The resulting atmosphere is intimate, sensory, and warm.",
       },
       {
         type: 'p',
-        text: "For Muslim families, the henna party is often an all-female gathering, which shapes the venue layout significantly — there is no need for a mixed-seating arrangement, and the styling can lean into a more feminine, maximally beautiful aesthetic.",
+        text: "For Muslim families, the henna party is often an all-female gathering, which shapes the venue layout significantly, there is no need for a mixed-seating arrangement, and the styling can lean into a more feminine, maximally beautiful aesthetic.",
       },
       {
         type: 'h2',
@@ -276,7 +276,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Low seating — floor cushions, bolsters, and poufs in jewel-toned fabrics — is the signature of the henna party aesthetic. It creates an immediate sense of intimacy and informality that chairs simply cannot achieve. We source cushions in velvet, brocade, and jacquard fabrics that photograph beautifully under warm light. Floor seating works best on a clean, carpeted or tiled surface — Lagos homes with tiled floors are perfect for this.",
+        text: "Low seating, floor cushions, bolsters, and poufs in jewel-toned fabrics, is the signature of the henna party aesthetic. It creates an immediate sense of intimacy and informality that chairs simply cannot achieve. We source cushions in velvet, brocade, and jacquard fabrics that photograph beautifully under warm light. Floor seating works best on a clean, carpeted or tiled surface, Lagos homes with tiled floors are perfect for this.",
       },
       {
         type: 'h3',
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Lanterns are the defining accessory of henna party décor. Brass or copper Moroccan lanterns, hung at varying heights or clustered on the floor, cast intricate light patterns across the space as the candles inside flicker. For outdoor Lagos setups, battery-powered LED lanterns eliminate the fire risk while maintaining the aesthetic. We typically use a mix of sizes — oversized lanterns as anchors with smaller ones in clusters.",
+        text: "Lanterns are the defining accessory of henna party décor. Brass or copper Moroccan lanterns, hung at varying heights or clustered on the floor, cast intricate light patterns across the space as the candles inside flicker. For outdoor Lagos setups, battery-powered LED lanterns eliminate the fire risk while maintaining the aesthetic. We typically use a mix of sizes, oversized lanterns as anchors with smaller ones in clusters.",
       },
       {
         type: 'h3',
@@ -292,7 +292,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Even for an intimate henna party, a dedicated floral backdrop — whether a full flower wall, a fabric and floral arch, or a floral column arrangement — gives guests a photography spot and creates a clear focal point for the space. The bride will spend much of the evening in this area as her henna is applied, so it serves a practical staging purpose as well as a decorative one.",
+        text: "Even for an intimate henna party, a dedicated floral backdrop, whether a full flower wall, a fabric and floral arch, or a floral column arrangement, gives guests a photography spot and creates a clear focal point for the space. The bride will spend much of the evening in this area as her henna is applied, so it serves a practical staging purpose as well as a decorative one.",
       },
       {
         type: 'h3',
@@ -300,7 +300,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Sheer fabric draped from a central point in the ceiling — or suspended between poles for outdoor setups — creates a tent-like canopy that makes any space feel more intimate and enclosed. For living room setups in Lagos homes, even a simple canopy above the seating area transforms the room entirely. Choose fabrics in rich tones: deep red, gold, midnight blue, or forest green.",
+        text: "Sheer fabric draped from a central point in the ceiling, or suspended between poles for outdoor setups, creates a tent-like canopy that makes any space feel more intimate and enclosed. For living room setups in Lagos homes, even a simple canopy above the seating area transforms the room entirely. Choose fabrics in rich tones: deep red, gold, midnight blue, or forest green.",
       },
       {
         type: 'h2',
@@ -308,7 +308,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Henna parties are among the most versatile events to style because they work well in small, intimate spaces. Lagos homes — especially those with covered garden areas, large living rooms, or rooftop spaces — are ideal. We have styled henna nights in:",
+        text: "Henna parties are among the most versatile events to style because they work well in small, intimate spaces. Lagos homes, especially those with covered garden areas, large living rooms, or rooftop spaces, are ideal. We have styled henna nights in:",
       },
       {
         type: 'list',
@@ -334,8 +334,8 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Book your henna artist and your decorator together — they need to coordinate on the bride\'s seating position and lighting.',
-          'Tell your decorator the floor surface — carpet, tile, and wood all behave differently with floor cushion setups.',
+          'Book your henna artist and your decorator together, they need to coordinate on the bride\'s seating position and lighting.',
+          'Tell your decorator the floor surface, carpet, tile, and wood all behave differently with floor cushion setups.',
           'If your event is photographed, ask your decorator to place a lantern cluster or candle arrangement specifically for close-up photography.',
           'For outdoor evening setups, confirm power access for any plug-in lighting elements.',
         ],
@@ -357,16 +357,16 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'The Best Locations for a Luxury Picnic Setup in Lagos',
     metaTitle: 'Luxury Picnic Locations Lagos',
     metaDescription:
-      'Where does Decor Adorne set up luxury picnics in Lagos? From Tarkwa Bay to Lekki gardens — here are the best outdoor locations and what to consider.',
+      'Where does Decor Adorne set up luxury picnics in Lagos? From Tarkwa Bay to Lekki gardens, here are the best outdoor locations and what to consider.',
     publishedAt: '2025-04-21',
     readMins: 5,
     category: 'Lagos Guides',
     excerpt:
-      "Lagos has stunning outdoor spaces that most people walk past every day. Here's where we set up our luxury picnics — and what makes each location special.",
+      "Lagos has stunning outdoor spaces that most people walk past every day. Here's where we set up our luxury picnics, and what makes each location special.",
     body: [
       {
         type: 'p',
-        text: "Luxury picnics have become one of the fastest-growing celebration formats in Lagos. They work for anniversaries, birthdays, proposals, baby showers, and intimate friend gatherings — and when styled with intention, they rival any indoor event for beauty. The key ingredient, beyond the cushions and florals, is the location. Lagos has more extraordinary outdoor spaces than most Lagosians realise. Here are the ones we set up most frequently.",
+        text: "Luxury picnics have become one of the fastest-growing celebration formats in Lagos. They work for anniversaries, birthdays, proposals, baby showers, and intimate friend gatherings, and when styled with intention, they rival any indoor event for beauty. The key ingredient, beyond the cushions and florals, is the location. Lagos has more extraordinary outdoor spaces than most Lagosians realise. Here are the ones we set up most frequently.",
       },
       {
         type: 'h2',
@@ -374,7 +374,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The LCC is Lagos's most famous natural retreat — 78 hectares of lowland rainforest with boardwalks, natural clearings, and the world's longest canopy walkway. For a luxury picnic, the grassed clearings near the entrance provide a lush, green backdrop that feels completely removed from the city. The dappled light through the canopy is stunning for photography. Book the space directly with LCC management and coordinate arrival time for setup — we typically need at least 1.5 hours.",
+        text: "The LCC is Lagos's most famous natural retreat, 78 hectares of lowland rainforest with boardwalks, natural clearings, and the world's longest canopy walkway. For a luxury picnic, the grassed clearings near the entrance provide a lush, green backdrop that feels completely removed from the city. The dappled light through the canopy is stunning for photography. Book the space directly with LCC management and coordinate arrival time for setup, we typically need at least 1.5 hours.",
       },
       {
         type: 'h2',
@@ -382,7 +382,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Tarkwa Bay is a calm, protected beach on Lagos Island accessible only by boat — which immediately gives a picnic there a sense of occasion and adventure. The boat ride from Bar Beach or Five Cowries Creek is part of the experience. The sand is soft, the water is calm, and the absence of commercial activity gives it a private-island feel. We set up beach picnic tables with parasols, floor cushions on low platforms (to keep linens off the sand), and lanterns for evening events.",
+        text: "Tarkwa Bay is a calm, protected beach on Lagos Island accessible only by boat, which immediately gives a picnic there a sense of occasion and adventure. The boat ride from Bar Beach or Five Cowries Creek is part of the experience. The sand is soft, the water is calm, and the absence of commercial activity gives it a private-island feel. We set up beach picnic tables with parasols, floor cushions on low platforms (to keep linens off the sand), and lanterns for evening events.",
       },
       {
         type: 'h2',
@@ -390,7 +390,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Many private estates and villas in Ikoyi have substantial garden grounds that their residents hire out for events. These spaces combine the privacy and green beauty of a garden with the security and accessibility of a residential estate. They are our most requested category for luxury picnics — particularly for anniversary and proposal setups where privacy is important.",
+        text: "Many private estates and villas in Ikoyi have substantial garden grounds that their residents hire out for events. These spaces combine the privacy and green beauty of a garden with the security and accessibility of a residential estate. They are our most requested category for luxury picnics, particularly for anniversary and proposal setups where privacy is important.",
       },
       {
         type: 'h2',
@@ -406,7 +406,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The most accessible luxury picnic option for most Lagos families is their own garden or compound. A well-decorated home garden setup can be just as beautiful as a public venue — often more so, because the familiarity of home makes the event feel more personal. We have styled garden picnics in Surulere, Ikeja, Gbagada, Magodo, and across the Mainland.",
+        text: "The most accessible luxury picnic option for most Lagos families is their own garden or compound. A well-decorated home garden setup can be just as beautiful as a public venue, often more so, because the familiarity of home makes the event feel more personal. We have styled garden picnics in Surulere, Ikeja, Gbagada, Magodo, and across the Mainland.",
       },
       {
         type: 'h2',
@@ -415,12 +415,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Access and logistics — can setup equipment (tables, cushions, decor) reach the location easily? Tarkwa Bay requires careful packing for the boat.',
-          'Natural shade — Lagos sun is intense, especially between 11am and 3pm. A tree canopy or parasol arrangement is essential.',
-          'Surface type — grass is beautiful but damp grass can spoil linens. Hard ground makes some cushion setups unstable.',
-          'Power access — if you want electric fairy lights or fans, confirm power availability.',
-          'Timing — golden hour (one hour before sunset) is always the most beautiful time for photography in Lagos.',
-          'Rain contingency — Lagos can rain at any time. Discuss an indoor backup plan with your decorator.',
+          'Access and logistics, can setup equipment (tables, cushions, decor) reach the location easily? Tarkwa Bay requires careful packing for the boat.',
+          'Natural shade, Lagos sun is intense, especially between 11am and 3pm. A tree canopy or parasol arrangement is essential.',
+          'Surface type, grass is beautiful but damp grass can spoil linens. Hard ground makes some cushion setups unstable.',
+          'Power access, if you want electric fairy lights or fans, confirm power availability.',
+          'Timing, golden hour (one hour before sunset) is always the most beautiful time for photography in Lagos.',
+          'Rain contingency, Lagos can rain at any time. Discuss an indoor backup plan with your decorator.',
         ],
       },
       {
@@ -450,7 +450,7 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       {
         type: 'p',
-        text: "The Nikkah is one of the most sacred events in a Muslim family's life. Unlike an engagement party or a birthday celebration, the Nikkah is a religious ceremony — the formal solemnisation of marriage under Islamic law. The décor must reflect this sanctity. At Decor Adorne, we approach every Nikkah we style with deep respect for its cultural and spiritual significance, designing settings that are beautiful without being ostentatious.",
+        text: "The Nikkah is one of the most sacred events in a Muslim family's life. Unlike an engagement party or a birthday celebration, the Nikkah is a religious ceremony, the formal solemnisation of marriage under Islamic law. The décor must reflect this sanctity. At Decor Adorne, we approach every Nikkah we style with deep respect for its cultural and spiritual significance, designing settings that are beautiful without being ostentatious.",
       },
       {
         type: 'h2',
@@ -463,15 +463,15 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Soft, muted tones — ivory, blush, champagne, sage green, or soft gold',
-          'Floral arrangements that are graceful rather than theatrical — ranunculus, garden roses, and eucalyptus rather than tropical statement flowers',
+          'Soft, muted tones, ivory, blush, champagne, sage green, or soft gold',
+          'Floral arrangements that are graceful rather than theatrical, ranunculus, garden roses, and eucalyptus rather than tropical statement flowers',
           'Clean lines and structured fabric draping rather than excess volume',
           'Warm ambient lighting rather than coloured or dramatic stage lighting',
         ],
       },
       {
         type: 'p',
-        text: "This does not mean minimalist or plain. A beautifully styled Nikkah can still be breathtakingly gorgeous — it simply achieves that through refinement rather than maximalism.",
+        text: "This does not mean minimalist or plain. A beautifully styled Nikkah can still be breathtakingly gorgeous, it simply achieves that through refinement rather than maximalism.",
       },
       {
         type: 'h2',
@@ -483,7 +483,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The Akad — the formal contract signing — requires a specific area set up for the bride, groom, the Sheikh (Islamic officiant), and the witnesses. This typically means a table dressed in luxurious linen with floral accents, a signing set (pen and Quran placement), and two chairs or a love seat for the couple. The backdrop behind this area — a floral arch, fabric draping, or a custom banner — becomes the central visual element of all the ceremony photography.",
+        text: "The Akad, the formal contract signing, requires a specific area set up for the bride, groom, the Sheikh (Islamic officiant), and the witnesses. This typically means a table dressed in luxurious linen with floral accents, a signing set (pen and Quran placement), and two chairs or a love seat for the couple. The backdrop behind this area, a floral arch, fabric draping, or a custom banner, becomes the central visual element of all the ceremony photography.",
       },
       {
         type: 'h3',
@@ -491,7 +491,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Many Lagos Nikkah ceremonies observe gender-segregated seating, with male and female guests seated in separate areas of the venue. This is a significant layout consideration that must be planned into the décor from the beginning — not added as an afterthought. Each side should be equally well-styled, with clear visual sightlines to the Akad area where the ceremony takes place. Partitions, when used, should be tasteful and well-dressed — not makeshift.",
+        text: "Many Lagos Nikkah ceremonies observe gender-segregated seating, with male and female guests seated in separate areas of the venue. This is a significant layout consideration that must be planned into the décor from the beginning, not added as an afterthought. Each side should be equally well-styled, with clear visual sightlines to the Akad area where the ceremony takes place. Partitions, when used, should be tasteful and well-dressed, not makeshift.",
       },
       {
         type: 'h3',
@@ -507,11 +507,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Many Lagos Muslim families combine the Nikkah ceremony and the Walima reception — the celebratory meal after the marriage is consummated — in a single day or across two days at the same venue. This creates an opportunity to design a cohesive décor narrative across both events, while making a distinct visual shift between the ceremony (intimate, sacred) and the reception (celebratory, abundant).",
+        text: "Many Lagos Muslim families combine the Nikkah ceremony and the Walima reception, the celebratory meal after the marriage is consummated, in a single day or across two days at the same venue. This creates an opportunity to design a cohesive décor narrative across both events, while making a distinct visual shift between the ceremony (intimate, sacred) and the reception (celebratory, abundant).",
       },
       {
         type: 'p',
-        text: "We offer combined Nikkah + Walima packages that allow families to manage the day as a single, coordinated event. The décor transitions from ceremony setting to reception setting during the mid-day break, using many of the same structural elements but adding celebratory layer — table centrepieces, charger plates, and more elaborate lighting for the reception.",
+        text: "We offer combined Nikkah + Walima packages that allow families to manage the day as a single, coordinated event. The décor transitions from ceremony setting to reception setting during the mid-day break, using many of the same structural elements but adding celebratory layer, table centrepieces, charger plates, and more elaborate lighting for the reception.",
       },
       {
         type: 'h2',
@@ -519,7 +519,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Nikkah ceremonies in Lagos take place across a wide range of venues — from family homes and compound spaces to hotel ballrooms, garden venues, and dedicated Islamic event centres. Victoria Island, Lekki, and Ikoyi have a concentration of venues well-suited to Nikkah celebrations. We serve all of these areas and have experience styling Nikkah ceremonies across all Lagos LGAs.",
+        text: "Nikkah ceremonies in Lagos take place across a wide range of venues, from family homes and compound spaces to hotel ballrooms, garden venues, and dedicated Islamic event centres. Victoria Island, Lekki, and Ikoyi have a concentration of venues well-suited to Nikkah celebrations. We serve all of these areas and have experience styling Nikkah ceremonies across all Lagos LGAs.",
       },
       {
         type: 'h2',
@@ -532,10 +532,10 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Engage your decorator early — Nikkah ceremonies often have fixed religious dates with little flexibility.',
+          'Engage your decorator early, Nikkah ceremonies often have fixed religious dates with little flexibility.',
           'Brief your decorator on gender-segregation requirements from the first conversation.',
-          'If combining with a Walima, discuss the full programme and timeline — the transition window between ceremony and reception is critical.',
-          'Share the Sheikh\'s seating position requirements — this affects the Akad table layout.',
+          'If combining with a Walima, discuss the full programme and timeline, the transition window between ceremony and reception is critical.',
+          'Share the Sheikh\'s seating position requirements, this affects the Akad table layout.',
           'Ask to see specific Nikkah work in the decorator\'s portfolio, not just engagement or party work.',
         ],
       },
@@ -561,11 +561,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readMins: 6,
     category: 'Lagos Guides',
     excerpt:
-      "Victoria Island is Lagos's most prestigious events district. Here's what great décor looks like in VI — from hotel ballrooms to rooftop gardens.",
+      "Victoria Island is Lagos's most prestigious events district. Here's what great décor looks like in VI, from hotel ballrooms to rooftop gardens.",
     body: [
       {
         type: 'p',
-        text: "Victoria Island is Lagos's business and social centrepiece — a dense, energetic island where the city's most prestigious hotels, restaurants, and event venues sit within a few kilometres of one another. For families and couples planning a celebration that demands the best, VI is the obvious choice. We style events on Victoria Island regularly, and we have developed a clear understanding of its venues, its aesthetics, and its expectations.",
+        text: "Victoria Island is Lagos's business and social centrepiece, a dense, energetic island where the city's most prestigious hotels, restaurants, and event venues sit within a few kilometres of one another. For families and couples planning a celebration that demands the best, VI is the obvious choice. We style events on Victoria Island regularly, and we have developed a clear understanding of its venues, its aesthetics, and its expectations.",
       },
       {
         type: 'h2',
@@ -573,7 +573,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Events on Victoria Island operate at a premium level. The venues are large, well-managed, and experienced with elaborate setups. Guests arrive with high expectations — a Victoria Island event signals investment and quality. The décor must match. This does not mean spending the maximum possible; it means spending with precision, concentrating impact on the elements guests actually notice and photograph.",
+        text: "Events on Victoria Island operate at a premium level. The venues are large, well-managed, and experienced with elaborate setups. Guests arrive with high expectations, a Victoria Island event signals investment and quality. The décor must match. This does not mean spending the maximum possible; it means spending with precision, concentrating impact on the elements guests actually notice and photograph.",
       },
       {
         type: 'h2',
@@ -585,7 +585,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Victoria Island's five-star hotels — Eko Hotels, Marriott, Transcorp Hilton (Abuja's equivalent is closer to this tier), and several boutique properties — offer large ballrooms with high ceilings, in-house lighting rigs, and professional event management teams. These venues suit large-scale Kamu ceremonies, engagement parties, birthday galas, and Walima receptions. For décor, high ceilings allow ceiling draping and chandelier installations that smaller venues cannot accommodate.",
+        text: "Victoria Island's five-star hotels, Eko Hotels, Marriott, Transcorp Hilton (Abuja's equivalent is closer to this tier), and several boutique properties, offer large ballrooms with high ceilings, in-house lighting rigs, and professional event management teams. These venues suit large-scale Kamu ceremonies, engagement parties, birthday galas, and Walima receptions. For décor, high ceilings allow ceiling draping and chandelier installations that smaller venues cannot accommodate.",
       },
       {
         type: 'h3',
@@ -593,7 +593,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Several Victoria Island buildings offer rooftop event spaces with spectacular Lagos views — the ocean to the south, the city skyline to the north. These are ideal for intimate engagements, luxury picnics, birthday sundowners, and cocktail receptions. The open air and natural light make styling both easier and more impactful. String light canopies and lantern arrangements work particularly well.",
+        text: "Several Victoria Island buildings offer rooftop event spaces with spectacular Lagos views, the ocean to the south, the city skyline to the north. These are ideal for intimate engagements, luxury picnics, birthday sundowners, and cocktail receptions. The open air and natural light make styling both easier and more impactful. String light canopies and lantern arrangements work particularly well.",
       },
       {
         type: 'h3',
@@ -601,7 +601,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Some of Lagos's finest restaurants on Victoria Island offer private dining spaces or full restaurant buyouts for events. These spaces are already atmospherically designed, which means décor should complement — not overwhelm — the existing aesthetic. We typically focus on table styling, floral centrepieces, and a dedicated photo backdrop or proposal setup in these environments.",
+        text: "Some of Lagos's finest restaurants on Victoria Island offer private dining spaces or full restaurant buyouts for events. These spaces are already atmospherically designed, which means décor should complement, not overwhelm, the existing aesthetic. We typically focus on table styling, floral centrepieces, and a dedicated photo backdrop or proposal setup in these environments.",
       },
       {
         type: 'h2',
@@ -614,8 +614,8 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Modern luxury — clean lines, white and gold, sculptural floral arrangements, crystal glassware, and professional lighting. Draws from international wedding and event trends while feeling unmistakably Nigerian in its scale and colour.',
-          'Culturally rich — bold textiles, traditional elements, abundant florals in deep jewel tones, and décor that celebrates Nigerian identity. This aesthetic is particularly strong for Kamu, Durbar, and naming ceremony events on VI.',
+          'Modern luxury, clean lines, white and gold, sculptural floral arrangements, crystal glassware, and professional lighting. Draws from international wedding and event trends while feeling unmistakably Nigerian in its scale and colour.',
+          'Culturally rich, bold textiles, traditional elements, abundant florals in deep jewel tones, and décor that celebrates Nigerian identity. This aesthetic is particularly strong for Kamu, Durbar, and naming ceremony events on VI.',
         ],
       },
       {
@@ -624,7 +624,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "Styling events on Victoria Island requires careful logistics planning. Traffic during morning and evening setup windows can be severe. We always confirm setup access times with the venue well in advance — most VI hotel venues require suppliers to arrive through service entrances and during specific windows.",
+        text: "Styling events on Victoria Island requires careful logistics planning. Traffic during morning and evening setup windows can be severe. We always confirm setup access times with the venue well in advance, most VI hotel venues require suppliers to arrive through service entrances and during specific windows.",
       },
       {
         type: 'p',
@@ -637,12 +637,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'list',
         items: [
-          'Engagement parties — particularly romantic rooftop and garden setups',
-          'Kamu ceremonies — full venue transformations with cultural fabric and floral installations',
-          'Nikkah ceremonies — elegant, refined, respectful of Islamic tradition',
-          'Luxury picnic setups — rooftop and garden',
-          'Arabian Night events — full venue transformations for the most dramatic aesthetic',
-          'Birthday galas — milestone celebrations for Lagos\'s most discerning families',
+          'Engagement parties, particularly romantic rooftop and garden setups',
+          'Kamu ceremonies, full venue transformations with cultural fabric and floral installations',
+          'Nikkah ceremonies, elegant, refined, respectful of Islamic tradition',
+          'Luxury picnic setups, rooftop and garden',
+          'Arabian Night events, full venue transformations for the most dramatic aesthetic',
+          'Birthday galas, milestone celebrations for Lagos\'s most discerning families',
         ],
       },
       {

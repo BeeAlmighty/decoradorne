@@ -41,7 +41,7 @@ export function Hero() {
             variants={FADE_UP}
             className="text-xs sm:text-sm font-medium tracking-[0.22em] uppercase text-[#C9A96E] mb-6"
           >
-            Lagos Luxury Event Decoration
+            Arabian-Inspired Luxury Decor · Across Nigeria
           </motion.p>
 
           {/* Headline */}
@@ -68,9 +68,9 @@ export function Hero() {
             variants={FADE_UP}
             className="text-base sm:text-lg text-[#1A1410]/60 leading-relaxed max-w-lg mb-10"
           >
-            From intimate Nikkah ceremonies to grand engagement parties,
-            we transform Lagos venues into breathtaking celebrations that
-            your guests will never forget.
+            From intimate Henna nights to grand Arabian Night transformations,
+            we turn venues across Nigeria into breathtaking, lantern-lit
+            celebrations your guests will never forget.
           </motion.p>
 
           {/* CTAs */}

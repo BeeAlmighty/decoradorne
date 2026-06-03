@@ -12,6 +12,8 @@ import type { Service } from '@/lib/constants';
 
 interface ServicePageProps {
   service: Service;
+  /** Collection images from the service's folder (excludes the hero). */
+  galleryImages?: string[];
 }
 
 function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
@@ -54,7 +56,7 @@ function PhotoHero({ service, waUrl }: { service: Service; waUrl: string }) {
       {/* Full-bleed photo */}
       <Image
         src={service.heroImage!}
-        alt={`${service.name} in Lagos — Decor Adorne`}
+        alt={`${service.name} in Lagos, Decor Adorne`}
         fill
         priority
         className="object-cover"
@@ -77,7 +79,7 @@ function PhotoHero({ service, waUrl }: { service: Service; waUrl: string }) {
         {/* Eyebrow */}
         <p className="da-fade da-d1 text-[10px] sm:text-xs font-medium tracking-[0.22em] uppercase mb-5"
            style={{ color: service.colorAccent }}>
-          {service.shortName} · Lagos
+          {service.shortName} · Lagos · Nationwide
         </p>
 
         {/* Headline */}
@@ -154,7 +156,7 @@ function GradientHero({ service, waUrl }: { service: Service; waUrl: string }) {
           transition={{ duration: 0.5 }}
           className="text-xs font-medium tracking-[0.2em] uppercase text-[#C9A96E] mb-4"
         >
-          {service.shortName} · Lagos
+          {service.shortName} · Lagos · Nationwide
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -209,6 +211,69 @@ function GradientHero({ service, waUrl }: { service: Service; waUrl: string }) {
   );
 }
 
+function ServiceGallery({
+  images,
+  name,
+  accent,
+}: {
+  images: string[];
+  name: string;
+  accent: string;
+}) {
+  if (images.length === 0) return null;
+
+  return (
+    <section className="py-20 sm:py-28 bg-[#FAF7F4]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-xs font-medium tracking-[0.2em] uppercase mb-3"
+          style={{ color: accent }}
+        >
+          The collection
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="font-display font-light text-[#1A1410] mb-10"
+          style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}
+        >
+          Recent{' '}
+          <em className="italic" style={{ color: accent }}>
+            {name.toLowerCase()}
+          </em>{' '}
+          work.
+        </motion.h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          {images.map((src, i) => (
+            <motion.div
+              key={src}
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#1A1410]"
+            >
+              <Image
+                src={src}
+                alt={`${name} by Decor Adorne, Arabian-inspired styling in Lagos & across Nigeria`}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                sizes="(max-width: 640px) 50vw, 33vw"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const SLUG_TO_FORM_EVENT: Record<string, string> = {
   'engagement-decor-lagos':           'engagement',
   'kamu-decoration-lagos':            'kamu',
@@ -221,7 +286,7 @@ const SLUG_TO_FORM_EVENT: Record<string, string> = {
   'birthday-decoration-lagos':        'birthday',
 };
 
-export function ServicePage({ service }: ServicePageProps) {
+export function ServicePage({ service, galleryImages = [] }: ServicePageProps) {
   const waUrl = buildDefaultWhatsAppUrl();
 
   return (
@@ -267,7 +332,7 @@ export function ServicePage({ service }: ServicePageProps) {
                 className="text-[#1A1410]/60 leading-relaxed"
               >
                 Every {service.shortName.toLowerCase()} package by Decor Adorne is tailored to
-                your vision. Below is what our standard package covers — we can customise any
+                your vision. Below is what our standard package covers, we can customise any
                 element to suit your event.
               </motion.p>
             </div>
@@ -293,6 +358,9 @@ export function ServicePage({ service }: ServicePageProps) {
           </div>
         </div>
       </section>
+
+      {/* Collection — auto-populated from the service's image folder */}
+      <ServiceGallery images={galleryImages} name={service.name} accent={service.colorAccent} />
 
       {/* FAQ */}
       <section className="py-20 sm:py-28 bg-[#FAF7F4]">
@@ -332,14 +400,14 @@ export function ServicePage({ service }: ServicePageProps) {
                 Where we style
               </p>
               <p className="font-display text-xl font-light text-[#FAF7F4]">
-                Across <em className="italic text-[#C9A96E]">Lagos</em>
+                Lagos and <em className="italic text-[#C9A96E]">across Nigeria</em>
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {[
-                'Victoria Island', 'Lekki', 'Ikoyi', 'Ikeja',
-                'Lagos Island', 'Ajah', 'Surulere', 'Yaba',
-                'Magodo', 'Gbagada', 'Mainland Lagos',
+                'Lagos', 'Abuja', 'Kano', 'Kaduna', 'Sokoto',
+                'Ibadan', 'Port Harcourt', 'Victoria Island', 'Lekki',
+                'Ikoyi', 'Ikeja',
               ].map((area) => (
                 <span
                   key={area}

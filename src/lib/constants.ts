@@ -11,8 +11,8 @@ export const BUSINESS_IG = 'https://instagram.com/decor_adorne';
 export const FOUNDED_YEAR = 2016;
 
 export const STATS = [
-  { value: '500+', label: 'Events Styled' },
-  { value: '8', label: 'Years in Lagos' },
+  { value: '500+', label: 'Events Adorned' },
+  { value: '8', label: 'Years Styling' },
   { value: '200+', label: '5-Star Reviews' },
 ] as const;
 
@@ -46,9 +46,9 @@ export const SERVICES: Service[] = [
     tagline: 'Where love stories begin.',
     icon: 'Heart',
     description:
-      'From intimate proposals to grand engagement parties, we design moments that feel personal, beautiful, and entirely yours.',
+      'From intimate proposals to grand engagement parties. We design moments that feel personal, considered, and entirely yours. Across Nigeria.',
     longDescription:
-      "Your engagement marks the beginning of a forever. We create lush floral installations, romantic candlelit settings, and custom signage that transform any Lagos venue into a declaration of love. Whether it's a surprise proposal at a rooftop restaurant on Victoria Island or a garden celebration in Ikoyi, every detail is considered.",
+      "Your engagement marks the beginning of a forever. Lush floral installations, candlelit table settings, custom signage, and the kind of editorial detail that turns a venue into a declaration of love. Whether it's a rooftop proposal in Victoria Island, a garden celebration in Abuja, or a family ceremony in Kano. Every element is considered, every moment composed.",
     included: [
       'Custom floral arch or backdrop',
       'Ambient string lights and candle arrangements',
@@ -66,29 +66,29 @@ export const SERVICES: Service[] = [
       {
         question: 'Do you handle indoor and outdoor engagement venues in Lagos?',
         answer:
-          'Yes — we style both indoor banquet halls and outdoor garden settings across Lagos. We advise on venue-appropriate decor and handle logistics for both environments.',
+          'Yes, we style both indoor banquet halls and outdoor garden settings across Lagos. We advise on venue-appropriate decor and handle logistics for both environments.',
       },
       {
         question: 'Can I see past engagement decoration work before booking?',
         answer:
-          'Absolutely. We share a curated lookbook and can walk you through past Lagos engagement projects during your free consultation call.',
+          'Absolutely. We share a lookbook and can walk you through past Lagos engagement projects during your free consultation call.',
       },
     ],
-    colorAccent: '#C9A96E',
+    colorAccent: '#D4AF37',
     heroImage: '/images/gallery/engagement-1.JPG',
     metaDescription:
-      'Expert engagement decoration in Lagos — floral arches, candlelit table styling, and personalised setups across Victoria Island, Lekki, and Ikoyi. Free quote.',
+      'Luxury engagement decoration, floral arches, candlelit styling, personalised setups. Arabian-inspired studio in Lagos · Available across Nigeria. Free quote.',
   },
   {
     slug: 'kamu-decoration-lagos',
     name: 'Kamu Decoration',
     shortName: 'Kamu',
-    tagline: 'Celebrate her final days of maidenhood in style.',
+    tagline: 'Centuries of Hausa-Fulani tradition, beautifully adorned.',
     icon: 'Star',
     description:
-      'A Kamu celebration is a sacred, joyful tradition. We bring colour, culture, and elegance to every detail of your ceremony decor.',
+      'The Kamu is a centuries-old Hausa-Fulani rite, rooted in Arabian-influenced celebration. We honour it with rich textiles, ornate lantern work, and editorial detail.',
     longDescription:
-      "The Kamu ceremony deserves a setting as vibrant and meaningful as the occasion itself. We blend rich fabrics, traditional patterns, and contemporary styling to create a backdrop that honours the culture and delights every guest. From the bride's throne to the guest tables, every corner of your Lagos venue comes alive.",
+      "The Kamu carries weight that generic décor cannot meet. Aso-oke, brocade, and kalabash arranged with intention. A throne styled like a royal tableau. Brass lantern clusters, jewel-toned drapery, and the Arabian-influenced motifs that have shaped Northern Nigerian celebration for centuries. We work with families across Nigeria, in Lagos, Abuja, Kano and Kaduna, to build a Kamu that feels both deeply traditional and unmistakably designed.",
     included: [
       'Stage or throne area styling for the bride',
       'Colourful fabric draping and cultural textile accents',
@@ -106,29 +106,29 @@ export const SERVICES: Service[] = [
       {
         question: "Can the decor accommodate both the bride's seating and guest tables?",
         answer:
-          "Absolutely. Our Kamu packages include full venue styling — from the bride's throne area to guest table centrepieces and the backdrop for photography.",
+          "Absolutely. Our Kamu packages include full venue styling, from the bride's throne area to guest table centrepieces and the backdrop for photography.",
       },
       {
         question: 'Is Kamu decoration available for venues outside Lagos Island?',
         answer:
-          'We serve venues across Lagos — including Lagos Island, Victoria Island, Lekki, Ajah, and the Mainland. Travel surcharges may apply for venues beyond a 40km radius.',
+          'We serve venues across Lagos, including Lagos Island, Victoria Island, Lekki, Ajah, and the Mainland. Travel surcharges may apply for venues beyond a 40km radius.',
       },
     ],
-    colorAccent: '#D4878A',
+    colorAccent: '#A878CD',
     heroImage: '/images/gallery/wedding-1.JPG',
     metaDescription:
-      'Kamu ceremony decoration in Lagos — throne styling, cultural fabric draping, and authentic Hausa-inspired décor. Serving all Lagos areas. Free consultation.',
+      'Kamu ceremony decoration, throne styling, aso-oke draping, brass lanterns, authentic Hausa-Fulani détail. Lagos studio · Abuja, Kano & nationwide. Free quote.',
   },
   {
     slug: 'henna-party-decor-lagos',
     name: 'Henna Party Decoration',
     shortName: 'Henna Party',
-    tagline: 'Beautiful beginnings, beautifully set.',
+    tagline: 'Brass lanterns. Floor cushions. A night transported.',
     icon: 'Sparkles',
     description:
-      'Your henna night is a celebration of sisterhood and tradition. We create warm, intimate settings that feel like a dream.',
+      'Brass lanterns. Floor cushions. Jewel-toned drapery. Henna nights styled to feel transported, from Marrakesh to your home in Nigeria.',
     longDescription:
-      "Henna parties are intimate celebrations — a gathering of close friends and family before the big day. We design cosy, photo-worthy settings with rich jewel tones, Moroccan lanterns, floor cushions, and floral details that make the evening feel magical. Every corner of your Lagos space is styled to perfection.",
+      "The Henna night is intimate, sensory, and ancient. We build settings that lean fully into the Arabian aesthetic that gave the tradition its bones: clusters of Moroccan brass lanterns, velvet and brocade floor cushions, sheer ceiling canopies, marigold and rose installations, and candlelight as the primary mood. A bride's corner that photographs like a portrait. We style Henna nights in family homes, gardens, and intimate venues across Lagos, Abuja, Kaduna, Kano, and wherever your celebration calls us.",
     included: [
       'Low seating arrangement with floor cushions and bolsters',
       'Moroccan lanterns and tea light candle settings',
@@ -154,21 +154,21 @@ export const SERVICES: Service[] = [
           'Every Decor Adorne setup is designed with photography in mind. We include at least one dedicated backdrop or feature wall for portraits and group shots.',
       },
     ],
-    colorAccent: '#8BA888',
+    colorAccent: '#4ECDC4',
     heroImage: '/images/gallery/henna-1.JPG',
     metaDescription:
-      'Henna party decoration in Lagos — floor cushions, Moroccan lanterns, flower walls, and intimate settings from ₦150,000. Lekki, VI, Ikoyi, and Mainland.',
+      'Henna party decoration, Moroccan brass lanterns, jewel-tone floor cushions, sheer canopies, flower walls. Arabian-inspired styling. Lagos · Nationwide. From ₦150k.',
   },
   {
     slug: 'arabian-night-decoration-lagos',
     name: 'Arabian Night Decoration',
     shortName: 'Arabian Night',
-    tagline: 'A thousand nights in one evening.',
+    tagline: 'A thousand nights, in one evening.',
     icon: 'Moon',
     description:
-      'Transport your guests to another world with our signature Arabian Night styling — rich, immersive, and unforgettably dramatic.',
+      'Our signature. Ceiling-to-floor drapery, ornate lantern clusters, majlis-style low seating. The full Arabian dream, composed for your celebration.',
     longDescription:
-      'Arabian Night events call for deep jewel tones, ornate lanterns, flowing drapes, and an atmosphere that feels truly transported. We create full venue transformations — from ceiling to floor — that make every guest in your Lagos event feel like royalty for the night.',
+      "Arabian Night is the aesthetic Decor Adorne was built around. Sheer fabric sweeping from a central ceiling point. Brass and copper lantern clusters at every elevation. Low seating arranged majlis-style with velvet bolsters, brocade cushions, and date-and-dried-fruit displays. Pomegranate-deep florals. Persian-rug grounding. Candlelight as the only meaningful light source. We deliver full venue transformations across Nigeria, from Lagos hotel ballrooms to private compounds in Abuja and Kano, that leave guests genuinely transported.",
     included: [
       'Full ceiling draping with sheer fabric',
       'Moroccan-style lantern clusters',
@@ -192,12 +192,12 @@ export const SERVICES: Service[] = [
       {
         question: 'Do you provide a themed photo area for Arabian Night events?',
         answer:
-          'Yes — our Arabian Night packages include a dedicated photo moment area with archways, lanterns, and layered backdrops perfect for portraits and group shots.',
+          'Yes, our Arabian Night packages include a dedicated photo moment area with archways, lanterns, and layered backdrops perfect for portraits and group shots.',
       },
     ],
-    colorAccent: '#C9A96E',
+    colorAccent: '#E2567A',
     metaDescription:
-      'Arabian Night decoration in Lagos — full venue transformations with jewel-tone ceiling draping, ornate lanterns, and low cushion seating. Book now.',
+      'Arabian Night decoration, full venue transformations: ceiling drapery, brass lantern clusters, majlis low seating, jewel-tone florals. Lagos studio · Nationwide.',
   },
   {
     slug: 'nikkah-decoration-lagos',
@@ -206,9 +206,9 @@ export const SERVICES: Service[] = [
     tagline: 'Sacred union, beautifully adorned.',
     icon: 'Crown',
     description:
-      'Honour the sanctity of the Nikkah with elegant, respectful decor that frames the ceremony in beauty and meaning.',
+      'The Nikkah is sacred. We honour it with restraint and beauty: soft drapery, refined florals, Arabic-script signage, and the quiet detail the moment calls for.',
     longDescription:
-      'The Nikkah is one of the most sacred moments in a Muslim wedding. Our styling is elegant, modest, and deeply beautiful — florals, soft drapery, and refined setups that elevate the ceremony without overwhelming it. We work with Lagos families to honour their traditions with full reverence.',
+      "The Nikkah is the most consequential ceremony in a Muslim family's life. Our styling holds that weight with restraint: ivory, blush, sage, and soft gold rather than dramatic colour; ranunculus and garden roses rather than statement tropicals; clean lines and structured drapery rather than maximalist volume. Arabic calligraphy signage where families want it. Thoughtfully planned gender-segregated layouts when required. We style Nikkah and Walima ceremonies for Muslim families across Nigeria, in Lagos, Abuja, Kano and Sokoto, with the cultural fluency the moment deserves.",
     included: [
       'Floral arch or backdrop for the ceremony',
       'Bride and groom seating arrangement',
@@ -226,18 +226,18 @@ export const SERVICES: Service[] = [
       {
         question: 'How modest is the styling for a Nikkah ceremony?',
         answer:
-          "We work within the family's guidelines. Our Nikkah decor is always refined and understated — focusing on florals, soft fabrics, and clean lines rather than maximalist or theatrical elements.",
+          "We work within the family's guidelines. Our Nikkah decor is always refined and understated, focusing on florals, soft fabrics, and clean lines rather than maximalist or theatrical elements.",
       },
       {
         question: 'Can Nikkah decoration be combined with a Walima reception setup?',
         answer:
-          'Absolutely. We offer combined packages for couples who want seamless transitions from Nikkah to Walima reception, handling both ceremony and reception styling.',
+          'Absolutely. We offer combined packages for couples who want smooth transitions from Nikkah to Walima reception, handling both ceremony and reception styling.',
       },
     ],
-    colorAccent: '#D4878A',
+    colorAccent: '#8BAFD4',
     heroImage: '/images/gallery/wedding-2.JPG',
     metaDescription:
-      'Nikkah decoration in Lagos — elegant, respectful ceremony styling with floral arches, segregated seating arrangements, and Nikkah + Walima packages.',
+      'Nikkah decoration, restrained, respectful Islamic ceremony styling. Floral arches, Arabic-script signage, segregated seating, Nikkah + Walima. Lagos · Nationwide.',
   },
   {
     slug: 'naming-ceremony-decor-lagos',
@@ -246,9 +246,9 @@ export const SERVICES: Service[] = [
     tagline: 'Welcome the newest joy into the world.',
     icon: 'Gift',
     description:
-      'Celebrate the gift of new life with joyful, warm, and beautiful naming ceremony decor tailored to your cultural traditions.',
+      'Welcoming the newest member of your family, whether Yoruba, Hausa, Igbo, or simply yours. Warm, joyful, and beautifully composed.',
     longDescription:
-      "A naming ceremony is a family's declaration of love and blessing for a new child. We create warm, joyful settings — from traditional Yoruba and Hausa ceremonies to modern celebrations — that honour the moment and delight every guest in Lagos.",
+      "A naming ceremony, the Aqeeqah in Muslim families, the iso-omoloruko in Yoruba tradition, is a family's declaration of blessing for a new child. We design settings that honour the specific cultural tradition: bold pastels for Yoruba ceremonies, jewel-toned and Arabian-leaning detail for Hausa-Muslim Aqeeqahs, soft and modern for blended families. We style home setups, garden ceremonies, and hall events across Nigeria with the same care.",
     included: [
       'Welcome arch or entrance decor',
       "Baby's display area or cradle styling",
@@ -266,18 +266,18 @@ export const SERVICES: Service[] = [
       {
         question: 'What colours work best for naming ceremony decor?',
         answer:
-          'We typically work with soft pastels for a gentle, celebratory feel — or bold, cultural colours if the family prefers a traditional aesthetic. We guide colour selection during consultation.',
+          'We typically work with soft pastels for a gentle, celebratory feel, or bold, cultural colours if the family prefers a traditional aesthetic. We guide colour selection during consultation.',
       },
       {
         question: 'Can you style the naming ceremony at our home in Lagos?',
         answer:
-          'Yes. Home setups are a specialty — we assess the available space, manage logistics, and create a beautiful event in your home without damage to the property.',
+          'Yes. Home setups are a specialty. We assess the available space, manage logistics, and create a beautiful event in your home without damage to the property.',
       },
     ],
-    colorAccent: '#8BA888',
+    colorAccent: '#7DC87B',
     heroImage: '/images/gallery/naming-1.JPG',
     metaDescription:
-      'Naming ceremony decoration in Lagos — joyful setups for Yoruba, Hausa, and Igbo traditions. Home setups welcome. Balloon columns, backdrops, florals.',
+      'Naming ceremony decoration, Aqeeqah, Yoruba, Hausa, and Igbo traditions. Home setups, garden ceremonies, hall events. Lagos studio · Nationwide service.',
   },
   {
     slug: 'picnic-setup-lagos',
@@ -286,9 +286,9 @@ export const SERVICES: Service[] = [
     tagline: 'The outdoors, reimagined.',
     icon: 'Sun',
     description:
-      "Experience Lagos's natural beauty through a curated luxury picnic — intimate, styled, and unforgettably beautiful.",
+      "Outdoor moments, beautifully styled: low tables, lush cushions, fresh florals. From Lagos beaches to Abuja gardens. You just arrive.",
     longDescription:
-      "Our luxury picnic setups are more than a spread — they're an experience. Styled low tables, lush cushions, fresh florals, and curated displays in Lagos's most beautiful outdoor settings, from beachfront to private gardens. Every detail is styled; all you need to do is arrive.",
+      "Our luxury picnic setups are an experience, not a spread. Styled low tables dressed in linen and brass. Velvet and brocade floor cushions arranged majlis-style. Fresh floral centrepieces, crystal glassware, fairy-light canopies, and considered photographic moments. We bring the full setup to Lagos beaches, Abuja gardens, private estates in Ikoyi, rooftop venues anywhere, and quietly disappear before you arrive.",
     included: [
       'Low picnic table with luxury linen dressing',
       'Floor cushions and throw pillows',
@@ -302,7 +302,7 @@ export const SERVICES: Service[] = [
       {
         question: 'What Lagos locations do you set up luxury picnics?',
         answer:
-          "We set up across Lagos — including Lekki Conservation Centre, Tarkwa Bay beach, private gardens in Ikoyi and Victoria Island, and rooftop spaces. We also work with clients' chosen locations.",
+          "We set up across Lagos, including Lekki Conservation Centre, Tarkwa Bay beach, private gardens in Ikoyi and Victoria Island, and rooftop spaces. We also work with clients' chosen locations.",
       },
       {
         question: 'How long is the picnic setup rental period?',
@@ -315,20 +315,20 @@ export const SERVICES: Service[] = [
           'We monitor weather closely. If rain is forecast, we advise on an alternative indoor setup. We have a 48-hour weather policy that allows rescheduling without penalty.',
       },
     ],
-    colorAccent: '#C9A96E',
+    colorAccent: '#F4A261',
     metaDescription:
-      'Luxury picnic setups in Lagos — styled low tables, fresh florals, and fairy lights at Lekki, Tarkwa Bay, Ikoyi, and your own garden. From ₦150,000.',
+      'Luxury picnic setups, styled low tables, majlis cushions, florals, fairy lights. Tarkwa Bay, Lekki, Ikoyi, Abuja gardens & nationwide. From ₦150,000.',
   },
   {
     slug: 'event-rentals-lagos',
     name: 'Event Rentals',
     shortName: 'Rentals',
-    tagline: 'Style your event. Own nothing.',
+    tagline: 'Premium pieces. Own nothing.',
     icon: 'Package',
     description:
-      'Access premium decor, furniture, and tableware for your Lagos event without the long-term commitment.',
+      "Premium event pieces: brass lanterns, Chiavari chairs, charger plates, linens. Delivered, set, and collected. Lagos-based · Nationwide reach.",
     longDescription:
-      'Not every event needs a full styling package. Our Lagos rental catalogue lets you pick the exact pieces you need — from Chiavari chairs and charger plates to floral stands and linen tablecloths — delivered and collected at your convenience. Quality pieces, zero storage hassle.',
+      'Not every event needs a full styling package. Our rental catalogue lets you pick the exact pieces you need: brass Moroccan lanterns, Chiavari and ghost chairs, charger plates, crystal glassware, candelabras, velvet linens in 30+ colourways, and floral vases. Delivered to your venue, set on arrival, collected after. Lagos warehouse, nationwide reach.',
     included: [
       'Chiavari chairs, ghost chairs, and velvet seating',
       'Charger plates, cutlery, and glassware',
@@ -351,23 +351,23 @@ export const SERVICES: Service[] = [
       {
         question: 'Is there a damage deposit for rental items?',
         answer:
-          'Yes — a refundable damage deposit of 20% of the rental value is collected at booking. It is fully refunded within 48 hours of item return and inspection.',
+          'Yes, a refundable damage deposit of 20% of the rental value is collected at booking. It is fully refunded within 48 hours of item return and inspection.',
       },
     ],
-    colorAccent: '#D4878A',
+    colorAccent: '#A878CD',
     metaDescription:
-      'Premium event rental items in Lagos — Chiavari chairs, charger plates, linens, candelabras, and glassware. Delivery and collection included. From ₦50,000.',
+      'Premium event rentals: brass Moroccan lanterns, Chiavari chairs, charger plates, candelabras, velvet linens. Delivered & collected. Lagos · Nationwide. From ₦50k.',
   },
   {
     slug: 'durbar-decoration-lagos',
     name: 'Durbar Decoration',
     shortName: 'Durbar',
-    tagline: 'Royal grandeur, magnificently adorned.',
+    tagline: 'Northern royal tradition, magnificently adorned.',
     icon: 'Gem',
     description:
-      'Rooted in Northern Nigerian royal tradition, Durbar celebrations demand décor that commands the room — richly draped, ornately styled, and breathtakingly grand.',
+      'The Durbar honours centuries of Northern Nigerian royal tradition: Arabian-influenced grandeur in jewel-toned fabrics, gold lantern clusters, and ceremonial staging worthy of an emir.',
     longDescription:
-      "The Durbar is one of Nigeria's most magnificent cultural celebrations — a display of royal pageantry, elaborate robes, and centuries of Hausa tradition. We create décor that rises to meet this grandeur: sweeping fabric installations, opulent gold and jewel-tone styling, ceremonial stage arrangements, and regal details that honour the occasion and leave every guest in Lagos in awe.",
+      "The Durbar is among the most magnificent ceremonial traditions on the continent: Hausa-Fulani royal pageantry, centuries deep, Arabian-influenced from textile to silhouette. Our décor rises to meet it: sweeping aso-oke and brocade installations, gold and pomegranate-deep jewel tones, towering candelabra arrangements, ornate brass lantern clusters, and ceremonial dais arrangements styled like the audience hall of an emir. We work with families across Northern Nigeria, in Kano, Kaduna, Sokoto and Zaria, and in Lagos and Abuja for celebrations of returning royal sons and daughters.",
     included: [
       'Grand entrance arch with cultural fabric and floral styling',
       'Stage or royal dais arrangement for the honorees',
@@ -381,12 +381,12 @@ export const SERVICES: Service[] = [
       {
         question: 'What makes Durbar decoration unique compared to other events?',
         answer:
-          "Durbar décor draws on Northern Nigerian royal tradition — richer fabrics, deeper jewel tones, ornate lantern clusters, and ceremonial staging. We blend authentic cultural elements with our editorial eye to create a setting that feels genuinely grand rather than generic.",
+          "Durbar décor draws on Northern Nigerian royal tradition: richer fabrics, deeper jewel tones, ornate lantern clusters, and ceremonial staging. We blend authentic cultural elements with our editorial eye to create a setting that feels genuinely grand rather than generic.",
       },
       {
         question: 'Can you source authentic Durbar-themed fabrics and props in Lagos?',
         answer:
-          "Yes. We work with trusted suppliers of premium Nigerian textiles — including aso-oke, brocade, and traditional embroidered fabrics — to ensure every element of the décor feels culturally grounded and visually striking.",
+          "Yes. We work with trusted suppliers of premium Nigerian textiles, including aso-oke, brocade, and traditional embroidered fabrics, to ensure every element of the décor feels culturally grounded and visually striking.",
       },
       {
         question: 'Do you style Durbar celebrations at hotel ballrooms in Lagos?',
@@ -394,10 +394,10 @@ export const SERVICES: Service[] = [
           "Absolutely. We transform hotel ballrooms, event halls, and private compound spaces into Durbar-worthy settings. Our team conducts a venue walk-through to plan the layout and ensure every element is executed to the highest standard.",
       },
     ],
-    colorAccent: '#C9A96E',
+    colorAccent: '#D4AF37',
     heroImage: '/images/gallery/durbar-decor-1.JPG',
     metaDescription:
-      'Durbar decoration in Lagos — royal-grand venue styling with jewel-tone draping, ornate lanterns, and ceremonial stage arrangements. Authentic Hausa décor.',
+      'Durbar decoration, royal Hausa-Fulani styling with aso-oke draping, gold lantern clusters, ceremonial dais arrangements. Lagos · Kano · Kaduna · Sokoto · Abuja.',
   },
   {
     slug: 'birthday-decoration-lagos',
@@ -406,9 +406,9 @@ export const SERVICES: Service[] = [
     tagline: 'Make every year count.',
     icon: 'Cake',
     description:
-      'From milestone birthdays to intimate surprises, we create luxury birthday setups in Lagos that are personal, stunning, and unforgettable.',
+      'Milestone birthdays. Intimate surprises. Decor Adorne styles birthday celebrations across Nigeria that feel composed, personal, and unmistakably yours.',
     longDescription:
-      "A birthday is a milestone worth celebrating beautifully. Whether you're planning a surprise garden party in Lekki, a luxury rooftop celebration in Victoria Island, or an intimate dinner in Ikoyi, Decor Adorne creates birthday setups that feel personal and extraordinary. Balloon installations, statement backdrops, florals, and curated styling — all tailored to the celebrant's personality.",
+      "A birthday is a milestone worth treating like one. Whether it's a Lekki garden surprise, a Victoria Island rooftop sundowner, an Abuja ballroom gala, or an intimate Ikoyi dinner, we design setups that reflect the person, not the template. Sculpted balloon installations in editorial colourways, statement backdrops, florals chosen for the celebrant's aesthetic, throne styling for milestone years. We style birthdays nationwide and have a soft spot for Arabian-themed milestone celebrations (30th, 40th, 50th) where the aesthetic can be fully indulged.",
     included: [
       'Statement balloon arch or ceiling installation',
       'Personalised birthday backdrop or neon sign',
@@ -421,7 +421,7 @@ export const SERVICES: Service[] = [
       {
         question: 'Do you style birthday decorations at home venues in Lagos?',
         answer:
-          'Yes — home setups are one of our most popular requests. We assess your available space and design a setup that transforms it without damage to the property.',
+          'Yes, home setups are one of our most popular requests. We assess your available space and design a setup that transforms it without damage to the property.',
       },
       {
         question: 'Can you style a surprise birthday party setup in Lagos?',
@@ -431,13 +431,13 @@ export const SERVICES: Service[] = [
       {
         question: 'What age milestone birthdays do you specialise in?',
         answer:
-          'We style everything from 1st birthdays to 50th and beyond. Each package is tailored to the celebrant — the aesthetic, colour palette, and details all reflect who they are.',
+          'We style everything from 1st birthdays to 50th and beyond. Each package is tailored to the celebrant. The aesthetic, colour palette, and details all reflect who they are.',
       },
     ],
-    colorAccent: '#C9A96E',
+    colorAccent: '#E2567A',
     heroImage: '/images/gallery/birthday-1.JPG',
     metaDescription:
-      'Birthday decoration in Lagos — balloon arches, statement backdrops, throne styling, and florals for milestone celebrations in Victoria Island, Lekki, Ikeja.',
+      'Luxury birthday decoration, sculpted balloons, statement backdrops, throne styling, Arabian-themed milestones. Lagos · Abuja · nationwide. Free quote.',
   },
 ];
 
@@ -446,7 +446,7 @@ export const TESTIMONIALS = [
     name: 'Fatima A.',
     event: 'Nikkah Ceremony, Victoria Island',
     quote:
-      'Decor Adorne transformed our Nikkah venue beyond what we imagined. The florals, the lighting, the arch — every detail was perfect. Our guests still talk about it six months later.',
+      'Decor Adorne transformed our Nikkah venue beyond what we imagined. The florals, the lighting, the arch, every detail was perfect. Our guests still talk about it six months later.',
     rating: 5,
   },
   {
@@ -460,7 +460,7 @@ export const TESTIMONIALS = [
     name: 'Aminat B.',
     event: 'Kamu Ceremony, Ikeja',
     quote:
-      'The Kamu setup was breathtaking. They incorporated our traditional fabrics so beautifully — every element felt intentional and culturally respectful. Everyone was in happy tears.',
+      'The Kamu setup was breathtaking. They incorporated our traditional fabrics so beautifully, every element felt intentional and culturally respectful. Everyone was in happy tears.',
     rating: 5,
   },
 ] as const;

@@ -23,12 +23,13 @@ const MARQUEE_ITEMS = [
   { name: 'Durbar Decor',  icon: Gem },
 ] as const;
 
-/** Soft gold dust — barely perceptible, adds editorial depth */
+/** Soft dust particles — gold + mauve */
 const PARTICLES = [
-  { id: 1, left: '14%',  top: '20%', size: 2.5, dur: 22, delay: 0   },
-  { id: 2, left: '80%',  top: '36%', size: 1.5, dur: 28, delay: 4   },
-  { id: 3, left: '55%',  top: '75%', size: 2,   dur: 19, delay: 9   },
-  { id: 4, left: '30%',  top: '58%', size: 1.5, dur: 26, delay: 14  },
+  { id: 1, left: '14%',  top: '20%', size: 2.5, dur: 22, delay: 0,  color: '#C9A96E' },
+  { id: 2, left: '80%',  top: '36%', size: 1.5, dur: 28, delay: 4,  color: '#A878CD' },
+  { id: 3, left: '55%',  top: '75%', size: 2,   dur: 19, delay: 9,  color: '#C9A96E' },
+  { id: 4, left: '30%',  top: '58%', size: 1.5, dur: 26, delay: 14, color: '#A878CD' },
+  { id: 5, left: '68%',  top: '18%', size: 2,   dur: 24, delay: 7,  color: '#E2567A' },
 ] as const;
 
 function StatItem({ value, label }: { value: string; label: string }) {
@@ -75,7 +76,7 @@ export function GlassmorphismTrustHero() {
         />
       </motion.div>
 
-      {/* ── Ambient gold glow — slow breathing drift (y + scale only, no x to avoid mobile overflow) ── */}
+      {/* ── Ambient gold glow — slow breathing drift ── */}
       <motion.div
         aria-hidden="true"
         animate={prefersReducedMotion ? undefined : {
@@ -83,17 +84,28 @@ export function GlassmorphismTrustHero() {
           scale: [1, 1.06, 0.97, 1.03, 1],
         }}
         transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', repeatType: 'mirror' }}
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[640px] h-[380px] rounded-full bg-[#C9A96E]/8 blur-[130px] pointer-events-none"
+        className="absolute top-1/3 left-1/3 -translate-x-1/2 w-[600px] h-[340px] rounded-full bg-[#C9A96E]/10 blur-[120px] pointer-events-none"
       />
 
-      {/* ── Floating gold dust particles ── */}
+      {/* ── Ambient mauve glow — offset, counter-breathing ── */}
+      <motion.div
+        aria-hidden="true"
+        animate={prefersReducedMotion ? undefined : {
+          y: [0, 14, -8, 10, 0],
+          scale: [1, 0.96, 1.05, 0.98, 1],
+        }}
+        transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut', repeatType: 'mirror' }}
+        className="absolute top-1/2 right-[10%] w-[480px] h-[280px] rounded-full bg-[#A878CD]/8 blur-[110px] pointer-events-none"
+      />
+
+      {/* ── Floating dust particles ── */}
       {!prefersReducedMotion && PARTICLES.map((p) => (
         <motion.div
           key={p.id}
           aria-hidden="true"
-          className="absolute rounded-full bg-[#C9A96E] pointer-events-none"
-          style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: 0 }}
-          animate={{ y: [0, -22, 8, -14, 0], opacity: [0, 0.18, 0.08, 0.15, 0] }}
+          className="absolute rounded-full pointer-events-none"
+          style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: 0, backgroundColor: p.color }}
+          animate={{ y: [0, -22, 8, -14, 0], opacity: [0, 0.22, 0.10, 0.18, 0] }}
           transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}
         />
       ))}
@@ -109,7 +121,7 @@ export function GlassmorphismTrustHero() {
             <div className="da-fade da-d1">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#C9A96E]/25 bg-[#C9A96E]/10 px-3.5 py-1.5 backdrop-blur-md">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#C9A96E] flex items-center gap-2">
-                  Lagos Luxury Event Decoration
+                  Arabian-Inspired Luxury Decor · Across Nigeria
                   <Star className="w-3.5 h-3.5 fill-current" />
                 </span>
               </div>
@@ -127,34 +139,37 @@ export function GlassmorphismTrustHero() {
                 WebkitMaskImage: 'linear-gradient(180deg, black 0%, black 82%, transparent 100%)',
               }}
             >
-              <span className="sr-only">Lagos luxury event decoration — </span>Moments,
+              <span className="sr-only">Arabian-inspired luxury event decor across Nigeria, </span>Moments,
               <br />
               <span
                 style={{
-                  background: 'linear-gradient(135deg, #FAF7F4 0%, #FAF7F4 52%, #C9A96E 100%)',
+                  background: 'linear-gradient(135deg, #FAF7F4 0%, #DEC48E 45%, #A878CD 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                 }}
               >
-                beautifully
+                lantern-lit,
               </span>
               <br />
-              adorned.
+              beautifully adorned.
             </h1>
 
             {/* Sub-copy */}
             <p className="da-fade da-d3 max-w-xl text-base sm:text-lg text-[#FAF7F4]/55 leading-relaxed">
-              From intimate Kamu celebrations to grand engagement parties —
-              we transform Lagos venues into breathtaking settings your
-              guests will never forget.
+              From intimate Henna nights to grand Arabian Night transformations, 
+              we create lantern-lit, jewel-toned celebrations across Nigeria.
+              Anchored in Lagos. Wherever your event calls us.
             </p>
 
             {/* CTAs */}
             <div className="da-fade da-d4 flex flex-col sm:flex-row gap-4">
               <a
                 href="#lead-form"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A96E] px-8 py-4 text-sm font-semibold text-[#1A1410] transition-all hover:scale-[1.02] hover:bg-[#DEC48E] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-[#FAF7F4] transition-all hover:scale-[1.02] active:scale-[0.98]"
+                style={{ background: 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #DEC48E 0%, #C49EE0 100%)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)'; }}
               >
                 Style my event
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -177,7 +192,8 @@ export function GlassmorphismTrustHero() {
             {/* Stats glass card */}
             <div className="da-fade da-d5 relative overflow-hidden rounded-3xl border border-[#FAF7F4]/10 bg-[#FAF7F4]/5 p-8 backdrop-blur-xl shadow-2xl">
               {/* Card ambient glow */}
-              <div aria-hidden="true" className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#C9A96E]/6 blur-3xl pointer-events-none" />
+              <div aria-hidden="true" className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#A878CD]/10 blur-3xl pointer-events-none" />
+              <div aria-hidden="true" className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-[#C9A96E]/8 blur-3xl pointer-events-none" />
 
               <div className="relative z-10">
                 {/* Primary stat */}
@@ -204,7 +220,7 @@ export function GlassmorphismTrustHero() {
                       initial={{ width: 0 }}
                       animate={{ width: '98%' }}
                       transition={{ duration: 1.6, delay: prefersReducedMotion ? 0 : 1.0, ease: EASE }}
-                      className="h-full rounded-full bg-gradient-to-r from-[#C9A96E] to-[#DEC48E]"
+                      className="h-full rounded-full bg-gradient-to-r from-[#C9A96E] via-[#A878CD] to-[#E2567A]"
                     />
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
+  /* Brand Colors — Warm Luxury */
   --color-cream: #FAF7F4;
   --color-parchment: #F2EDE8;
   --color-espresso: #1A1410;
@@ -12,6 +12,15 @@
   --color-sage: #8BA888;
   --color-warm-border: #E8E0D8;
 
+  /* Brand Colors — Vibrant Accent Layer */
+  --color-mauve: #A878CD;
+  --color-mauve-light: #C49EE0;
+  --color-mauve-dark: #7A50A8;
+  --color-plum: #2D1B4E;
+  --color-rose: #E2567A;
+  --color-teal: #4ECDC4;
+  --color-amber: #F4A261;
+
   /* Font Families — CSS variables injected by next/font */
   --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   --font-sans: var(--font-dm-sans), 'DM Sans', system-ui, sans-serif;
@@ -21,6 +30,7 @@
   --shadow-card: 0 2px 20px 0 rgba(26, 20, 16, 0.06);
   --shadow-card-hover: 0 8px 40px 0 rgba(26, 20, 16, 0.12);
   --shadow-gold: 0 4px 24px 0 rgba(201, 169, 110, 0.25);
+  --shadow-mauve: 0 4px 24px 0 rgba(168, 120, 205, 0.30);
 }
 
 /* Base Reset */
@@ -164,4 +174,19 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.text-gradient-vivid {
+  background: linear-gradient(135deg, #C9A96E 0%, #A878CD 60%, #E2567A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #C9A96E 0%, #A878CD 100%);
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #DEC48E 0%, #C49EE0 100%);
 }

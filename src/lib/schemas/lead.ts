@@ -70,7 +70,7 @@ export const leadSchema = z.object({
   }),
   vision: z
     .string()
-    .min(10, 'Tell us a little more — at least 10 characters')
+    .min(10, 'Tell us a little more, at least 10 characters')
     .max(1000, 'Brief is too long (max 1000 characters)'),
 });
 

@@ -36,7 +36,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'e1', category: 'engagement',
     label: 'Engagement Decor',
-    alt: 'Engagement decoration Lagos — floral arch and candlelit setup',
+    alt: 'Engagement decoration Lagos, floral arch and candlelit setup',
     src: '/images/gallery/engagement-1.JPG',
     gradient: 'from-[#C9A96E]/30 to-[#F2EDE8]', accent: '#C9A96E',
     span: 'tall',
@@ -44,7 +44,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'e2', category: 'engagement',
     label: 'Engagement Setup',
-    alt: 'Engagement party decoration Lagos — styled venue with florals and lighting',
+    alt: 'Engagement party decoration Lagos, styled venue with florals and lighting',
     src: '/images/gallery/wedding-3.JPG',
     gradient: 'from-[#C9A96E]/20 to-[#FAF7F4]', accent: '#C9A96E',
   },
@@ -53,14 +53,14 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'k1', category: 'kamu',
     label: 'Kamu Ceremony',
-    alt: 'Kamu decoration Lagos — vibrant throne area and cultural fabric draping',
+    alt: 'Kamu decoration Lagos, vibrant throne area and cultural fabric draping',
     src: '/images/gallery/wedding-1.JPG',
     gradient: 'from-[#D4878A]/30 to-[#FAF7F4]', accent: '#D4878A',
   },
   {
     id: 'k2', category: 'kamu',
     label: 'Kamu Details',
-    alt: 'Kamu ceremony Lagos — traditional lanterns and floral centrepieces',
+    alt: 'Kamu ceremony Lagos, traditional lanterns and floral centrepieces',
     gradient: 'from-[#D4878A]/20 to-[#F2EDE8]', accent: '#D4878A',
   },
 
@@ -68,7 +68,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'h1', category: 'henna',
     label: 'Henna Party',
-    alt: 'Henna party decoration Lagos — jewel-toned cushions and Moroccan lanterns',
+    alt: 'Henna party decoration Lagos, jewel-toned cushions and Moroccan lanterns',
     src: '/images/gallery/henna-1.JPG',
     gradient: 'from-[#8BA888]/25 to-[#FAF7F4]', accent: '#8BA888',
     span: 'tall',
@@ -76,28 +76,28 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'h2', category: 'henna',
     label: 'Henna Details',
-    alt: 'Henna night Lagos — close-up of styled table and floral centrepiece',
+    alt: 'Henna night Lagos, close-up of styled table and floral centrepiece',
     src: '/images/gallery/henna-2.JPG',
     gradient: 'from-[#8BA888]/20 to-[#F2EDE8]', accent: '#8BA888',
   },
   {
     id: 'h3', category: 'henna',
     label: 'Henna Backdrop',
-    alt: 'Henna party Lagos — flower wall backdrop for photography and portraits',
+    alt: 'Henna party Lagos, flower wall backdrop for photography and portraits',
     src: '/images/gallery/henna-3.JPG',
     gradient: 'from-[#8BA888]/15 to-[#FAF7F4]', accent: '#8BA888',
   },
   {
     id: 'h4', category: 'henna',
     label: 'Henna Night Decor',
-    alt: 'Henna night Lagos — intimate styled seating and lantern setup',
+    alt: 'Henna night Lagos, intimate styled seating and lantern setup',
     src: '/images/gallery/henna-4.JPG',
     gradient: 'from-[#8BA888]/22 to-[#FAF7F4]', accent: '#8BA888',
   },
   {
     id: 'h5', category: 'henna',
     label: 'Henna Setup',
-    alt: 'Henna party Lagos — full venue styling with jewel tones',
+    alt: 'Henna party Lagos, full venue styling with jewel tones',
     src: '/images/gallery/henna-5.JPG',
     gradient: 'from-[#8BA888]/18 to-[#F2EDE8]', accent: '#8BA888',
     span: 'tall',
@@ -107,14 +107,14 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'a1', category: 'arabian',
     label: 'Arabian Night',
-    alt: 'Arabian Night decoration Lagos — dramatic ceiling draping and ornate lanterns',
+    alt: 'Arabian Night decoration Lagos, dramatic ceiling draping and ornate lanterns',
     gradient: 'from-[#C9A96E]/25 to-[#1A1410]/8', accent: '#C9A96E',
     span: 'tall',
   },
   {
     id: 'a2', category: 'arabian',
     label: 'Arabian Details',
-    alt: 'Arabian Night decoration Lagos — lantern cluster and floral arrangement',
+    alt: 'Arabian Night decoration Lagos, lantern cluster and floral arrangement',
     gradient: 'from-[#C9A96E]/18 to-[#FAF7F4]', accent: '#C9A96E',
   },
 
@@ -122,7 +122,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'n1', category: 'nikkah',
     label: 'Nikkah Ceremony',
-    alt: 'Nikkah decoration Lagos — elegant floral arch and soft ambient lighting',
+    alt: 'Nikkah decoration Lagos, elegant floral arch and soft ambient lighting',
     src: '/images/gallery/wedding-2.JPG',
     gradient: 'from-[#D4878A]/20 to-[#F2EDE8]', accent: '#D4878A',
   },
@@ -131,7 +131,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'nm1', category: 'naming',
     label: 'Naming Ceremony',
-    alt: 'Naming ceremony decoration Lagos — warm celebratory setup for a new arrival',
+    alt: 'Naming ceremony decoration Lagos, warm celebratory setup for a new arrival',
     src: '/images/gallery/naming-1.JPG',
     gradient: 'from-[#8BA888]/30 to-[#FAF7F4]', accent: '#8BA888',
     span: 'tall',
@@ -139,7 +139,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'nm2', category: 'naming',
     label: 'Naming Details',
-    alt: 'Naming ceremony Lagos — pastel balloon columns and welcome arch',
+    alt: 'Naming ceremony Lagos, pastel balloon columns and welcome arch',
     src: '/images/gallery/naming-2.JPG',
     gradient: 'from-[#8BA888]/20 to-[#F2EDE8]', accent: '#8BA888',
   },
@@ -148,7 +148,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'p1', category: 'picnic',
     label: 'Luxury Picnic',
-    alt: 'Luxury picnic setup Lagos — styled low table with fresh florals and cushions',
+    alt: 'Luxury picnic setup Lagos, styled low table with fresh florals and cushions',
     gradient: 'from-[#C9A96E]/20 to-[#FAF7F4]', accent: '#C9A96E',
     span: 'tall',
   },
@@ -157,7 +157,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'b1', category: 'birthday',
     label: 'Birthday Decor',
-    alt: 'Birthday decoration Lagos — luxury styled celebration setup',
+    alt: 'Birthday decoration Lagos, luxury styled celebration setup',
     src: '/images/gallery/birthday-1.JPG',
     gradient: 'from-[#C9A96E]/25 to-[#FAF7F4]', accent: '#C9A96E',
     span: 'tall',
@@ -165,7 +165,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'b2', category: 'birthday',
     label: 'Birthday Setup',
-    alt: 'Birthday party decoration Lagos — elegant themed event styling',
+    alt: 'Birthday party decoration Lagos, elegant themed event styling',
     src: '/images/gallery/birthday-2.JPG',
     gradient: 'from-[#C9A96E]/18 to-[#F2EDE8]', accent: '#C9A96E',
   },
@@ -174,7 +174,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'd1', category: 'durbar',
     label: 'Durbar Decor',
-    alt: 'Durbar decoration Lagos — royal grand venue styling with ornate draping and gold accents',
+    alt: 'Durbar decoration Lagos, royal grand venue styling with ornate draping and gold accents',
     src: '/images/gallery/durbar-decor-1.JPG',
     gradient: 'from-[#C9A96E]/30 to-[#F2EDE8]', accent: '#C9A96E',
     span: 'tall',
@@ -182,14 +182,14 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'd2', category: 'durbar',
     label: 'Durbar Setup',
-    alt: 'Durbar ceremony Lagos — ceremonial stage with rich jewel-tone fabric and lantern clusters',
+    alt: 'Durbar ceremony Lagos, ceremonial stage with rich jewel-tone fabric and lantern clusters',
     src: '/images/gallery/durbar-decor-2.JPG',
     gradient: 'from-[#C9A96E]/22 to-[#FAF7F4]', accent: '#C9A96E',
   },
   {
     id: 'd3', category: 'durbar',
     label: 'Durbar Details',
-    alt: 'Durbar decoration Lagos — cultural textile accents and ornate candelabra arrangement',
+    alt: 'Durbar decoration Lagos, cultural textile accents and ornate candelabra arrangement',
     src: '/images/gallery/durbar-decor-3.JPG',
     gradient: 'from-[#C9A96E]/18 to-[#FAF7F4]', accent: '#C9A96E',
   },
@@ -198,7 +198,7 @@ const GALLERY_TILES: GalleryTile[] = [
   {
     id: 'r1', category: 'rentals',
     label: 'Event Rentals',
-    alt: 'Event rental Lagos — Chiavari chairs and gold charger plate table setting',
+    alt: 'Event rental Lagos, Chiavari chairs and gold charger plate table setting',
     gradient: 'from-[#D4878A]/15 to-[#F2EDE8]', accent: '#D4878A',
   },
 ];

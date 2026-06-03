@@ -489,7 +489,7 @@ export function LeadForm({ defaultEventType, compact = false }: LeadFormProps) {
                 <textarea
                   id="vision"
                   rows={compact ? 4 : 5}
-                  placeholder="Describe your vision — colours, theme, mood, inspiration. The more you share, the better we can bring it to life."
+                  placeholder="Describe your vision, colours, theme, mood, inspiration. The more you share, the better we can bring it to life."
                   className={`${INPUT} resize-none`}
                   {...register('vision')}
                 />

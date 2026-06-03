@@ -7,9 +7,9 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { PageHero } from '@/components/ui/page-hero';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Event Decoration Services in Lagos | Decor Adorne',
+  title: 'Arabian-Inspired Event Decor Services | Decor Adorne',
   description:
-    "Explore Decor Adorne's full range of Lagos event decoration services — Engagement, Kamu, Henna Party, Arabian Night, Nikkah, Naming Ceremony, Birthday, Durbar, Picnic, and Rentals.",
+    "Decor Adorne's full service range: Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Birthday, Picnic, and Rentals. Lagos studio · Across Nigeria.",
   path: '/services',
 });
 
@@ -28,29 +28,29 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 const GENERAL_FAQS = [
   {
-    question: 'How much does event decoration cost in Lagos?',
+    question: 'How much does event decoration cost?',
     answer:
-      'Event decoration pricing in Lagos varies by service type, venue size, and the complexity of styling. Intimate setups like luxury picnics and henna parties start from ₦150,000. Full engagement, Kamu, or Durbar packages for larger venues typically range from ₦350,000 upward. Contact us for a free bespoke quote tailored to your event.',
+      'Pricing varies by service type, venue size, and the complexity of styling. Intimate setups like luxury picnics and Henna nights start from ₦150,000. Full engagement, Kamu, or Durbar packages typically range from ₦350,000 upward. Full Arabian Night transformations scale to suit the venue. Contact us for a free bespoke quote.',
   },
   {
-    question: 'How far in advance should I book event decoration in Lagos?',
+    question: 'How far in advance should I book?',
     answer:
-      'We recommend booking at least 4–6 weeks before your event. For peak season dates — November through February and June through August — 8–12 weeks is ideal to secure your preferred style, florals, and setup team. We accept urgent bookings (7–14 days) subject to availability.',
+      'We recommend booking at least 4–6 weeks before your event. For peak season dates, November through February and June through August, 8–12 weeks is ideal to secure your preferred style, florals, and team. We accept urgent bookings (7–14 days) subject to availability.',
   },
   {
-    question: 'Do you serve venues outside Lagos Island?',
+    question: 'Do you serve clients outside Lagos?',
     answer:
-      'Yes. We style events across all of Lagos — Victoria Island, Lekki, Ikoyi, Ikeja, Ajah, Surulere, Yaba, Magodo, Gbagada, and the Mainland. Travel surcharges may apply for venues beyond a 40km radius of Lagos Island.',
+      'Yes. Lagos is our home, but our reach is national. We regularly style events in Abuja, Kano, Kaduna, Sokoto, Ibadan, and Port Harcourt, and travel anywhere in Nigeria for the right brief. Travel costs are quoted transparently with the package.',
   },
   {
-    question: 'Can I combine multiple services — for example, a Nikkah and Walima?',
+    question: 'Can I combine multiple services, for example, a Nikkah and Walima?',
     answer:
-      'Absolutely. We offer combination packages for multi-day or multi-event celebrations. Many of our clients book a Kamu, Nikkah, and Walima as a single package. Bundled bookings receive a preferential rate — contact us to discuss.',
+      'Absolutely. We offer combination packages for multi-day or multi-event celebrations. Many of our clients book a Kamu, Nikkah, and Walima as a single bundle. Bundled bookings receive a preferential rate, contact us to discuss.',
   },
   {
     question: 'What is included in a standard decoration package?',
     answer:
-      'Every package includes consultation, setup on the event day, and full breakdown and removal after. Core elements depend on the service — florals, backdrops, lighting, table settings, and fabric draping are typical. We also offer fully bespoke packages where every element is designed from scratch to your vision.',
+      'Every package includes consultation, setup on the event day, and full breakdown after. Core elements depend on the service, brass lanterns, florals, backdrops, lighting, table settings, and fabric draping are typical. We also offer fully bespoke packages where every element is designed from scratch to your vision.',
   },
 ];
 
@@ -58,7 +58,7 @@ const servicesListJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: `${BUSINESS_NAME} Services`,
-  description: 'Lagos luxury event decoration services',
+  description: 'Arabian-inspired luxury event decoration services, Lagos studio, serving Nigeria nationwide',
   url: `${SITE_URL}/services`,
   numberOfItems: SERVICES.length,
   itemListElement: SERVICES.map((s, i) => ({
@@ -83,10 +83,10 @@ export default function ServicesPage() {
       />
 
       <PageHero
-        eyebrow="What we offer"
-        headlineBefore="Every celebration,"
-        headlineItalic="expertly styled."
-        description="From your Kamu to your Nikkah, from intimate picnic setups to full Arabian Night transformations — Decor Adorne brings beauty to every Lagos celebration."
+        eyebrow="The full repertoire"
+        headlineBefore="From Henna nights to"
+        headlineItalic="Arabian dreams."
+        description="From your Kamu to your Nikkah, from intimate picnic setups to full Arabian Night transformations, Decor Adorne brings lantern-lit, jewel-toned beauty to every Nigerian celebration. Lagos studio · Nationwide service."
         photoUrl="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80"
       />
 
@@ -137,8 +137,8 @@ export default function ServicesPage() {
             className="font-display font-light text-[#1A1410] mb-10"
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}
           >
-            Event decoration in Lagos,{' '}
-            <em className="italic text-[#C9A96E]">answered.</em>
+            The questions{' '}
+            <em className="italic text-[#C9A96E]">we hear most.</em>
           </h2>
           <div className="border-t border-[#E8E0D8]">
             {GENERAL_FAQS.map((faq) => (

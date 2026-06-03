@@ -9,19 +9,19 @@ import { PageHero } from '@/components/ui/page-hero';
 import { SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Event Decoration Tips & Inspiration Lagos | Decor Adorne',
+  title: 'Event Decor Tips & Inspiration | Decor Adorne',
   description:
-    'Guides on Kamu, Nikkah, henna party, and engagement decoration in Lagos. Real advice from a team that has styled 500+ events across Lagos since 2016.',
+    'Guides on Henna nights, Kamu, Nikkah, Arabian Night, and engagement decoration. Real advice from a team that has styled 500+ events across Nigeria since 2016.',
   path: '/blog',
 });
 
 const blogListJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
-  name: 'Decor Adorne — Event Decoration Blog Lagos',
+  name: 'Decor Adorne: Event Decoration Blog Lagos',
   url: `${SITE_URL}/blog`,
   description:
-    'Event decoration guides, venue tips, and styling inspiration for Lagos celebrations.',
+    'Arabian-inspired event decoration guides, venue tips, and styling inspiration for Nigerian celebrations.',
   blogPost: BLOG_POSTS.map((p) => ({
     '@type': 'BlogPosting',
     headline: p.title,
@@ -50,8 +50,8 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Inspiration"
         headlineBefore="Ideas for your"
-        headlineItalic="Lagos celebration."
-        description="Guides, venue tips, and styling inspiration from a team that has styled over 500 events in Lagos since 2016."
+        headlineItalic="next celebration."
+        description="Guides, venue tips, and Arabian-inspired styling inspiration from a team that has styled over 500 events across Nigeria since 2016."
         photoUrl="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1920&q=80"
       />
 

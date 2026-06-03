@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { SERVICES, SITE_URL } from '@/lib/constants';
 import { ServicePage } from '@/components/services/ServicePage';
 import { generatePageMetadata, buildBreadcrumbJsonLd } from '@/lib/seo';
+import { getServiceImages } from '@/lib/service-images';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 interface PageProps {
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${service.name} in Lagos | Decor Adorne`,
     description: service.metaDescription ?? `${service.description} Based in Lagos. Free quote.`,
     path: `/services/${service.slug}`,
-    image: service.heroImage,
+    image: getServiceImages(slug).hero ?? service.heroImage,
   });
 }
 
@@ -31,6 +32,11 @@ export default async function ServiceSlugPage({ params }: PageProps) {
   const service = SERVICES.find((s) => s.slug === slug);
 
   if (!service) notFound();
+
+  // A hero.* in the service folder overrides the default heroImage; the rest
+  // becomes the collection grid. Both auto-update when photos are pasted.
+  const images = getServiceImages(service.slug);
+  const resolvedService = images.hero ? { ...service, heroImage: images.hero } : service;
 
   return (
     <>
@@ -41,7 +47,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
           { name: `${service.name} in Lagos`, item: `${SITE_URL}/services/${service.slug}` },
         ])}
       />
-      <ServicePage service={service} />
+      <ServicePage service={resolvedService} galleryImages={images.gallery} />
     </>
   );
 }

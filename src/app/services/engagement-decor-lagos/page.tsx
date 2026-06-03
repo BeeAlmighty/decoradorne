@@ -9,7 +9,7 @@ const service = SERVICES.find((s) => s.slug === 'engagement-decor-lagos')!;
 export const metadata: Metadata = generatePageMetadata({
   title: 'Engagement Decoration in Lagos | Decor Adorne',
   description:
-    'Luxury engagement decoration in Lagos — from intimate proposals to grand parties. Decor Adorne serves Victoria Island, Lekki, Ikoyi and beyond. Free quote.',
+    'Luxury engagement decoration in Lagos, from intimate proposals to grand parties. Decor Adorne serves Victoria Island, Lekki, Ikoyi and beyond. Free quote.',
   path: '/services/engagement-decor-lagos',
 });
 
