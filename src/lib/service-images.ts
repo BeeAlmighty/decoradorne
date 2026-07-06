@@ -25,7 +25,7 @@ const FOLDER_BY_SLUG: Record<string, string> = {
   'birthday-decoration-lagos': 'birthday',
 };
 
-const IMAGE_RE = /\.(jpe?g|png|webp|avif)$/i;
+const IMAGE_RE = /\.(jpe?g|png|webp|avif|svg)$/i;
 const HERO_RE = /^hero\./i;
 
 /**

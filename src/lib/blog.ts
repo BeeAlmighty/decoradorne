@@ -34,7 +34,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Ceremony Guides',
     excerpt:
       'The Kamu is one of the most visually rich celebrations in Northern Nigerian culture. Here is what great décor looks like, and how to plan it.',
-    heroImage: '/images/gallery/wedding-1.JPG',
+    heroImage: '/images/gallery/kamu-placeholder.svg',
     body: [
       {
         type: 'p',
@@ -446,7 +446,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Ceremony Guides',
     excerpt:
       'The Nikkah is a sacred ceremony that deserves décor which honours its meaning. Here is what to consider when planning Nikkah decoration in Lagos.',
-    heroImage: '/images/gallery/wedding-2.JPG',
+    heroImage: '/images/gallery/nikkah-placeholder.svg',
     body: [
       {
         type: 'p',

@@ -234,7 +234,8 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#8BAFD4',
-    heroImage: '/images/gallery/wedding-2.JPG',
+    // No dedicated Nikkah photography yet — falls back to GradientHero (like Kamu)
+    // rather than mislabelling a wedding photo. Add heroImage when real photos exist.
     metaDescription:
       'Nikkah decoration, restrained, respectful Islamic ceremony styling. Floral arches, Arabic-script signage, segregated seating, Nikkah + Walima. Lagos · Nationwide.',
   },

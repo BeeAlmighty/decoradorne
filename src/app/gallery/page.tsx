@@ -34,13 +34,13 @@ const galleryJsonLd = {
     },
     {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/images/gallery/wedding-1.JPG`,
+      url: `${SITE_URL}/images/gallery/kamu-placeholder.svg`,
       name: 'Kamu ceremony decoration Lagos',
       description: 'Kamu ceremony decoration Lagos, vibrant throne area and cultural fabric draping by Decor Adorne',
     },
     {
       '@type': 'ImageObject',
-      url: `${SITE_URL}/images/gallery/wedding-2.JPG`,
+      url: `${SITE_URL}/images/gallery/nikkah-placeholder.svg`,
       name: 'Nikkah decoration Lagos',
       description: 'Nikkah decoration Lagos, elegant floral arch and soft ambient lighting by Decor Adorne',
     },

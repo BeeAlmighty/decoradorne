@@ -123,8 +123,8 @@ const GALLERY_TILES: GalleryTile[] = [
     id: 'n1', category: 'nikkah',
     label: 'Nikkah Ceremony',
     alt: 'Nikkah decoration Lagos, elegant floral arch and soft ambient lighting',
-    src: '/images/gallery/wedding-2.JPG',
-    gradient: 'from-[#D4878A]/20 to-[#F2EDE8]', accent: '#D4878A',
+    src: '/images/gallery/nikkah-placeholder.svg',
+    gradient: 'from-[#8BAFD4]/20 to-[#F2EDE8]', accent: '#8BAFD4',
   },
 
   // ── Naming ───────────────────────────────────────────────────────────────────

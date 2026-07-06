@@ -38,17 +38,17 @@ const GALLERY_ITEMS: GalleryTile[] = [
     alt: 'Naming ceremony decoration Lagos, warm celebratory setup',
   },
   {
-    id: 'wedding-1',
+    id: 'kamu-placeholder',
     label: 'Kamu Setup',
-    src: '/images/gallery/wedding-1.JPG',
-    accent: '#D4878A',
+    src: '/images/gallery/kamu-placeholder.svg',
+    accent: '#A878CD',
     alt: 'Kamu ceremony decoration Lagos, vibrant traditional styling',
   },
   {
-    id: 'wedding-2',
+    id: 'nikkah-placeholder',
     label: 'Nikkah Ceremony',
-    src: '/images/gallery/wedding-2.JPG',
-    accent: '#D4878A',
+    src: '/images/gallery/nikkah-placeholder.svg',
+    accent: '#8BAFD4',
     alt: 'Nikkah decoration Lagos, elegant floral arch and ambient lighting',
   },
   {

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Nikkah — photography coming soon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F4"/>
+      <stop offset="1" stop-color="#F2EDE8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#8BAFD4" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8BAFD4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <rect x="28" y="28" width="1144" height="844" rx="20" fill="none" stroke="#8BAFD4" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <g text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif">
+    <line x1="560" y1="342" x2="640" y2="342" stroke="#C9A96E" stroke-width="1.5"/>
+    <text x="600" y="390" font-family="system-ui, sans-serif" font-size="20" letter-spacing="6" fill="#C9A96E" font-weight="500">DECOR ADORNE</text>
+    <text x="600" y="510" font-size="104" font-style="italic" font-weight="500" fill="#1A1410">Nikkah</text>
+    <text x="600" y="570" font-family="system-ui, sans-serif" font-size="22" letter-spacing="2" fill="#1A1410" fill-opacity="0.55">Floral arch</text>
+    <line x1="560" y1="618" x2="640" y2="618" stroke="#C9A96E" stroke-width="1.5"/>
+  </g>
+
+  <text x="600" y="840" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" letter-spacing="4" fill="#1A1410" fill-opacity="0.4">PHOTOGRAPHY COMING SOON</text>
+</svg>
