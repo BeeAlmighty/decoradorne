@@ -149,7 +149,7 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       {
         type: 'p',
-        text: "Lagos engagements are not understated affairs. Whether you're planning a surprise proposal at a Victoria Island rooftop restaurant or a family engagement party at a Lekki garden venue, the décor is expected to be memorable. After styling hundreds of Lagos engagements since 2016, we have a clear sense of which ideas endure and which simply photograph well. Here are the approaches that consistently create the most beautiful, emotionally resonant engagement celebrations.",
+        text: "Lagos engagements are not understated affairs. Whether you're planning a surprise proposal at a Victoria Island rooftop restaurant or a family engagement party at a Lekki garden venue, the décor is expected to be memorable. After styling hundreds of Lagos engagements since 2020, we have a clear sense of which ideas endure and which simply photograph well. Here are the approaches that consistently create the most beautiful, emotionally resonant engagement celebrations.",
       },
       {
         type: 'h2',

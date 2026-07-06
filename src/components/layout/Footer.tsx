@@ -26,11 +26,6 @@ const socialLinks = [
     href: `https://wa.me/${WA_PHONE}`,
     icon: SOCIAL_ICONS.whatsapp,
   },
-  {
-    label: 'Facebook',
-    href: 'https://facebook.com/decoradorne',
-    icon: SOCIAL_ICONS.facebook,
-  },
 ];
 
 const serviceLinks = SERVICES.map((s) => ({
@@ -107,7 +102,7 @@ export function Footer() {
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <FooterBrandColumn
             name={BUSINESS_NAME}
-            description="Arabian-inspired luxury event decor — crafting lantern-lit celebrations across Nigeria since 2016."
+            description="Arabian-inspired luxury event decor — crafting lantern-lit celebrations across Nigeria since 2020."
             address="Lagos studio · Nationwide service"
             phone={BUSINESS_PHONE}
             socialLinks={socialLinks}

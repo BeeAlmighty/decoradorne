@@ -11,7 +11,7 @@ import { SITE_URL } from '@/lib/constants';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Event Decor Tips & Inspiration | Decor Adorne',
   description:
-    'Guides on Henna nights, Kamu, Nikkah, Arabian Night, and engagement decoration. Real advice from a team that has styled 500+ events across Nigeria since 2016.',
+    'Guides on Henna nights, Kamu, Nikkah, Arabian Night, and engagement decoration. Real advice from a team that has styled 500+ events across Nigeria since 2020.',
   path: '/blog',
 });
 
@@ -51,7 +51,7 @@ export default function BlogPage() {
         eyebrow="Inspiration"
         headlineBefore="Ideas for your"
         headlineItalic="next celebration."
-        description="Guides, venue tips, and Arabian-inspired styling inspiration from a team that has styled over 500 events across Nigeria since 2016."
+        description="Guides, venue tips, and Arabian-inspired styling inspiration from a team that has styled over 500 events across Nigeria since 2020."
         photoUrl="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1920&q=80"
       />
 

@@ -105,8 +105,8 @@ export function buildLocalBusinessJsonLd() {
       'Arabian-inspired luxury event decor and rentals. Specialists in Henna Nights, Arabian Night transformations, Kamu, Nikkah, Durbar, Engagement, Naming, Picnic, and Birthday styling. Lagos studio, serving Nigeria nationwide.',
     url: SITE_URL,
     telephone: '+2348103349288',
-    email: 'hello@decoradorne.com',
-    foundingDate: '2016',
+    email: 'decoradorne@gmail.com',
+    foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lagos',
@@ -133,7 +133,6 @@ export function buildLocalBusinessJsonLd() {
     },
     sameAs: [
       'https://instagram.com/decor_adorne',
-      'https://facebook.com/decoradorne',
       'https://wa.me/2348103349288',
     ],
     priceRange: '₦₦₦',

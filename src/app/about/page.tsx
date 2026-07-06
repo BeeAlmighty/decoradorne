@@ -10,7 +10,7 @@ import { PageHero } from '@/components/ui/page-hero';
 export const metadata: Metadata = generatePageMetadata({
   title: 'About Decor Adorne: Arabian-Inspired Luxury Event Decor Studio',
   description:
-    'Arabian-inspired luxury event decor studio, founded in Lagos in 2016. 500+ celebrations styled with cultural fluency and editorial detail. Serving Nigeria nationwide.',
+    'Arabian-inspired luxury event decor studio, founded in Lagos in 2020. 500+ celebrations styled with cultural fluency and editorial detail. Serving Nigeria nationwide.',
   path: '/about',
 });
 
@@ -53,7 +53,7 @@ export default function AboutPage() {
         eyebrow="Our story"
         headlineBefore="An Arabian eye for"
         headlineItalic="Nigerian celebration."
-        description="Since 2016, Decor Adorne has been Nigeria's studio for Arabian-inspired luxury event decor, bringing lantern-lit beauty, cultural fluency, and editorial detail to every ceremony we are honoured to be part of. Anchored in Lagos. Nationwide in reach."
+        description="Since 2020, Decor Adorne has been Nigeria's studio for Arabian-inspired luxury event decor, bringing lantern-lit beauty, cultural fluency, and editorial detail to every ceremony we are honoured to be part of. Anchored in Lagos. Nationwide in reach."
         cta={{ label: 'Plan my event', href: '/#lead-form' }}
         ctaSecondary={{ label: 'See our work', href: BUSINESS_IG, external: true }}
         photoUrl="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80"
@@ -88,7 +88,7 @@ export default function AboutPage() {
               </h2>
               <div className="flex flex-col gap-5 text-[#1A1410]/65 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Decor Adorne was founded in 2016 around a singular obsession: the Arabian
+                  Decor Adorne was founded in 2020 around a singular obsession: the Arabian
                   aesthetic (brass lanterns, sheer drapery, jewel-toned florals, majlis-style
                   low seating) translated for the Nigerian celebration. Henna nights, Kamu
                   ceremonies, Nikkahs, Durbars. The traditions of Hausa-Fulani and Muslim

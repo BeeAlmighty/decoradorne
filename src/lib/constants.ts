@@ -6,13 +6,13 @@ export const BUSINESS_NAME = 'Decor Adorne';
 export const BUSINESS_TAGLINE = 'Moments, beautifully adorned.';
 export const BUSINESS_LOCATION = 'Lagos, Nigeria';
 export const BUSINESS_PHONE = '+234 810 334 9288';
-export const BUSINESS_EMAIL = 'hello@decoradorne.com';
+export const BUSINESS_EMAIL = 'decoradorne@gmail.com';
 export const BUSINESS_IG = 'https://instagram.com/decor_adorne';
-export const FOUNDED_YEAR = 2016;
+export const FOUNDED_YEAR = 2020;
 
 export const STATS = [
   { value: '500+', label: 'Events Adorned' },
-  { value: '8', label: 'Years Styling' },
+  { value: '6', label: 'Years Styling' },
   { value: '200+', label: '5-Star Reviews' },
 ] as const;
 
@@ -115,7 +115,6 @@ export const SERVICES: Service[] = [
       },
     ],
     colorAccent: '#A878CD',
-    heroImage: '/images/gallery/wedding-1.JPG',
     metaDescription:
       'Kamu ceremony decoration, throne styling, aso-oke draping, brass lanterns, authentic Hausa-Fulani détail. Lagos studio · Abuja, Kano & nationwide. Free quote.',
   },

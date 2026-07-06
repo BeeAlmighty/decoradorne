@@ -54,8 +54,8 @@ const GALLERY_TILES: GalleryTile[] = [
     id: 'k1', category: 'kamu',
     label: 'Kamu Ceremony',
     alt: 'Kamu decoration Lagos, vibrant throne area and cultural fabric draping',
-    src: '/images/gallery/wedding-1.JPG',
     gradient: 'from-[#D4878A]/30 to-[#FAF7F4]', accent: '#D4878A',
+    span: 'tall',
   },
   {
     id: 'k2', category: 'kamu',
