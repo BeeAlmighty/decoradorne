@@ -10,6 +10,7 @@ import { SERVICES, BUSINESS_NAME, BUSINESS_TAGLINE, FOUNDED_YEAR } from '@/lib/c
 import { buildDefaultWhatsAppUrl } from '@/lib/whatsapp';
 
 const SECONDARY_NAV = [
+  { label: 'Rentals', href: '/rentals' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },

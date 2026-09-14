@@ -15,6 +15,7 @@ const PAGES = [
   { path: '/services/naming-ceremony-decor-lagos', name: 'service-naming' },
   { path: '/services/picnic-setup-lagos', name: 'service-picnic' },
   { path: '/services/event-rentals-lagos', name: 'service-rentals' },
+  { path: '/rentals', name: 'rentals' },
   { path: '/gallery', name: 'gallery' },
   { path: '/about', name: 'about' },
 ];

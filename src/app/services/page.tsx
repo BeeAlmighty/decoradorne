@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Heart, Star, Sparkles, Moon, Crown, Gift, Sun, Package, Cake, Gem, ChevronDown } from 'lucide-react';
 import { SERVICES, SITE_URL, BUSINESS_NAME } from '@/lib/constants';
+import { RENTAL_ITEMS, RENTAL_MINIMUM_ORDER, formatNaira } from '@/lib/rentals';
 import { generatePageMetadata, buildBreadcrumbJsonLd, buildFaqJsonLd } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { PageHero } from '@/components/ui/page-hero';
@@ -124,6 +125,36 @@ export default function ServicesPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Rental catalogue banner */}
+      <section className="py-14 sm:py-16 bg-[#1A1410]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+          <div className="flex-1">
+            <p className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#C9A96E] mb-3">
+              Rent, don&rsquo;t book a package
+            </p>
+            <h2
+              className="font-display font-light text-[#FAF7F4]"
+              style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)' }}
+            >
+              {RENTAL_ITEMS.length} pieces with{' '}
+              <em className="italic text-[#C9A96E]">prices on every item.</em>
+            </h2>
+            <p className="mt-3 text-sm text-[#FAF7F4]/50 leading-relaxed max-w-xl">
+              Carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, and
+              raffia — delivered, set, and collected. Minimum order {formatNaira(RENTAL_MINIMUM_ORDER)}.
+            </p>
+          </div>
+          <Link
+            href="/rentals"
+            className="shrink-0 inline-flex items-center gap-2 text-[#FAF7F4] text-sm font-semibold px-7 py-3.5 rounded-full transition-transform hover:scale-[1.02]"
+            style={{ background: 'linear-gradient(135deg, #C9A96E 0%, #A878CD 100%)' }}
+          >
+            Browse the rental catalogue
+            <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
 

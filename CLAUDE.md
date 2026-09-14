@@ -19,6 +19,14 @@ Follow the frontend-design skill. This is a warm editorial luxury aesthetic — 
 - Icons: Lucide React only. Animation: Framer Motion with `viewport={{ once: true }}`.
 - WhatsApp number: import from `src/lib/constants.ts` — never hardcode.
 
+## Rental Catalogue
+`/rentals` is the priced rental catalogue: 42 pieces, data in `src/lib/rentals.ts`, photography in `public/images/rentals/`.
+
+Source of truth is the client's props catalogue PDF (`C:\Users\JT\Documents\Catalog decor props main.pdf`) — an image-only 44-page deck, one product per page with the price burnt into the artwork. It has no text layer, so `pdftotext` returns nothing; pages must be rendered (PyMuPDF at 200dpi) and read visually. Product photos were cropped out of those page renders by keeping the tall non-white row bands (the photography) and dropping the short ones (title and price type).
+
+**Never estimate a rental price.** Every number in `rentals.ts` comes from the catalogue. When the client sends an updated catalogue, re-read it and update both the data file and the images.
+
+
 ## SEO
 - Every `page.tsx` must call `generateMetadata()` from `src/lib/seo.ts`
 - Every page must include JSON-LD via `src/components/seo/JsonLd.tsx`

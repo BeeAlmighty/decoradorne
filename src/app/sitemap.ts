@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...serviceUrls,
     {
+      url: `${SITE_URL}/rentals`,
+      lastModified: new Date(SITE_UPDATED),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${SITE_URL}/gallery`,
       lastModified: new Date(SITE_UPDATED),
       changeFrequency: 'weekly',
