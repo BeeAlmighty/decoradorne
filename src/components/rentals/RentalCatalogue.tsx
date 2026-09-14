@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Plus, ArrowRight, X } from 'lucide-react';
+import { Check, Plus, ArrowRight, X, Store, Truck } from 'lucide-react';
 import {
   RENTAL_CATEGORIES,
   RENTAL_ITEMS,
@@ -17,6 +17,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp';
 
 type Filter = RentalCategorySlug | 'all';
 type Sort = 'featured' | 'price-asc' | 'price-desc';
+type Fulfilment = 'pickup' | 'delivery';
 
 const SORTS: { value: Sort; label: string }[] = [
   { value: 'featured', label: 'Catalogue order' },
@@ -24,7 +25,37 @@ const SORTS: { value: Sort; label: string }[] = [
   { value: 'price-desc', label: 'Price: high to low' },
 ];
 
-function buildEnquiryUrl(items: RentalItem[]): string {
+const FULFILMENT_OPTIONS = [
+  {
+    value: 'pickup' as const,
+    icon: Store,
+    label: 'Pick up at the studio',
+    body: 'Collect the pieces from our Lagos studio yourself and return them after your event. Nothing extra to pay.',
+  },
+  {
+    value: 'delivery' as const,
+    icon: Truck,
+    label: 'Delivery to your venue',
+    body: 'We bring everything to you. Delivery is priced by your location, so message us with the address and we will quote it.',
+  },
+];
+
+/**
+ * The WhatsApp message carries the item list, the subtotal, and how the client
+ * wants to receive the pieces — delivery quotes depend on their location, so
+ * that request has to reach us in the first message.
+ */
+function buildEnquiryUrl(items: RentalItem[], fulfilment: Fulfilment): string {
+  const closing =
+    fulfilment === 'pickup'
+      ? ['*Collection:* I will pick up from the studio', '', 'Please confirm availability for my event date.']
+      : [
+          '*Delivery:* Please quote delivery to my location',
+          '*Delivering to:* ',
+          '',
+          'Please confirm availability for my event date.',
+        ];
+
   const lines = [
     'Hi Decor Adorné! 👋',
     '',
@@ -35,8 +66,7 @@ function buildEnquiryUrl(items: RentalItem[]): string {
     ...items.map((i) => `• ${rentalFullName(i)} — ${formatNaira(i.price)}`),
     '',
     `*Items subtotal:* ${formatNaira(items.reduce((sum, i) => sum + i.price, 0))}`,
-    '',
-    'Please confirm availability, delivery, and setup for my event date.',
+    ...closing,
   ];
   return buildWhatsAppUrl(lines.join('\n'));
 }
@@ -45,6 +75,7 @@ export function RentalCatalogue() {
   const [filter, setFilter] = useState<Filter>('all');
   const [sort, setSort] = useState<Sort>('featured');
   const [selected, setSelected] = useState<string[]>([]);
+  const [fulfilment, setFulfilment] = useState<Fulfilment>('pickup');
 
   const visible = useMemo(() => {
     const items =
@@ -70,10 +101,56 @@ export function RentalCatalogue() {
 
   return (
     <>
+      {/* ── Pick-up or delivery ───────────────────────────────────────── */}
+      <div className="max-w-7xl mx-auto mb-10">
+        <p className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#1A1410]/35 mb-4">
+          How would you like to receive them?
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          {FULFILMENT_OPTIONS.map((option) => {
+            const active = fulfilment === option.value;
+            return (
+              <button
+                key={option.value}
+                onClick={() => setFulfilment(option.value)}
+                aria-pressed={active}
+                className={`text-left flex gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-200 ${
+                  active
+                    ? 'bg-[#1A1410] border-[#1A1410] text-[#FAF7F4]'
+                    : 'bg-[#F2EDE8] border-[#E8E0D8] text-[#1A1410] hover:border-[#C9A96E]'
+                }`}
+              >
+                <span
+                  className={`shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${
+                    active ? 'bg-[#C9A96E]/20 text-[#C9A96E]' : 'bg-[#C9A96E]/12 text-[#C9A96E]'
+                  }`}
+                >
+                  <option.icon size={18} strokeWidth={1.6} />
+                </span>
+                <span className="min-w-0">
+                  <span className="flex items-center gap-2">
+                    <span className="font-sans font-semibold text-sm">{option.label}</span>
+                    {active && <Check size={13} className="text-[#C9A96E] shrink-0" />}
+                  </span>
+                  <span
+                    className={`block mt-1.5 text-xs leading-relaxed ${
+                      active ? 'text-[#FAF7F4]/55' : 'text-[#1A1410]/50'
+                    }`}
+                  >
+                    {option.body}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* ── Filter + sort ─────────────────────────────────────────────── */}
       <div className="sticky top-[76px] sm:top-[86px] z-30 -mx-5 sm:-mx-8 px-5 sm:px-8 py-4 bg-[#FAF7F4]/92 backdrop-blur-md border-b border-[#E8E0D8]">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-          <div className="flex gap-2 overflow-x-auto -mx-1 px-1 pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {/* Scrolls on narrow screens, wraps on wide ones so no chip is ever clipped. */}
+          <div className="flex flex-nowrap lg:flex-wrap gap-2 overflow-x-auto lg:overflow-visible -mx-1 px-1 pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <FilterChip active={filter === 'all'} onClick={() => setFilter('all')}>
               Everything
               <span className="ml-1.5 text-[10px] opacity-50">{RENTAL_ITEMS.length}</span>
@@ -121,6 +198,7 @@ export function RentalCatalogue() {
           <RentalCard
             key={item.slug}
             item={item}
+            fulfilment={fulfilment}
             selected={selected.includes(item.slug)}
             onToggle={() => toggle(item.slug)}
           />
@@ -149,14 +227,29 @@ export function RentalCatalogue() {
               <div className="min-w-0 flex-1">
                 <p className="text-[#FAF7F4] text-sm font-medium truncate">
                   {selectedItems.length} {selectedItems.length === 1 ? 'piece' : 'pieces'} selected
+                  <span className="text-[#C9A96E]"> · {formatNaira(subtotal)}</span>
                 </p>
-                <p className="text-[#C9A96E] text-xs">
-                  Items subtotal {formatNaira(subtotal)}
-                </p>
+                <button
+                  onClick={() =>
+                    setFulfilment((f) => (f === 'pickup' ? 'delivery' : 'pickup'))
+                  }
+                  className="mt-0.5 inline-flex items-center gap-1.5 text-[11px] text-[#FAF7F4]/50 hover:text-[#FAF7F4] transition-colors"
+                >
+                  {fulfilment === 'pickup' ? (
+                    <>
+                      <Store size={11} /> Studio pick-up
+                    </>
+                  ) : (
+                    <>
+                      <Truck size={11} /> Delivery — we&rsquo;ll quote it
+                    </>
+                  )}
+                  <span className="underline underline-offset-2 opacity-70">change</span>
+                </button>
               </div>
 
               <a
-                href={buildEnquiryUrl(selectedItems)}
+                href={buildEnquiryUrl(selectedItems, fulfilment)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-2 text-[#FAF7F4] text-xs sm:text-sm font-semibold px-4 sm:px-6 py-3 rounded-full transition-transform hover:scale-[1.03]"
@@ -200,10 +293,12 @@ function FilterChip({
 
 function RentalCard({
   item,
+  fulfilment,
   selected,
   onToggle,
 }: {
   item: RentalItem;
+  fulfilment: Fulfilment;
   selected: boolean;
   onToggle: () => void;
 }) {
@@ -264,7 +359,7 @@ function RentalCard({
         <div className="mt-4 pt-3 border-t border-[#E8E0D8]/70 flex items-baseline justify-between gap-2">
           <span className="font-display text-xl text-[#1A1410]">{formatNaira(item.price)}</span>
           <a
-            href={buildEnquiryUrl([item])}
+            href={buildEnquiryUrl([item], fulfilment)}
             target="_blank"
             rel="noopener noreferrer"
             className="text-[11px] font-medium text-[#C9A96E] hover:text-[#A8834A] transition-colors inline-flex items-center gap-1"

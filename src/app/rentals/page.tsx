@@ -22,7 +22,7 @@ const RENTALS_SERVICE = SERVICES.find((s) => s.slug === 'event-rentals-lagos');
 export const metadata: Metadata = generatePageMetadata({
   title: 'Event Rental Catalogue & Prices in Lagos | Decor Adorne',
   description:
-    `${RENTAL_ITEMS.length} rental pieces with the price on every item: carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, couches, raffia. Minimum order ${formatNaira(RENTAL_MINIMUM_ORDER)}. Lagos · Nationwide.`,
+    `${RENTAL_ITEMS.length} rental pieces with the price on every item: carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, couches, raffia. Studio pick-up or delivery quoted to your location. Lagos · Nationwide.`,
   path: '/rentals',
   image: '/images/rentals/carved-backdrop-16x8.jpg',
 });
@@ -40,8 +40,8 @@ const HOW_IT_WORKS = [
   },
   {
     icon: Truck,
-    title: 'We deliver and collect',
-    body: 'Delivered to your venue, set on arrival, collected after. Free delivery and collection within 20km of Lagos Island on orders above ₦100,000.',
+    title: 'Collect it, or we deliver',
+    body: 'Pick up from our Lagos studio at no extra cost, or have it delivered. Delivery is priced by your location, so message us the venue address and we will quote it.',
   },
 ];
 
@@ -54,7 +54,17 @@ const CATALOGUE_FAQS = [
   {
     question: 'Are the rental prices per day or per event?',
     answer:
-      'Prices are quoted per item for a standard event hire, covering delivery, setup on arrival, and collection afterwards. Multi-day events and extended hires are quoted on request, so send your dates with your item list.',
+      'Prices are quoted per item for a standard event hire. They cover the piece itself: pick-up from our Lagos studio costs nothing extra, and delivery is quoted separately. Multi-day events and extended hires are quoted on request, so send your dates with your item list.',
+  },
+  {
+    question: 'Can I pick up rental items myself?',
+    answer:
+      'Yes. Studio pick-up is one of the two options on this page. Collect the pieces from our Lagos studio at an agreed time, then return them after your event. There is nothing extra to pay on top of the item prices.',
+  },
+  {
+    question: 'How much is delivery for rental items in Lagos?',
+    answer:
+      'Delivery is priced by location, so it is not listed against each item. Message us on WhatsApp with your venue address alongside your item list and we will quote the delivery cost. Selecting "Delivery to your venue" on this page puts that request straight into your message.',
   },
   {
     question: 'Can I rent items without booking a full decoration package?',
@@ -112,11 +122,11 @@ export default function RentalsPage() {
         eyebrow={`${RENTAL_ITEMS.length} pieces · Priced`}
         headlineBefore="Rent the pieces."
         headlineItalic="Own nothing."
-        description={`Our full rental catalogue with the price on every item: carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, velvet couches, and hand-woven raffia. Minimum order ${formatNaira(RENTAL_MINIMUM_ORDER)}. Lagos warehouse · Nationwide delivery.`}
+        description={`Our full rental catalogue with the price on every item: carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, velvet couches, and hand-woven raffia. Minimum order ${formatNaira(RENTAL_MINIMUM_ORDER)}. Pick up at our Lagos studio, or message us for a delivery quote to your venue.`}
         cta={{
           label: 'Ask about availability',
           href: buildWhatsAppUrl(
-            "Hi Decor Adorné! 👋 I'm looking through the rental catalogue and would like to check availability for my event date.",
+            "Hi Decor Adorné! 👋 I'm looking through the rental catalogue and would like to check availability for my event date, plus the delivery cost to my location.",
           ),
           external: true,
         }}
@@ -160,8 +170,9 @@ export default function RentalsPage() {
               Every piece, <em className="italic text-[#C9A96E]">every price.</em>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-[#1A1410]/55 leading-relaxed">
-              Prices are per item. Tick the pieces you want and send the whole list to us on
-              WhatsApp in one message, or reserve a single piece on its own.
+              Prices are per item and cover the piece itself. Choose studio pick-up or delivery,
+              tick the pieces you want, and send the whole list to us on WhatsApp in one message.
+              Delivery is quoted to your location.
             </p>
           </div>
 

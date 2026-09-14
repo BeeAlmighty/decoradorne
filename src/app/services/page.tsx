@@ -144,7 +144,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-3 text-sm text-[#FAF7F4]/50 leading-relaxed max-w-xl">
               Carved Arabian backdrops, Persian rugs, brass lanterns, Moroccan floor puffs, and
-              raffia — delivered, set, and collected. Minimum order {formatNaira(RENTAL_MINIMUM_ORDER)}.
+              raffia — collect at the studio, or we deliver. Minimum order {formatNaira(RENTAL_MINIMUM_ORDER)}.
             </p>
           </div>
           <Link

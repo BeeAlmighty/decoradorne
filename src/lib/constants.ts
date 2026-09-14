@@ -326,22 +326,22 @@ export const SERVICES: Service[] = [
     tagline: 'Premium pieces. Own nothing.',
     icon: 'Package',
     description:
-      "Premium event pieces: brass lanterns, Chiavari chairs, charger plates, linens. Delivered, set, and collected. Lagos-based · Nationwide reach.",
+      "Premium event pieces: brass lanterns, Chiavari chairs, charger plates, linens. Pick up at our Lagos studio, or have them delivered. Lagos-based · Nationwide reach.",
     longDescription:
-      'Not every event needs a full styling package. Our rental catalogue lets you pick the exact pieces you need: brass Moroccan lanterns, Chiavari and ghost chairs, charger plates, crystal glassware, candelabras, velvet linens in 30+ colourways, and floral vases. Delivered to your venue, set on arrival, collected after. Lagos warehouse, nationwide reach.',
+      'Not every event needs a full styling package. Our rental catalogue lets you pick the exact pieces you need: brass Moroccan lanterns, Chiavari and ghost chairs, charger plates, crystal glassware, candelabras, velvet linens in 30+ colourways, and floral vases. Pick them up from our Lagos studio yourself, or have them delivered to your venue, delivery is quoted by location. Lagos warehouse, nationwide reach.',
     included: [
       'Chiavari chairs, ghost chairs, and velvet seating',
       'Charger plates, cutlery, and glassware',
       'Table linens in 30+ colours and textures',
       'Centrepiece stands and floral vases',
       'Candelabras, candleholders, and lanterns',
-      'Delivery, collection, and cleaning included',
+      'Studio pick-up, or delivery quoted to your location',
     ],
     faqs: [
       {
         question: 'What is the minimum rental order for Lagos events?',
         answer:
-          'Our minimum rental order is ₦50,000. We offer free delivery and collection within a 20km radius of Lagos Island for orders above ₦100,000.',
+          'Our minimum rental order is ₦50,000. You can collect the pieces from our Lagos studio at no extra cost, or we deliver, delivery is priced by your location and quoted when you send us your list on WhatsApp.',
       },
       {
         question: 'How far in advance do I need to book rental items?',
@@ -356,7 +356,7 @@ export const SERVICES: Service[] = [
     ],
     colorAccent: '#A878CD',
     metaDescription:
-      'Premium event rentals: brass Moroccan lanterns, Chiavari chairs, charger plates, candelabras, velvet linens. Delivered & collected. Lagos · Nationwide. From ₦50k.',
+      'Premium event rentals: brass Moroccan lanterns, Chiavari chairs, charger plates, candelabras, velvet linens. Studio pick-up or delivery. Lagos · Nationwide. From ₦50k.',
   },
   {
     slug: 'durbar-decoration-lagos',
